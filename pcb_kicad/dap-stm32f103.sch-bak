@@ -17,19 +17,19 @@ $EndDescr
 $Comp
 L lc_MCU:STM32F103CBT6 U?
 U 2 1 5D998D10
-P 6550 4550
-F 0 "U?" H 6850 5015 50  0000 C CNN
-F 1 "STM32F103CBT6" H 6300 5900 50  0001 L BNN
-F 2 "lc_lib:LQFP-48_7X7X05P" H 6250 3050 50  0001 L BNN
-F 3 "http://www.szlcsc.com/product/details_8796.html" H 6250 3150 50  0001 L BNN
-F 4 "ARM" H 6550 4550 50  0001 C CNN "description"
-F 5 "供应商链接" H 6250 2950 50  0001 L BNN "ComponentLink1Description"
-F 6 "LQFP-48_7x7x05P" H 6250 2850 50  0001 L BNN "Package"
-F 7 "LC" H 6250 2750 50  0001 L BNN "Supplier"
-F 8 "C8304" H 6250 2650 50  0001 L BNN "SuppliersPartNumber"
-F 9 "" H 6250 2550 50  0001 L BNN "Notepad"
-F 10 "STM32F103CBT6" H 6850 4924 50  0000 C CNN "Comment"
-	2    6550 4550
+P 9550 4750
+F 0 "U?" H 9850 5215 50  0000 C CNN
+F 1 "STM32F103CBT6" H 9300 6100 50  0001 L BNN
+F 2 "lc_lib:LQFP-48_7X7X05P" H 9250 3250 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_8796.html" H 9250 3350 50  0001 L BNN
+F 4 "ARM" H 9550 4750 50  0001 C CNN "description"
+F 5 "供应商链接" H 9250 3150 50  0001 L BNN "ComponentLink1Description"
+F 6 "LQFP-48_7x7x05P" H 9250 3050 50  0001 L BNN "Package"
+F 7 "LC" H 9250 2950 50  0001 L BNN "Supplier"
+F 8 "C8304" H 9250 2850 50  0001 L BNN "SuppliersPartNumber"
+F 9 "" H 9250 2750 50  0001 L BNN "Notepad"
+F 10 "STM32F103CBT6" H 9850 5124 50  0000 C CNN "Comment"
+	2    9550 4750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -79,19 +79,19 @@ Wire Wire Line
 $Comp
 L lc_MCU:STM32F103CBT6 U?
 U 1 1 5D9980F9
-P 6050 2350
-F 0 "U?" H 7050 3715 50  0000 C CNN
-F 1 "STM32F103CBT6" H 5800 3700 50  0001 L BNN
-F 2 "lc_lib:LQFP-48_7X7X05P" H 5750 850 50  0001 L BNN
-F 3 "http://www.szlcsc.com/product/details_8796.html" H 5750 950 50  0001 L BNN
-F 4 "ARM" H 6050 2350 50  0001 C CNN "description"
-F 5 "供应商链接" H 5750 750 50  0001 L BNN "ComponentLink1Description"
-F 6 "LQFP-48_7x7x05P" H 5750 650 50  0001 L BNN "Package"
-F 7 "LC" H 5750 550 50  0001 L BNN "Supplier"
-F 8 "C8304" H 5750 450 50  0001 L BNN "SuppliersPartNumber"
-F 9 "" H 5750 350 50  0001 L BNN "Notepad"
-F 10 "STM32F103CBT6" H 7050 3624 50  0000 C CNN "Comment"
-	1    6050 2350
+P 9050 2550
+F 0 "U?" H 10050 3915 50  0000 C CNN
+F 1 "STM32F103CBT6" H 8800 3900 50  0001 L BNN
+F 2 "lc_lib:LQFP-48_7X7X05P" H 8750 1050 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_8796.html" H 8750 1150 50  0001 L BNN
+F 4 "ARM" H 9050 2550 50  0001 C CNN "description"
+F 5 "供应商链接" H 8750 950 50  0001 L BNN "ComponentLink1Description"
+F 6 "LQFP-48_7x7x05P" H 8750 850 50  0001 L BNN "Package"
+F 7 "LC" H 8750 750 50  0001 L BNN "Supplier"
+F 8 "C8304" H 8750 650 50  0001 L BNN "SuppliersPartNumber"
+F 9 "" H 8750 550 50  0001 L BNN "Notepad"
+F 10 "STM32F103CBT6" H 10050 3824 50  0000 C CNN "Comment"
+	1    9050 2550
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -260,4 +260,73 @@ Wire Wire Line
 Wire Wire Line
 	3000 1400 3100 1400
 Connection ~ 3000 1400
+$Comp
+L lc_RES:0402_4.7KΩ__4701_1% R?
+U 1 1 5DA612EA
+P 5250 2250
+F 0 "R?" V 5204 2320 50  0000 L CNN
+F 1 "0402_4.7KΩ__4701_1%" H 5100 2440 50  0001 L BNN
+F 2 "lc_lib:0402_R" H 5050 2010 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_26643.html" H 5050 2110 50  0001 L BNN
+F 4 "贴片电阻" H 5250 2250 50  0001 C CNN "description"
+F 5 "供应商链接" H 5050 1910 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 5050 1810 50  0001 L BNN "Package"
+F 7 "LC" H 5050 1710 50  0001 L BNN "Supplier"
+F 8 "C25900" H 5050 1610 50  0001 L BNN "SuppliersPartNumber"
+F 9 "" H 5050 1510 50  0001 L BNN "Notepad"
+F 10 "4.7KΩ (4701) ±1%" V 5295 2320 50  0000 L CNN "Comment"
+	1    5250 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L lc_RES:0402_4.7KΩ__4701_1% R?
+U 1 1 5DA62406
+P 5250 2750
+F 0 "R?" V 5204 2820 50  0000 L CNN
+F 1 "0402_4.7KΩ__4701_1%" H 5100 2940 50  0001 L BNN
+F 2 "lc_lib:0402_R" H 5050 2510 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_26643.html" H 5050 2610 50  0001 L BNN
+F 4 "贴片电阻" H 5250 2750 50  0001 C CNN "description"
+F 5 "供应商链接" H 5050 2410 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 5050 2310 50  0001 L BNN "Package"
+F 7 "LC" H 5050 2210 50  0001 L BNN "Supplier"
+F 8 "C25900" H 5050 2110 50  0001 L BNN "SuppliersPartNumber"
+F 9 "" H 5050 2010 50  0001 L BNN "Notepad"
+F 10 "4.7KΩ (4701) ±1%" V 5295 2820 50  0000 L CNN "Comment"
+	1    5250 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4400 2500 5250 2500
+Wire Wire Line
+	5250 2500 5250 2450
+Wire Wire Line
+	5250 2550 5250 2500
+Connection ~ 5250 2500
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5DA6E56B
+P 5250 1950
+F 0 "#PWR?" H 5250 1800 50  0001 C CNN
+F 1 "+3.3V" H 5265 2123 50  0000 C CNN
+F 2 "" H 5250 1950 50  0001 C CNN
+F 3 "" H 5250 1950 50  0001 C CNN
+	1    5250 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DA6E7D0
+P 5250 3050
+F 0 "#PWR?" H 5250 2800 50  0001 C CNN
+F 1 "GND" H 5255 2877 50  0000 C CNN
+F 2 "" H 5250 3050 50  0001 C CNN
+F 3 "" H 5250 3050 50  0001 C CNN
+	1    5250 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 1950 5250 2050
+Wire Wire Line
+	5250 2950 5250 3050
 $EndSCHEMATC

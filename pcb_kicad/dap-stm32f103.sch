@@ -145,7 +145,7 @@ L MCU_ST_STM32F1:STM32F103CBTx U?
 U 1 1 5D9901D4
 P 3800 2700
 F 0 "U?" H 3750 1111 50  0000 C CNN
-F 1 "STM32F103CBTx" H 3750 1020 50  0000 C CNN
+F 1 "STM32F103CBTx" H 3500 1000 50  0000 C CNN
 F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 3200 1300 50  0001 R CNN
 F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00161566.pdf" H 3800 2700 50  0001 C CNN
 	1    3800 2700
@@ -329,4 +329,38 @@ Wire Wire Line
 	5250 1950 5250 2050
 Wire Wire Line
 	5250 2950 5250 3050
+$Comp
+L power:GND #PWR?
+U 1 1 5D9F8DE0
+P 3900 4500
+F 0 "#PWR?" H 3900 4250 50  0001 C CNN
+F 1 "GND" H 3905 4327 50  0000 C CNN
+F 2 "" H 3900 4500 50  0001 C CNN
+F 3 "" H 3900 4500 50  0001 C CNN
+	1    3900 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 4500 3900 4200
+Wire Wire Line
+	3900 4200 3800 4200
+Connection ~ 3900 4200
+Connection ~ 3700 4200
+Wire Wire Line
+	3700 4200 3600 4200
+Connection ~ 3800 4200
+Wire Wire Line
+	3800 4200 3700 4200
+Wire Wire Line
+	3600 1200 3700 1200
+Connection ~ 3600 1200
+Connection ~ 3700 1200
+Wire Wire Line
+	3700 1200 3800 1200
+Connection ~ 3800 1200
+Wire Wire Line
+	3800 1200 3900 1200
+Connection ~ 3900 1200
+Wire Wire Line
+	3900 1200 4000 1200
 $EndSCHEMATC
