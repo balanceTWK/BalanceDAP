@@ -1,1 +1,582 @@
+130003049318010
+Package_QFP
+EQFP-144-1EP_20x20mm_P0.5mm_EP4x4mm
+EQFP, 144 Pin (https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/packaging/04r00482-02.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+EQFP QFP
 0
+154
+145
+Package_QFP
+EQFP-144-1EP_20x20mm_P0.5mm_EP4x4mm_ThermalVias
+EQFP, 144 Pin (https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/packaging/04r00482-02.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+EQFP QFP
+0
+171
+145
+Package_QFP
+EQFP-144-1EP_20x20mm_P0.5mm_EP5x5mm
+EQFP, 144 Pin (https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/packaging/04r00476-02.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+EQFP QFP
+0
+161
+145
+Package_QFP
+EQFP-144-1EP_20x20mm_P0.5mm_EP5x5mm_ThermalVias
+EQFP, 144 Pin (https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/packaging/04r00476-02.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+EQFP QFP
+0
+187
+145
+Package_QFP
+EQFP-144-1EP_20x20mm_P0.5mm_EP6.61x5.615mm
+EQFP, 144 Pin (https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/packaging/04r00485-02.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+EQFP QFP
+0
+165
+145
+Package_QFP
+EQFP-144-1EP_20x20mm_P0.5mm_EP6.61x5.615mm_ThermalVias
+EQFP, 144 Pin (https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/packaging/04r00485-02.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+EQFP QFP
+0
+196
+145
+Package_QFP
+EQFP-144-1EP_20x20mm_P0.5mm_EP7.2x6.35mm
+EQFP, 144 Pin (https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/packaging/04r00487-01.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+EQFP QFP
+0
+175
+145
+Package_QFP
+EQFP-144-1EP_20x20mm_P0.5mm_EP7.2x6.35mm_ThermalVias
+EQFP, 144 Pin (https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/packaging/04r00487-01.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+EQFP QFP
+0
+218
+145
+Package_QFP
+EQFP-144-1EP_20x20mm_P0.5mm_EP8.93x8.7mm
+EQFP, 144 Pin (https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/packaging/04r00479-02.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+EQFP QFP
+0
+194
+145
+Package_QFP
+EQFP-144-1EP_20x20mm_P0.5mm_EP8.93x8.7mm_ThermalVias
+EQFP, 144 Pin (https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/packaging/04r00479-02.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+EQFP QFP
+0
+259
+145
+Package_QFP
+HTQFP-64-1EP_10x10mm_P0.5mm_EP8x8mm
+64-Lead Plastic Thin Quad Flatpack (PT) - 10x10x1 mm Body, 2.00 mm Footprint [HTQFP] thermal pad
+HTQFP-64 Pitch 0.5 
+0
+69
+65
+Package_QFP
+HTQFP-64-1EP_10x10mm_P0.5mm_EP8x8mm_Mask4.4x4.4mm_ThermalVias
+64-Lead Plastic Thin Quad Flatpack (PT) - 10x10x1 mm Body, 2.00 mm Footprint [HTQFP] thermal pad
+HTQFP-64 Pitch 0.5 
+0
+135
+65
+Package_QFP
+LQFP-32_5x5mm_P0.5mm
+LQFP, 32 Pin (https://www.nxp.com/docs/en/package-information/SOT401-1.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+32
+32
+Package_QFP
+LQFP-32_7x7mm_P0.8mm
+LQFP, 32 Pin (https://www.nxp.com/docs/en/package-information/SOT358-1.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+32
+32
+Package_QFP
+LQFP-36_7x7mm_P0.65mm
+LQFP, 36 Pin (https://www.onsemi.com/pub/Collateral/561AV.PDF), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+36
+36
+Package_QFP
+LQFP-44_10x10mm_P0.8mm
+LQFP, 44 Pin (https://www.nxp.com/files-static/shared/doc/package_info/98ASS23225W.pdf?&fsrch=1), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+44
+44
+Package_QFP
+LQFP-48-1EP_7x7mm_P0.5mm_EP3.6x3.6mm
+LQFP, 48 Pin (http://www.analog.com/media/en/technical-documentation/data-sheets/LTC7810.pdf), generated with kicad-footprint-generator ipc_qfp_generator.py
+LQFP QFP
+0
+58
+49
+Package_QFP
+LQFP-48-1EP_7x7mm_P0.5mm_EP3.6x3.6mm_ThermalVias
+LQFP, 48 Pin (http://www.analog.com/media/en/technical-documentation/data-sheets/LTC7810.pdf), generated with kicad-footprint-generator ipc_qfp_generator.py
+LQFP QFP
+0
+75
+49
+Package_QFP
+LQFP-48_7x7mm_P0.5mm
+LQFP, 48 Pin (https://www.analog.com/media/en/technical-documentation/data-sheets/ltc2358-16.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+48
+48
+Package_QFP
+LQFP-52-1EP_10x10mm_P0.65mm_EP4.8x4.8mm
+LQFP, 52 Pin (https://www.onsemi.com/pub/Collateral/848H-01.PDF), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+62
+53
+Package_QFP
+LQFP-52-1EP_10x10mm_P0.65mm_EP4.8x4.8mm_ThermalVias
+LQFP, 52 Pin (https://www.onsemi.com/pub/Collateral/848H-01.PDF), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+95
+53
+Package_QFP
+LQFP-52_10x10mm_P0.65mm
+LQFP, 52 Pin (https://www.nxp.com/docs/en/package-information/98ARL10526D.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+52
+52
+Package_QFP
+LQFP-52_14x14mm_P1mm
+LQFP, 52 Pin (http://www.holtek.com/documents/10179/116711/HT1632Cv170.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+52
+52
+Package_QFP
+LQFP-64-1EP_10x10mm_P0.5mm_EP5x5mm
+LQFP, 64 Pin (https://www.analog.com/media/en/technical-documentation/data-sheets/adv7611.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+90
+65
+Package_QFP
+LQFP-64-1EP_10x10mm_P0.5mm_EP5x5mm_ThermalVias
+LQFP, 64 Pin (https://www.analog.com/media/en/technical-documentation/data-sheets/adv7611.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+107
+65
+Package_QFP
+LQFP-64-1EP_10x10mm_P0.5mm_EP6.5x6.5mm
+LQFP, 64 Pin (https://www.nxp.com/files-static/shared/doc/package_info/98ARH98426A.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+90
+65
+Package_QFP
+LQFP-64-1EP_10x10mm_P0.5mm_EP6.5x6.5mm_ThermalVias
+LQFP, 64 Pin (https://www.nxp.com/files-static/shared/doc/package_info/98ARH98426A.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+127
+65
+Package_QFP
+LQFP-64_7x7mm_P0.4mm
+LQFP, 64 Pin (https://www.nxp.com/docs/en/package-information/SOT414-1.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+64
+64
+Package_QFP
+LQFP-64_10x10mm_P0.5mm
+LQFP, 64 Pin (https://www.analog.com/media/en/technical-documentation/data-sheets/ad7606_7606-6_7606-4.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+64
+64
+Package_QFP
+LQFP-64_14x14mm_P0.8mm
+LQFP, 64 Pin (https://www.nxp.com/docs/en/package-information/SOT791-1.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+64
+64
+Package_QFP
+LQFP-80_10x10mm_P0.4mm
+LQFP, 80 Pin (https://www.renesas.com/eu/en/package-image/pdf/outdrawing/q80.10x10.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+80
+80
+Package_QFP
+LQFP-80_12x12mm_P0.5mm
+LQFP, 80 Pin (https://www.nxp.com/docs/en/package-information/SOT315-1.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+80
+80
+Package_QFP
+LQFP-80_14x14mm_P0.65mm
+LQFP, 80 Pin (https://www.analog.com/media/en/technical-documentation/data-sheets/AD9852.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+80
+80
+Package_QFP
+LQFP-100_14x14mm_P0.5mm
+LQFP, 100 Pin (https://www.nxp.com/docs/en/package-information/SOT407-1.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+100
+100
+Package_QFP
+LQFP-128_14x14mm_P0.4mm
+LQFP, 128 Pin (https://www.renesas.com/eu/en/package-image/pdf/outdrawing/q128.14x14.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+128
+128
+Package_QFP
+LQFP-128_14x20mm_P0.5mm
+LQFP, 128 Pin (https://www.nxp.com/docs/en/package-information/SOT425-1.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+128
+128
+Package_QFP
+LQFP-144_20x20mm_P0.5mm
+LQFP, 144 Pin (http://ww1.microchip.com/downloads/en/PackagingSpec/00000049BQ.pdf#page=425), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+144
+144
+Package_QFP
+LQFP-160_24x24mm_P0.5mm
+LQFP, 160 Pin (https://www.nxp.com/docs/en/package-information/SOT435-1.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+160
+160
+Package_QFP
+LQFP-176_20x20mm_P0.4mm
+LQFP, 176 Pin (https://www.onsemi.com/pub/Collateral/566DB.PDF), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+176
+176
+Package_QFP
+LQFP-176_24x24mm_P0.5mm
+LQFP, 176 Pin (https://www.st.com/resource/en/datasheet/stm32f207vg.pdf#page=163), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+176
+176
+Package_QFP
+LQFP-208_28x28mm_P0.5mm
+LQFP, 208 Pin (https://www.nxp.com/docs/en/package-information/SOT459-1.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+208
+208
+Package_QFP
+LQFP-216_24x24mm_P0.4mm
+LQFP, 216 Pin (https://www.onsemi.com/pub/Collateral/561BE.PDF), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+216
+216
+Package_QFP
+MQFP-44_10x10mm_P0.8mm
+MQFP, 44 Pin (https://www.analog.com/media/en/technical-documentation/data-sheets/ad7722.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+MQFP QFP
+0
+44
+44
+Package_QFP
+PQFP-44_10x10mm_P0.8mm
+44-Lead Plastic Quad Flatpack - 10x10x2.5mm Body (http://www.onsemi.com/pub/Collateral/122BK.PDF)
+PQFP 0.8
+0
+44
+44
+Package_QFP
+PQFP-80_14x20mm_P0.8mm
+PQFP80 14x20 / QIP80E CASE 122BS (see ON Semiconductor 122BS.PDF)
+QFP 0.8
+0
+80
+80
+Package_QFP
+PQFP-100_14x20mm_P0.65mm
+PQFP, 100 Pin (http://www.microsemi.com/index.php?option=com_docman&task=doc_download&gid=131095), generated with kicad-footprint-generator ipc_qfp_generator.py
+PQFP QFP
+0
+100
+100
+Package_QFP
+PQFP-112_20x20mm_P0.65mm
+PQFP, 112 pins, 20mm sq body, 0.65mm pitch (http://cache.freescale.com/files/shared/doc/package_info/98ASS23330W.pdf, http://www.nxp.com/docs/en/application-note/AN4388.pdf)
+PQFP 112
+0
+112
+112
+Package_QFP
+PQFP-132_24x24mm_P0.635mm
+PQFP, 132 pins, 24mm sq body, 0.635mm pitch (https://www.intel.com/content/dam/www/public/us/en/documents/packaging-databooks/packaging-chapter-02-databook.pdf, http://www.nxp.com/docs/en/application-note/AN4388.pdf)
+PQFP 132
+0
+132
+132
+Package_QFP
+PQFP-132_24x24mm_P0.635mm_i386
+PQFP, 132 pins, 24mm sq body, 0.635mm pitch, Intel 386EX (https://www.intel.com/content/dam/www/public/us/en/documents/packaging-databooks/packaging-chapter-02-databook.pdf, http://www.nxp.com/docs/en/application-note/AN4388.pdf)
+PQFP 132 Intel 386EX
+0
+132
+132
+Package_QFP
+PQFP-144_28x28mm_P0.65mm
+PQFP, 144 Pin (http://www.microsemi.com/index.php?option=com_docman&task=doc_download&gid=131095), generated with kicad-footprint-generator ipc_qfp_generator.py
+PQFP QFP
+0
+144
+144
+Package_QFP
+PQFP-160_28x28mm_P0.65mm
+PQFP, 160 Pin (http://www.microsemi.com/index.php?option=com_docman&task=doc_download&gid=131095), generated with kicad-footprint-generator ipc_qfp_generator.py
+PQFP QFP
+0
+160
+160
+Package_QFP
+PQFP-208_28x28mm_P0.5mm
+PQFP, 208 Pin (http://www.microsemi.com/index.php?option=com_docman&task=doc_download&gid=131095), generated with kicad-footprint-generator ipc_qfp_generator.py
+PQFP QFP
+0
+208
+208
+Package_QFP
+PQFP-240_32.1x32.1mm_P0.5mm
+PQFP, 240 Pin (http://www.microsemi.com/index.php?option=com_docman&task=doc_download&gid=131095), generated with kicad-footprint-generator ipc_qfp_generator.py
+PQFP QFP
+0
+240
+240
+Package_QFP
+PQFP-256_28x28mm_P0.4mm
+PQFP256 28x28 / QFP256J CASE 122BX (see ON Semiconductor 122BX.PDF)
+QFP 0.4
+0
+256
+256
+Package_QFP
+TQFP-32_7x7mm_P0.8mm
+32-Lead Plastic Thin Quad Flatpack (PT) - 7x7x1.0 mm Body, 2.00 mm [TQFP] (see Microchip Packaging Specification 00000049BS.pdf)
+QFP 0.8
+0
+32
+32
+Package_QFP
+TQFP-44-1EP_10x10mm_P0.8mm_EP4.5x4.5mm
+44-Lead Plastic Thin Quad Flatpack (MW) - 10x10x1.0 mm Body [TQFP] With 4.5x4.5 mm Exposed Pad (see Microchip Packaging Specification 00000049BS.pdf)
+QFP 0.8
+0
+54
+45
+Package_QFP
+TQFP-44_10x10mm_P0.8mm
+44-Lead Plastic Thin Quad Flatpack (PT) - 10x10x1.0 mm Body [TQFP] (see Microchip Packaging Specification 00000049BS.pdf)
+QFP 0.8
+0
+44
+44
+Package_QFP
+TQFP-48-1EP_7x7mm_P0.5mm_EP3.5x3.5mm
+48-Lead Thin Quad Flatpack (PT) - 7x7x1.0 mm Body [TQFP] With Exposed Pad (see Microchip Packaging Specification 00000049BS.pdf)
+QFP 0.5
+0
+53
+49
+Package_QFP
+TQFP-48-1EP_7x7mm_P0.5mm_EP5x5mm
+TQFP, 48 Pin (https://www.trinamic.com/fileadmin/assets/Products/ICs_Documents/TMC2100_datasheet_Rev1.08.pdf (page 45)), generated with kicad-footprint-generator ipc_qfp_generator.py
+TQFP QFP
+0
+65
+49
+Package_QFP
+TQFP-48-1EP_7x7mm_P0.5mm_EP5x5mm_ThermalVias
+TQFP, 48 Pin (https://www.trinamic.com/fileadmin/assets/Products/ICs_Documents/TMC2100_datasheet_Rev1.08.pdf (page 45)), generated with kicad-footprint-generator ipc_qfp_generator.py
+TQFP QFP
+0
+91
+49
+Package_QFP
+TQFP-48_7x7mm_P0.5mm
+48 LEAD TQFP 7x7mm (see MICREL TQFP7x7-48LD-PL-1.pdf)
+QFP 0.5
+0
+48
+48
+Package_QFP
+TQFP-52-1EP_10x10mm_P0.65mm_EP6.5x6.5mm
+TQFP, 52 Pin (http://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/tqfp_edsv/sv_52_1.pdf), generated with kicad-footprint-generator ipc_qfp_generator.py
+TQFP QFP
+0
+78
+53
+Package_QFP
+TQFP-52-1EP_10x10mm_P0.65mm_EP6.5x6.5mm_ThermalVias
+TQFP, 52 Pin (http://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/tqfp_edsv/sv_52_1.pdf), generated with kicad-footprint-generator ipc_qfp_generator.py
+TQFP QFP
+0
+79
+53
+Package_QFP
+TQFP-64-1EP_10x10mm_P0.5mm_EP8x8mm
+64-Lead Plastic Thin Quad Flatpack (PT) - 10x10x1 mm Body, 2.00 mm Footprint [TQFP] thermal pad
+QFP 0.5 
+0
+90
+65
+Package_QFP
+TQFP-64_7x7mm_P0.4mm
+TQFP64 7x7, 0.4P CASE 932BH (see ON Semiconductor 932BH.PDF)
+QFP 0.4
+0
+64
+64
+Package_QFP
+TQFP-64_10x10mm_P0.5mm
+TQFP, 64 Pin (http://www.microsemi.com/index.php?option=com_docman&task=doc_download&gid=131095), generated with kicad-footprint-generator ipc_qfp_generator.py
+TQFP QFP
+0
+64
+64
+Package_QFP
+TQFP-64_14x14mm_P0.8mm
+64-Lead Plastic Thin Quad Flatpack (PF) - 14x14x1 mm Body, 2.00 mm [TQFP] (see Microchip Packaging Specification 00000049BS.pdf)
+QFP 0.8
+0
+64
+64
+Package_QFP
+TQFP-80-1EP_14x14mm_P0.65mm_EP9.5x9.5mm
+80-Lead Plastic Thin Quad Flatpack (PF) - 14x14mm body, 9.5mm sq thermal pad (http://www.analog.com/media/en/technical-documentation/data-sheets/AD9852.pdf)
+QFP 0.65
+0
+85
+81
+Package_QFP
+TQFP-80_12x12mm_P0.5mm
+80-Lead Plastic Thin Quad Flatpack (PT) - 12x12x1 mm Body, 2.00 mm [TQFP] (see Microchip Packaging Specification 00000049BS.pdf)
+QFP 0.5
+0
+80
+80
+Package_QFP
+TQFP-80_14x14mm_P0.65mm
+80-Lead Plastic Thin Quad Flatpack (PF) - 14x14x1 mm Body, 2.00 mm [TQFP] (see Microchip Packaging Specification 00000049BS.pdf)
+QFP 0.65
+0
+80
+80
+Package_QFP
+TQFP-100-1EP_14x14mm_P0.5mm_EP5x5mm
+TQFP, 100 Pin (https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/tqfp_edsv/sv_100_4.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+TQFP QFP
+0
+117
+101
+Package_QFP
+TQFP-100-1EP_14x14mm_P0.5mm_EP5x5mm_ThermalVias
+TQFP, 100 Pin (https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/tqfp_edsv/sv_100_4.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+TQFP QFP
+0
+143
+101
+Package_QFP
+TQFP-100_12x12mm_P0.4mm
+100-Lead Plastic Thin Quad Flatpack (PT) - 12x12x1 mm Body, 2.00 mm [TQFP] (see Microchip Packaging Specification 00000049BS.pdf)
+QFP 0.4
+0
+100
+100
+Package_QFP
+TQFP-100_14x14mm_P0.5mm
+TQFP, 100 Pin (http://www.microsemi.com/index.php?option=com_docman&task=doc_download&gid=131095), generated with kicad-footprint-generator ipc_qfp_generator.py
+TQFP QFP
+0
+100
+100
+Package_QFP
+TQFP-120_14x14mm_P0.4mm
+TQFP120 14x14 / TQFP120 CASE 932AZ (see ON Semiconductor 932AZ.PDF)
+QFP 0.4
+0
+120
+120
+Package_QFP
+TQFP-128_14x14mm_P0.4mm
+TQFP128 14x14 / TQFP128 CASE 932BB (see ON Semiconductor 932BB.PDF)
+QFP 0.4
+0
+128
+128
+Package_QFP
+TQFP-144_16x16mm_P0.4mm
+144-Lead Plastic Thin Quad Flatpack (PH) - 16x16x1 mm Body, 2.00 mm Footprint [TQFP] (see Microchip Packaging Specification 00000049BS.pdf)
+QFP 0.4
+0
+144
+144
+Package_QFP
+TQFP-144_20x20mm_P0.5mm
+TQFP, 144 Pin (http://www.microsemi.com/index.php?option=com_docman&task=doc_download&gid=131095), generated with kicad-footprint-generator ipc_qfp_generator.py
+TQFP QFP
+0
+144
+144
+Package_QFP
+TQFP-176_24x24mm_P0.5mm
+TQFP, 176 Pin (http://www.microsemi.com/index.php?option=com_docman&task=doc_download&gid=131095), generated with kicad-footprint-generator ipc_qfp_generator.py
+TQFP QFP
+0
+176
+176
+Package_QFP
+VQFP-80_14x14mm_P0.65mm
+VQFP, 80 Pin (http://www.microsemi.com/index.php?option=com_docman&task=doc_download&gid=131095), generated with kicad-footprint-generator ipc_qfp_generator.py
+VQFP QFP
+0
+80
+80
+Package_QFP
+VQFP-100_14x14mm_P0.5mm
+VQFP, 100 Pin (http://www.microsemi.com/index.php?option=com_docman&task=doc_download&gid=131095), generated with kicad-footprint-generator ipc_qfp_generator.py
+VQFP QFP
+0
+100
+100
+Package_QFP
+VQFP-128_14x14mm_P0.4mm
+VQFP, 128 Pin (http://www.microsemi.com/index.php?option=com_docman&task=doc_download&gid=131095), generated with kicad-footprint-generator ipc_qfp_generator.py
+VQFP QFP
+0
+128
+128
+Package_QFP
+VQFP-176_20x20mm_P0.4mm
+VQFP, 176 Pin (http://www.microsemi.com/index.php?option=com_docman&task=doc_download&gid=131095), generated with kicad-footprint-generator ipc_qfp_generator.py
+VQFP QFP
+0
+176
+176
