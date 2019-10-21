@@ -785,7 +785,6 @@ Wire Wire Line
 Connection ~ 4200 6350
 NoConn ~ 4200 6750
 NoConn ~ 4200 6850
-NoConn ~ 3300 7150
 NoConn ~ 4200 5850
 NoConn ~ 4200 5950
 $Comp
@@ -1324,8 +1323,6 @@ F 3 "" H 8800 4750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8800 4750 8850 4750
-Text Label 8400 4850 0    50   ~ 0
-TGT_NRESET
 Text Label 8400 4950 0    50   ~ 0
 TGT_RX
 Text Label 8400 5050 0    50   ~ 0
@@ -1339,8 +1336,6 @@ TGT_NRESET
 NoConn ~ 8850 5550
 NoConn ~ 8850 5650
 Wire Wire Line
-	8400 4850 8850 4850
-Wire Wire Line
 	8400 4950 8850 4950
 Wire Wire Line
 	8400 5050 8850 5050
@@ -1351,4 +1346,8 @@ Wire Wire Line
 Wire Wire Line
 	8850 5450 8400 5450
 NoConn ~ 8850 5250
+NoConn ~ 8850 4850
+Wire Wire Line
+	3300 7150 3600 7150
+Connection ~ 3600 7150
 $EndSCHEMATC
