@@ -1339,4 +1339,12 @@ Wire Wire Line
 	9100 5350 9450 5350
 Wire Wire Line
 	9100 5450 9450 5450
+Text Label 8950 5550 0    50   ~ 0
+TGT_USB_D+
+Text Label 8950 5650 0    50   ~ 0
+TGT_USB_D-
+Wire Wire Line
+	8950 5550 9450 5550
+Wire Wire Line
+	8950 5650 9450 5650
 $EndSCHEMATC
