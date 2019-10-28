@@ -789,7 +789,7 @@ U 1 1 5DB71DB8
 P 9650 2800
 F 0 "J2" H 9730 2792 50  0000 L CNN
 F 1 "Conn_01x10" H 9730 2701 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical" H 9650 2800 50  0001 C CNN
+F 2 "Connector_PinSocket_2.00mm:PinSocket_1x10_P2.00mm_Vertical" H 9650 2800 50  0001 C CNN
 F 3 "~" H 9650 2800 50  0001 C CNN
 	1    9650 2800
 	1    0    0    -1  
@@ -1185,7 +1185,7 @@ U 1 1 5DE9B523
 P 9650 3950
 F 0 "J3" H 9730 3942 50  0000 L CNN
 F 1 "Conn_01x10" H 9730 3851 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical" H 9650 3950 50  0001 C CNN
+F 2 "Connector_PinSocket_2.00mm:PinSocket_1x10_P2.00mm_Vertical" H 9650 3950 50  0001 C CNN
 F 3 "~" H 9650 3950 50  0001 C CNN
 	1    9650 3950
 	1    0    0    -1  
@@ -1196,7 +1196,7 @@ U 1 1 5DEBDC52
 P 9650 5150
 F 0 "J4" H 9730 5142 50  0000 L CNN
 F 1 "Conn_01x10" H 9730 5051 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical" H 9650 5150 50  0001 C CNN
+F 2 "Connector_PinSocket_2.00mm:PinSocket_1x10_P2.00mm_Vertical" H 9650 5150 50  0001 C CNN
 F 3 "~" H 9650 5150 50  0001 C CNN
 	1    9650 5150
 	1    0    0    -1  
