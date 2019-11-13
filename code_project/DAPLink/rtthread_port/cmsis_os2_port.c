@@ -39,12 +39,12 @@
 osStatus_t osKernelInitialize(void)
 {
     // taskCount = 0;
-    // return osOK;
+    return osOK;
 }
 
 osThreadId_t osThreadNew(osThreadFunc_t func, void *argument, const osThreadAttr_t *attr)
 {
-    // OS_TID tid = 0;
+    rt_thread_t tid = 0;
     // //first task will init the rtx
     // if (taskCount == 0) {
     //     os_sys_init_user((void (*)(void))func, MAIN_TASK_PRIORITY, stk_main_task, MAIN_TASK_STACK);
@@ -53,7 +53,7 @@ osThreadId_t osThreadNew(osThreadFunc_t func, void *argument, const osThreadAttr
     //     tid = os_tsk_create((void (*)(void))func, MAIN_TASK_PRIORITY+1);
     // }
     // taskCount++;
-    // return (osThreadId_t) tid;
+    return (osThreadId_t) tid;
 }
 
 uint32_t osThreadFlagsSet(osThreadId_t thread_id, uint32_t flags)
@@ -63,13 +63,13 @@ uint32_t osThreadFlagsSet(osThreadId_t thread_id, uint32_t flags)
     // }else {
     //     os_evt_set(flags, (OS_TID)thread_id);
     // }
-    // return flags;
+    return flags;
 }
 
 osStatus_t osKernelStart(void)
 {
     //first thread already started the kernel
-    // return osOK;
+    return osOK;
 }
 
 // Timer task
@@ -86,16 +86,16 @@ static void rt_timer_task(void)
 
 osTimerId_t osTimerNew(osTimerFunc_t func, osTimerType_t type, void *argument, const osTimerAttr_t *attr)
 {
-    // OS_TID tid = 0;
+    rt_thread_t tid = 0;
     // onlyTimerFunction = func;
-    // return (osTimerId_t)tid;
+    return (osTimerId_t)tid;
 }
 
 osStatus_t osTimerStart(osTimerId_t timer_id, uint32_t ticks)
 {
     // timerTick = ticks;
     // OS_TID tid = os_tsk_create_user(rt_timer_task, TIMER_TASK_30_PRIORITY, (void *)stk_timer_task, TIMER_TASK_STACK);
-    // return osOK;
+    return osOK;
 }
 
 uint32_t osThreadFlagsWait(uint32_t flags, uint32_t options, uint32_t timeout)
@@ -113,28 +113,30 @@ osMutexId_t osMutexNew(const osMutexAttr_t *attr)
 osStatus_t osMutexAcquire(osMutexId_t mutex_id, uint32_t timeout)
 {
     // os_mut_wait((OS_ID)mutex_id, timeout);
-    // return osOK;
+    return osOK;
 }
 
 osStatus_t osMutexRelease(osMutexId_t mutex_id)
 {
     // os_mut_release((OS_ID)mutex_id);
-    // return osOK;
+    return osOK;
 }
 
 osThreadId_t osThreadGetId(void)
 {
     // return (osThreadId_t)os_tsk_self();
+    return rt_thread_self();
 }
 
 osStatus_t osDelay(uint32_t ticks)
 {
     // os_dly_wait(ticks);
-    // return osOK;
+    return osOK;
 }
 
 uint32_t osKernelGetSysTimerCount(void)
 {
     // return os_time_get();
+    return rt_tick_get();
 }
 
