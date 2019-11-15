@@ -141,6 +141,9 @@
 
 /* system packages */
 
+#define PKG_USING_CMSIS
+#define PKG_USING_CMSIS_V500
+#define PKG_CMSIS_RTOS2
 
 /* peripheral libraries and drivers */
 
@@ -155,7 +158,7 @@
 
 /* Hardware Drivers Config */
 
-#define SOC_STM32F103RB
+#define SOC_STM32F103CB
 
 /* Onboard Peripheral Drivers */
 

@@ -354,6 +354,7 @@
           <state>$PROJ_DIR$\libraries\HAL_Drivers\config</state>
           <state>$PROJ_DIR$\rt-thread\include</state>
           <state>$PROJ_DIR$\libraries\HAL_Drivers</state>
+          <state>$PROJ_DIR$\packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src</state>
           <state>$PROJ_DIR$\board\ports</state>
           <state>$PROJ_DIR$\rt-thread\libcpu\arm\common</state>
           <state>$PROJ_DIR$\rt-thread\libcpu\arm\cortex-m3</state>
@@ -367,6 +368,7 @@
           <state>$PROJ_DIR$\board\CubeMX_Config\Inc</state>
           <state>$PROJ_DIR$\libraries\STM32F1xx_HAL\CMSIS\Include</state>
           <state>$PROJ_DIR$\rt-thread\components\libc\compilers\common</state>
+          <state>$PROJ_DIR$\packages\CMSIS-v5.0.0\CMSIS_5\CMSIS\RTOS2\Include</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -1407,6 +1409,7 @@
           <state>$PROJ_DIR$\libraries\HAL_Drivers\config</state>
           <state>$PROJ_DIR$\rt-thread\include</state>
           <state>$PROJ_DIR$\libraries\HAL_Drivers</state>
+          <state>$PROJ_DIR$\packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src</state>
           <state>$PROJ_DIR$\board\ports</state>
           <state>$PROJ_DIR$\rt-thread\libcpu\arm\common</state>
           <state>$PROJ_DIR$\rt-thread\libcpu\arm\cortex-m3</state>
@@ -1420,6 +1423,7 @@
           <state>$PROJ_DIR$\board\CubeMX_Config\Inc</state>
           <state>$PROJ_DIR$\libraries\STM32F1xx_HAL\CMSIS\Include</state>
           <state>$PROJ_DIR$\rt-thread\components\libc\compilers\common</state>
+          <state>$PROJ_DIR$\packages\CMSIS-v5.0.0\CMSIS_5\CMSIS\RTOS2\Include</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -2179,6 +2183,18 @@
     </file>
     <file>
       <name>$PROJ_DIR$\libraries\HAL_Drivers\drv_common.c</name>
+    </file>
+  </group>
+  <group>
+    <name>daplink</name>
+  </group>
+  <group>
+    <name>CMSIS</name>
+    <file>
+      <name>$PROJ_DIR$\packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src\cmsis_rtthread.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src\os_systick.c</name>
     </file>
   </group>
   <group>
