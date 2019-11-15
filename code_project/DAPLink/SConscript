@@ -14,9 +14,6 @@ cppdefines = []
 cwd = GetCurrentDir()
 list = os.listdir(cwd)
 
-src += ['rtthread_port/cmsis_os2_port.c']
-cpppath += [cwd + '/rtthread_port']
-
 group = DefineGroup('daplink', src, depend = [''], CPPPATH = cpppath, CPPDEFINES = cppdefines, LIBS = libs, LIBPATH = libpath)
 
 for d in list:
