@@ -31,7 +31,6 @@
 
 #include "LPC43xx.h"
 #include "fpu_enable.h"
-#include "board.h"
 
 /*----------------------------------------------------------------------------
   Define clocks
@@ -56,9 +55,6 @@ extern uint32_t __Vectors;
  */
 void SystemInit(void)
 {
-    // Set up Cortex_M3 or M4 VTOR register to point to vector table
-    SCB->VTOR = (unsigned int)&__Vectors;
-
     fpuEnable();
 
     // In case we are running from internal flash, we configure the flash
@@ -78,8 +74,6 @@ void SystemInit(void)
         t &= ~(0xF << 12);
         *MAM = t | (FLASH_ACCELERATOR_SPEED << 12);
     }
-
-    board_init();
 }
 
 void SystemReset(void)

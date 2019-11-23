@@ -1,6 +1,6 @@
 /**
  * @file    target_board.h
- * @brief   
+ * @brief
  *
  * DAPLink Interface Firmware
  * Copyright (c) 2018-2019, ARM Limited, All Rights Reserved
@@ -25,34 +25,45 @@
 #include <stdint.h>
 #include "target_config.h"
 #include "target_reset.h"
-#include "virtual_fs.h" 
+#include "virtual_fs.h"
 
-// Flags for board_info 
-enum { 
+//! @brief Board info struct versions.
+enum {
+    kBoardInfoVersion = 0, //!< Current board info version.
+};
+
+//! @brief Flags for board_info
+enum _board_info_flags {
 	kEnablePageErase = 1,               /*!< Enable page programming and sector erase for drag and drop */
     kEnableUnderResetConnect = 1<<1,    /*!< Enable under reset connection when enabling debug mode */
 };
 
-typedef struct __attribute__((__packed__)) board_info { 
-    uint16_t infoVersion;               /*!< Version number of the board */ 
-    uint16_t family_id;                 /*!< Use to select or identify target family from defined target family or custom ones */ 
+/*!
+ * @brief Board customization info.
+ */
+typedef struct __attribute__((__packed__)) board_info {
+    uint16_t info_version;              /*!< Version number of the board info */
+    uint16_t family_id;                 /*!< Use to select or identify target family from defined target family or custom ones */
     char board_id[5];                   /*!< 4-char board ID plus null terminator */
-    uint8_t _padding[3]; 
-    uint32_t flags;                     /*!< Combination of kEnablePageErase and kEnableUnderResetConnect */
-    target_cfg_t *target_cfg;           /*!< Specific chip configuration for the target and enables MSD when non-NULL */ 
-     
-    // fields used by MSD 
+    uint8_t _padding[3];
+    uint32_t flags;                     /*!< Flags from #_board_info_flags */
+    target_cfg_t *target_cfg;           /*!< Specific chip configuration for the target and enables MSD when non-NULL */
+
+    // fields used by MSD
     vfs_filename_t daplink_url_name;    /*!< Customize the URL file name */
     vfs_filename_t daplink_drive_name;  /*!< Customize the MSD DAPLink drive name */
     char daplink_target_url[64];        /*!< Customize the target url in DETAILS.TXT */
-    
-    // some specific board initilization
+
+    uint8_t _padding2[2];
+
+    // Board customization routine function pointers.
     void (*prerun_board_config)(void);                      /*!< Specific board debug/ID related initialization */
     void (*swd_set_target_reset)(uint8_t asserted);         /*!< Boards can customize how to send reset to the target precedence over target family */
     uint8_t (*target_set_state)(TARGET_RESET_STATE state);  /*!< Boards can customize target debug states in target_reset.h precedence over target family */
     uint32_t soft_reset_type;                               /*!< Boards can override software reset type to VECTRESET or SYSRESETREQ */
 } board_info_t;
 
+//! @brief Information describing the board on which DAPLink is running.
 extern const board_info_t g_board_info;
 
 #ifdef __cplusplus

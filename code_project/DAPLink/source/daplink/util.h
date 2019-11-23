@@ -3,7 +3,7 @@
  * @brief   useful things
  *
  * DAPLink Interface Firmware
- * Copyright (c) 2009-2016, ARM Limited, All Rights Reserved
+ * Copyright (c) 2009-2019, ARM Limited, All Rights Reserved
  * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -22,8 +22,12 @@
 #ifndef UTIL_H
 #define UTIL_H
 
-#include "stdbool.h"
-#include "stdint.h"
+#include <stdbool.h>
+#include <stdint.h>
+#include "compiler.h"
+
+//! @brief Round up division to nearest number of words.
+#define WORDS(s) (((s) + sizeof(uint32_t) - 1) / sizeof(uint32_t))
 
 #ifdef __cplusplus
 extern "C" {
@@ -38,9 +42,20 @@ uint32_t util_write_uint32(char *str, uint32_t value);
 uint32_t util_write_uint32_zp(char *str, uint32_t value, uint16_t total_size);
 uint32_t util_write_string(char *str, const char *data);
 
-uint32_t util_div_round_up(uint32_t dividen, uint32_t divisor);
-uint32_t util_div_round_down(uint32_t dividen, uint32_t divisor);
-uint32_t util_div_round(uint32_t dividen, uint32_t divisor);
+__STATIC_INLINE uint32_t util_div_round_up(uint32_t dividen, uint32_t divisor)
+{
+    return (dividen + divisor - 1) / divisor;
+}
+
+__STATIC_INLINE uint32_t util_div_round_down(uint32_t dividen, uint32_t divisor)
+{
+    return dividen / divisor;
+}
+
+__STATIC_INLINE uint32_t util_div_round(uint32_t dividen, uint32_t divisor)
+{
+    return (dividen + divisor / 2) / divisor;
+}
 
 #if !(defined(DAPLINK_NO_ASSERT_FILENAMES) && defined(DAPLINK_BL))
 // With the filename enabled.

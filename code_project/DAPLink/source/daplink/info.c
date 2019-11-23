@@ -23,7 +23,6 @@
 #include "main.h"
 #include "info.h"
 #include "target_config.h"
-#include "board.h"
 #include "read_uid.h"
 #include "util.h"
 #include "crc.h"
@@ -101,22 +100,9 @@ const char *info_get_unique_id_string_descriptor(void)
     return usb_desc_unique_id;
 }
 
-//prevent the compiler to optimize boad and family id
-#if (defined(__ICCARM__))
-#pragma optimize = none
-static void setup_basics(void)
-#elif (defined(__CC_ARM))
-#pragma push
-#pragma O0
-static void setup_basics(void)
-#elif (!defined(__GNUC__))
-/* #pragma GCC push_options */
-/* #pragma GCC optimize("O0") */
-static void __attribute__((optimize("O0"))) setup_basics(void)
-#else
-#error "Unknown compiler"
-#endif
-
+//prevent the compiler to optimize board and family id
+NO_OPTIMIZE_PRE
+static void NO_OPTIMIZE_INLINE setup_basics(void)
 {
     uint8_t i = 0, idx = 0;
     uint16_t family_id = get_family_id();
@@ -150,22 +136,22 @@ static void __attribute__((optimize("O0"))) setup_basics(void)
     string_board_id[4] = 0;
     idx = 0;
     //Family ID
-    string_family_id[idx++] = hex_to_ascii(((family_id >> 12) & 0xF));    
+    string_family_id[idx++] = hex_to_ascii(((family_id >> 12) & 0xF));
     string_family_id[idx++] = hex_to_ascii(((family_id >> 8) & 0xF));
-#if !(defined(DAPLINK_BL)) &&  defined(DRAG_N_DROP_SUPPORT)   //need to change the unique id when the msd is disabled 
+#if !(defined(DAPLINK_BL)) &&  defined(DRAG_N_DROP_SUPPORT)   //need to change the unique id when the msd is disabled
     #if defined(MSC_ENDPOINT)
     if (config_ram_get_disable_msd() == 1 || flash_algo_valid()==0){
-        string_family_id[idx++] = hex_to_ascii((((family_id >> 4) | 0x08) & 0xF)); 
+        string_family_id[idx++] = hex_to_ascii((((family_id >> 4) | 0x08) & 0xF));
     } else {
         string_family_id[idx++] = hex_to_ascii(((family_id >> 4) & 0xF));
     }
     #else //no msd support always have the most significant bit set for family id 2nd byte
-        string_family_id[idx++] = hex_to_ascii((((family_id >> 4) | 0x08) & 0xF)); 
+        string_family_id[idx++] = hex_to_ascii((((family_id >> 4) | 0x08) & 0xF));
     #endif
 #else
     string_family_id[idx++] = hex_to_ascii(((family_id >> 4) & 0xF));
 #endif
-    string_family_id[idx++] = hex_to_ascii(((family_id) & 0xF));    
+    string_family_id[idx++] = hex_to_ascii(((family_id) & 0xF));
     string_family_id[idx++] = 0;
     // Version
     idx = 0;
@@ -175,6 +161,7 @@ static void __attribute__((optimize("O0"))) setup_basics(void)
     string_version[idx++] = '0' + (DAPLINK_VERSION / 1) % 10;
     string_version[idx++] = 0;
 }
+NO_OPTIMIZE_POST
 
 static void setup_unique_id()
 {

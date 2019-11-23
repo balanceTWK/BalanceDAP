@@ -25,52 +25,52 @@
 #include "target_family.h"
 #include "target_board.h"
 
-// Stub families 
-const target_family_descriptor_t g_hw_reset_family = { 
-    .family_id = kStub_HWReset_FamilyID, 
-    .default_reset_type = kHardwareReset, 
-}; 
- 
-const target_family_descriptor_t g_sw_vectreset_family = { 
-    .family_id = kStub_SWVectReset_FamilyID, 
-    .default_reset_type = kSoftwareReset, 
-    .soft_reset_type = VECTRESET, 
-}; 
- 
-const target_family_descriptor_t g_sw_sysresetreq_family = { 
-    .family_id = kStub_SWSysReset_FamilyID, 
-    .default_reset_type = kSoftwareReset, 
-    .soft_reset_type = SYSRESETREQ, 
+// Stub families
+const target_family_descriptor_t g_hw_reset_family = {
+    .family_id = kStub_HWReset_FamilyID,
+    .default_reset_type = kHardwareReset,
+};
+
+const target_family_descriptor_t g_sw_vectreset_family = {
+    .family_id = kStub_SWVectReset_FamilyID,
+    .default_reset_type = kSoftwareReset,
+    .soft_reset_type = VECTRESET,
+};
+
+const target_family_descriptor_t g_sw_sysresetreq_family = {
+    .family_id = kStub_SWSysReset_FamilyID,
+    .default_reset_type = kSoftwareReset,
+    .soft_reset_type = SYSRESETREQ,
 };
 
 //Weakly define family
-__attribute__((weak))
+__WEAK __ALIGNED(4)
 const target_family_descriptor_t g_nxp_kinetis_kseries = {0};
-__attribute__((weak))
+__WEAK __ALIGNED(4)
 const target_family_descriptor_t g_nxp_kinetis_lseries = {0};
-__attribute__((weak))
+__WEAK __ALIGNED(4)
 const target_family_descriptor_t g_nxp_kinetis_k32w_series = {0};
-__attribute__((weak))
+__WEAK __ALIGNED(4)
 const target_family_descriptor_t g_nxp_mimxrt = {0};
-__attribute__((weak))
+__WEAK __ALIGNED(4)
 const target_family_descriptor_t g_nxp_rapid_iot = {0};
-__attribute__((weak))
+__WEAK __ALIGNED(4)
 const target_family_descriptor_t  g_nordic_nrf51  = {0};
-__attribute__((weak))
+__WEAK __ALIGNED(4)
 const target_family_descriptor_t  g_nordic_nrf52  = {0};
-__attribute__((weak))
+__WEAK __ALIGNED(4)
 const target_family_descriptor_t g_realtek_rtl8195am  = {0};
-__attribute__((weak))
+__WEAK __ALIGNED(4)
 const target_family_descriptor_t g_ti_family  = {0};
-__attribute__((weak))
+__WEAK __ALIGNED(4)
 const target_family_descriptor_t g_wiznet_family  = {0};
-__attribute__((weak))
+__WEAK __ALIGNED(4)
 const target_family_descriptor_t g_renesas_family  = {0};
-__attribute__((weak))
+__WEAK __ALIGNED(4)
 const target_family_descriptor_t g_toshiba_tz_family  = {0};
 
-__attribute__((weak))
-const target_family_descriptor_t *g_families[] = { 
+__WEAK __ALIGNED(4)
+const target_family_descriptor_t *g_families[] = {
     &g_hw_reset_family,
     &g_sw_vectreset_family,
     &g_sw_sysresetreq_family,
@@ -86,10 +86,10 @@ const target_family_descriptor_t *g_families[] = {
     &g_wiznet_family,
     &g_renesas_family,
     &g_toshiba_tz_family,
-    0 // list terminator 
-}; 
+    0 // list terminator
+};
 
-__attribute__((weak))
+__WEAK __ALIGNED(4)
 const target_family_descriptor_t *g_target_family = NULL;
 
 
@@ -100,7 +100,7 @@ void init_family(void)
     if (g_target_family != NULL){ //already set
         return;
     }
-    
+
     while (g_families[index]!=0) {
         if (g_families[index]->family_id && (g_families[index]->family_id == family_id)) {
             g_target_family = g_families[index];
@@ -108,7 +108,7 @@ void init_family(void)
         }
         index++;
     }
-    
+
     if(g_target_family == NULL){ //default family
         g_target_family = &g_hw_reset_family;
     }
@@ -124,7 +124,7 @@ uint8_t target_set_state(TARGET_RESET_STATE state)
     if (g_board_info.target_set_state) { //target specific
         g_board_info.target_set_state(state);
     }
-    if (g_target_family) { 
+    if (g_target_family) {
         if (g_target_family->target_set_state) {
             //customize target state
             return g_target_family->target_set_state(state);
@@ -140,7 +140,7 @@ uint8_t target_set_state(TARGET_RESET_STATE state)
                 return swd_set_target_state_sw(state);
             }else {
                 return 1;
-            } 
+            }
         }
     }else{
         return 0;

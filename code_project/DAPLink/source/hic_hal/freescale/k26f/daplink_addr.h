@@ -44,6 +44,8 @@
 #define DAPLINK_ROM_CONFIG_USER_START   0x0003f000
 #define DAPLINK_ROM_CONFIG_USER_SIZE    0x00001000 // 4 kB user config
 
+#define DAPLINK_ROM_APP_START_TEXT_OFFSET 0x410
+
 /* RAM sizes */
 
 #define DAPLINK_RAM_APP_START           0x1fff0000
@@ -78,5 +80,9 @@
 #error "Build must be either bootloader or interface"
 
 #endif
+
+// GCC LD include files
+#define DAPLINK_LD_MEMORY_INC "k26f_ld_memory.inc"
+#define DAPLINK_LD_EARLY_INC "k26f_ld_early.inc"
 
 #endif

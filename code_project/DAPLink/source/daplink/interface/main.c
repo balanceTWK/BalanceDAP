@@ -24,9 +24,9 @@
 #include "stdint.h"
 
 #include "cmsis_os2.h"
+#include "rtx_os.h"
 #include "rl_usb.h"
 #include "main.h"
-#include "board.h"
 #include "gpio.h"
 #include "uart.h"
 #include "tasks.h"
@@ -94,6 +94,23 @@
 
 // Reference to our main task
 osThreadId_t main_task_id;
+static uint32_t s_main_thread_cb[WORDS(sizeof(osRtxThread_t))];
+static uint64_t s_main_task_stack[MAIN_TASK_STACK / sizeof(uint64_t)];
+static const osThreadAttr_t k_main_thread_attr = {
+        .name = "main",
+        .cb_mem = s_main_thread_cb,
+        .cb_size = sizeof(s_main_thread_cb),
+        .stack_mem = s_main_task_stack,
+        .stack_size = sizeof(s_main_task_stack),
+        .priority = MAIN_TASK_PRIORITY,
+    };
+
+static uint32_t s_timer_30ms_cb[WORDS(sizeof(osRtxTimer_t))];
+static const osTimerAttr_t k_timer_30ms_attr = {
+        .name = "30ms",
+        .cb_mem = s_timer_30ms_cb,
+        .cb_size = sizeof(s_timer_30ms_cb),
+    };
 
 // USB busy LED state; when TRUE the LED will flash once using 30mS clock tick
 static uint8_t hid_led_usb_activity = 0;
@@ -203,8 +220,6 @@ void main_task(void * arg)
     config_init();
     // Update bootloader if it is out of date
     bootloader_check_and_update();
-    // Get a reference to this task
-    main_task_id = osThreadGetId();
     // leds
     gpio_init();
     // Turn to LED default settings
@@ -248,7 +263,7 @@ void main_task(void * arg)
     usb_state_count = USB_CONNECT_DELAY;
 
     // Start timer tasks
-    osTimerId_t tmr_id = osTimerNew(timer_task_30mS, osTimerPeriodic, NULL, NULL);
+    osTimerId_t tmr_id = osTimerNew(timer_task_30mS, osTimerPeriodic, NULL, &k_timer_30ms_attr);
     osTimerStart(tmr_id, 3);
     while (1) {
         flags = osThreadFlagsWait(FLAGS_MAIN_RESET             // Put target in reset state
@@ -468,8 +483,15 @@ int main(void)
     // initialize vendor sdk
     sdk_init();
 
-    osKernelInitialize();                 // Initialize CMSIS-RTOS
-    osThreadNew(main_task, NULL, NULL);    // Create application main thread
-    osKernelStart();                      // Start thread execution
+    // Initialize CMSIS-RTOS
+    osKernelInitialize();
+
+    // Create application main thread
+    main_task_id = osThreadNew(main_task, NULL, &k_main_thread_attr);
+
+    // Start thread execution
+    osKernelStart();
+
+    // Should never reach here!
     for (;;) {}
 }

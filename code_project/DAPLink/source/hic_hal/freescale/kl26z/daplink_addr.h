@@ -1,6 +1,6 @@
 /**
  * @file    daplink_addr.h
- * @brief   
+ * @brief
  *
  * DAPLink Interface Firmware
  * Copyright (c) 2009-2016, ARM Limited, All Rights Reserved
@@ -45,6 +45,8 @@
 #define DAPLINK_ROM_CONFIG_USER_START   0x0001FC00
 #define DAPLINK_ROM_CONFIG_USER_SIZE    0x00000400
 
+#define DAPLINK_ROM_APP_START_TEXT_OFFSET 0x410
+
 /* RAM sizes */
 
 #define DAPLINK_RAM_APP_START           0x1FFFF000
@@ -79,5 +81,9 @@
 #error "Build must be either bootloader or interface"
 
 #endif
+
+// GCC LD include files
+#define DAPLINK_LD_MEMORY_INC "kl26z_ld_memory.inc"
+#define DAPLINK_LD_EARLY_INC "kl26z_ld_early.inc"
 
 #endif

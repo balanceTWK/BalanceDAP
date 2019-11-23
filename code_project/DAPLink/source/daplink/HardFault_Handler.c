@@ -24,18 +24,15 @@
 #include "util.h"
 #include "cortex_m.h"
 
-register unsigned int _psp __asm("psp");
-register unsigned int _msp __asm("msp");
-register unsigned int _lr __asm("lr");
-register unsigned int _control __asm("control");
-void HardFault_Handler()
+
+void _fault_handler(uint32_t _lr)
 {
 //hexdump logic on hardfault
     uint32_t stk_ptr;
-    uint32_t * stack = (uint32_t *)_msp;
-    
+    uint32_t * stack = (uint32_t *)__get_MSP();
+
     if ((_lr & 0xF) == 0xD) { //process stack
-        stack = (uint32_t *)_psp;
+        stack = (uint32_t *)__get_PSP();
     }
 
     //calculate stack ptr before fault
@@ -46,15 +43,15 @@ void HardFault_Handler()
     if ((_lr & 0x10) == 0) { //fp
         stk_ptr += 0x48;
     }
-    
+
     config_ram_add_hexdump(_lr);  //EXC_RETURN
-    config_ram_add_hexdump(_psp);
-    config_ram_add_hexdump(_msp);
-    config_ram_add_hexdump(_control);
+    config_ram_add_hexdump(__get_PSP());
+    config_ram_add_hexdump(__get_MSP());
+    config_ram_add_hexdump(__get_CONTROL());
     config_ram_add_hexdump(stk_ptr); //SP
     config_ram_add_hexdump(stack[5]);  //LR
     config_ram_add_hexdump(stack[6]);  //PC
-    config_ram_add_hexdump(stack[7]);  //xPSR 
+    config_ram_add_hexdump(stack[7]);  //xPSR
 
 #ifndef __CORTEX_M
 #error __CORTEX_M not defined!!
@@ -67,7 +64,7 @@ void HardFault_Handler()
     config_ram_add_hexdump(SCB->AFSR);
     config_ram_add_hexdump(SCB->MMFAR);
     config_ram_add_hexdump(SCB->BFAR);
-#endif  
+#endif
 
 #endif //#ifndef __CORTEX_M
 
@@ -75,4 +72,12 @@ void HardFault_Handler()
     SystemReset();
 
     while (1); // Wait for reset
+}
+
+void HardFault_Handler()
+{
+    asm volatile (
+        "    mov    r0, lr\n"
+        "    bl     _fault_handler\n"
+    );
 }
