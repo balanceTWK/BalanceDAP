@@ -202,6 +202,13 @@ menu "On-chip Peripheral Drivers"
         bool "Enable Watchdog Timer"
         select RT_USING_WDT
         default n
+
+    config BSP_USING_USBD
+        bool "Enable OTGFS as USB device"
+		select RT_USING_USB_DEVICE
+		select RT_USB_DEVICE_COMPOSITE
+		select _RT_USB_DEVICE_CDC
+        default n
 	
     source "libraries/HAL_Drivers/Kconfig"
     

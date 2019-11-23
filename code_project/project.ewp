@@ -225,6 +225,24 @@
           <name>CCDefines</name>
           <state />
           <state>STM32F103xB</state>
+          <state>DAPLINK_VERSION=254</state>
+          <state>HID_ENDPOINT</state>
+          <state>MSC_ENDPOINT</state>
+          <state>CDC_ENDPOINT</state>
+          <state>WEBUSB_INTERFACE</state>
+          <state>WINUSB_INTERFACE</state>
+          <state>DRAG_N_DROP_SUPPORT</state>
+          <state>DAPLINK_IF</state>
+          <state>DAPLINK_BUILD_KEY=0x9B939E8F</state>
+          <state>OS_TICK=10000</state>
+          <state>INTERFACE_STM32F103XB</state>
+          <state>USE_HAL_DRIVER</state>
+          <state>STM32F103xB</state>
+          <state>DAPLINK_HIC_ID=0x97969908</state>
+          <state>__packed=__packed</state>
+          <state>DAPLINK_NO_ASSERT_FILENAMES</state>
+          <state>OS_CLOCK=72000000</state>
+          <state>BULK_ENDPOINT</state>
           <state>USE_HAL_DRIVER</state>
         </option>
         <option>
@@ -351,24 +369,37 @@
         <option>
           <name>CCIncludePath2</name>
           <state />
-          <state>$PROJ_DIR$\libraries\HAL_Drivers\config</state>
           <state>$PROJ_DIR$\rt-thread\include</state>
-          <state>$PROJ_DIR$\libraries\HAL_Drivers</state>
-          <state>$PROJ_DIR$\packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src</state>
-          <state>$PROJ_DIR$\board\ports</state>
-          <state>$PROJ_DIR$\rt-thread\libcpu\arm\common</state>
-          <state>$PROJ_DIR$\rt-thread\libcpu\arm\cortex-m3</state>
           <state>$PROJ_DIR$\rt-thread\components\finsh</state>
-          <state>$PROJ_DIR$\.</state>
-          <state>$PROJ_DIR$\applications</state>
+          <state>$PROJ_DIR$\DAPLink\source\daplink\cmsis-dap</state>
+          <state>$PROJ_DIR$\libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Inc</state>
+          <state>$PROJ_DIR$\DAPLink\source\daplink\usb2uart</state>
+          <state>$PROJ_DIR$\packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src</state>
+          <state>$PROJ_DIR$\board\CubeMX_Config\Inc</state>
           <state>$PROJ_DIR$\libraries\STM32F1xx_HAL\CMSIS\Device\ST\STM32F1xx\Include</state>
+          <state>$PROJ_DIR$\libraries\HAL_Drivers\config</state>
+          <state>$PROJ_DIR$\DAPLink\source\usb</state>
+          <state>$PROJ_DIR$\libraries\HAL_Drivers</state>
+          <state>$PROJ_DIR$\DAPLink\source\hic_hal\stm32\stm32f103xb\cmsis</state>
+          <state>$PROJ_DIR$\DAPLink\source\cmsis-core</state>
+          <state>$PROJ_DIR$\.</state>
+          <state>$PROJ_DIR$\DAPLink\source\daplink</state>
           <state>$PROJ_DIR$\rt-thread\components\drivers\include</state>
           <state>$PROJ_DIR$\board</state>
-          <state>$PROJ_DIR$\libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Inc</state>
-          <state>$PROJ_DIR$\board\CubeMX_Config\Inc</state>
-          <state>$PROJ_DIR$\libraries\STM32F1xx_HAL\CMSIS\Include</state>
-          <state>$PROJ_DIR$\rt-thread\components\libc\compilers\common</state>
+          <state>$PROJ_DIR$\DAPLink\source\daplink\interface</state>
           <state>$PROJ_DIR$\packages\CMSIS-v5.0.0\CMSIS_5\CMSIS\RTOS2\Include</state>
+          <state>$PROJ_DIR$\DAPLink\source\target</state>
+          <state>$PROJ_DIR$\board\ports</state>
+          <state>$PROJ_DIR$\rt-thread\libcpu\arm\cortex-m3</state>
+          <state>$PROJ_DIR$\applications</state>
+          <state>$PROJ_DIR$\DAPLink\source\hic_hal</state>
+          <state>$PROJ_DIR$\DAPLink\source\daplink\drag-n-drop</state>
+          <state>$PROJ_DIR$\rt-thread\components\drivers\usb\usbdevice</state>
+          <state>$PROJ_DIR$\libraries\STM32F1xx_HAL\CMSIS\Include</state>
+          <state>$PROJ_DIR$\DAPLink\source\daplink\settings</state>
+          <state>$PROJ_DIR$\DAPLink\source\hic_hal\stm32\stm32f103xb</state>
+          <state>$PROJ_DIR$\rt-thread\libcpu\arm\common</state>
+          <state>$PROJ_DIR$\rt-thread\components\libc\compilers\common</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -1280,6 +1311,24 @@
           <name>CCDefines</name>
           <state />
           <state>STM32F103xB</state>
+          <state>DAPLINK_VERSION=254</state>
+          <state>HID_ENDPOINT</state>
+          <state>MSC_ENDPOINT</state>
+          <state>CDC_ENDPOINT</state>
+          <state>WEBUSB_INTERFACE</state>
+          <state>WINUSB_INTERFACE</state>
+          <state>DRAG_N_DROP_SUPPORT</state>
+          <state>DAPLINK_IF</state>
+          <state>DAPLINK_BUILD_KEY=0x9B939E8F</state>
+          <state>OS_TICK=10000</state>
+          <state>INTERFACE_STM32F103XB</state>
+          <state>USE_HAL_DRIVER</state>
+          <state>STM32F103xB</state>
+          <state>DAPLINK_HIC_ID=0x97969908</state>
+          <state>__packed=__packed</state>
+          <state>DAPLINK_NO_ASSERT_FILENAMES</state>
+          <state>OS_CLOCK=72000000</state>
+          <state>BULK_ENDPOINT</state>
           <state>USE_HAL_DRIVER</state>
         </option>
         <option>
@@ -1406,24 +1455,37 @@
         <option>
           <name>CCIncludePath2</name>
           <state />
-          <state>$PROJ_DIR$\libraries\HAL_Drivers\config</state>
           <state>$PROJ_DIR$\rt-thread\include</state>
-          <state>$PROJ_DIR$\libraries\HAL_Drivers</state>
-          <state>$PROJ_DIR$\packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src</state>
-          <state>$PROJ_DIR$\board\ports</state>
-          <state>$PROJ_DIR$\rt-thread\libcpu\arm\common</state>
-          <state>$PROJ_DIR$\rt-thread\libcpu\arm\cortex-m3</state>
           <state>$PROJ_DIR$\rt-thread\components\finsh</state>
-          <state>$PROJ_DIR$\.</state>
-          <state>$PROJ_DIR$\applications</state>
+          <state>$PROJ_DIR$\DAPLink\source\daplink\cmsis-dap</state>
+          <state>$PROJ_DIR$\libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Inc</state>
+          <state>$PROJ_DIR$\DAPLink\source\daplink\usb2uart</state>
+          <state>$PROJ_DIR$\packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src</state>
+          <state>$PROJ_DIR$\board\CubeMX_Config\Inc</state>
           <state>$PROJ_DIR$\libraries\STM32F1xx_HAL\CMSIS\Device\ST\STM32F1xx\Include</state>
+          <state>$PROJ_DIR$\libraries\HAL_Drivers\config</state>
+          <state>$PROJ_DIR$\DAPLink\source\usb</state>
+          <state>$PROJ_DIR$\libraries\HAL_Drivers</state>
+          <state>$PROJ_DIR$\DAPLink\source\hic_hal\stm32\stm32f103xb\cmsis</state>
+          <state>$PROJ_DIR$\DAPLink\source\cmsis-core</state>
+          <state>$PROJ_DIR$\.</state>
+          <state>$PROJ_DIR$\DAPLink\source\daplink</state>
           <state>$PROJ_DIR$\rt-thread\components\drivers\include</state>
           <state>$PROJ_DIR$\board</state>
-          <state>$PROJ_DIR$\libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Inc</state>
-          <state>$PROJ_DIR$\board\CubeMX_Config\Inc</state>
-          <state>$PROJ_DIR$\libraries\STM32F1xx_HAL\CMSIS\Include</state>
-          <state>$PROJ_DIR$\rt-thread\components\libc\compilers\common</state>
+          <state>$PROJ_DIR$\DAPLink\source\daplink\interface</state>
           <state>$PROJ_DIR$\packages\CMSIS-v5.0.0\CMSIS_5\CMSIS\RTOS2\Include</state>
+          <state>$PROJ_DIR$\DAPLink\source\target</state>
+          <state>$PROJ_DIR$\board\ports</state>
+          <state>$PROJ_DIR$\rt-thread\libcpu\arm\cortex-m3</state>
+          <state>$PROJ_DIR$\applications</state>
+          <state>$PROJ_DIR$\DAPLink\source\hic_hal</state>
+          <state>$PROJ_DIR$\DAPLink\source\daplink\drag-n-drop</state>
+          <state>$PROJ_DIR$\rt-thread\components\drivers\usb\usbdevice</state>
+          <state>$PROJ_DIR$\libraries\STM32F1xx_HAL\CMSIS\Include</state>
+          <state>$PROJ_DIR$\DAPLink\source\daplink\settings</state>
+          <state>$PROJ_DIR$\DAPLink\source\hic_hal\stm32\stm32f103xb</state>
+          <state>$PROJ_DIR$\rt-thread\libcpu\arm\common</state>
+          <state>$PROJ_DIR$\rt-thread\components\libc\compilers\common</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -2182,6 +2244,9 @@
       <name>$PROJ_DIR$\libraries\HAL_Drivers\drv_usart.c</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\libraries\HAL_Drivers\drv_usbd.c</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\libraries\HAL_Drivers\drv_common.c</name>
     </file>
   </group>
@@ -2246,6 +2311,18 @@
     </file>
   </group>
   <group>
+    <name>rt_usbd</name>
+    <file>
+      <name>$PROJ_DIR$\rt-thread\components\drivers\usb\usbdevice\core\core.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\rt-thread\components\drivers\usb\usbdevice\core\usbdevice.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\rt-thread\components\drivers\usb\usbdevice\class\cdc_vcom.c</name>
+    </file>
+  </group>
+  <group>
     <name>finsh</name>
     <file>
       <name>$PROJ_DIR$\rt-thread\components\finsh\shell.c</name>
@@ -2306,6 +2383,18 @@
     </file>
     <file>
       <name>$PROJ_DIR$\libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_usart.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd_ex.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_usb.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_hcd.c</name>
     </file>
   </group>
 </project>
