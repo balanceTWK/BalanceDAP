@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:dap-stm32f103-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -56,24 +55,6 @@ F 3 "" H 2500 2100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2500 2100 2600 2100
-$Comp
-L lc_RES:0402_100KΩ__1003_1% R5
-U 1 1 5D9EFCAC
-P 3000 1200
-F 0 "R5" V 2954 1270 50  0000 L CNN
-F 1 "0402_100KΩ__1003_1%" H 2850 1390 50  0001 L BNN
-F 2 "lc_lib:0402_R" H 2800 960 50  0001 L BNN
-F 3 "http://www.szlcsc.com/product/details_26484.html" H 2800 1060 50  0001 L BNN
-F 4 "贴片电阻" H 3000 1200 50  0001 C CNN "description"
-F 5 "供应商链接" H 2800 860 50  0001 L BNN "ComponentLink1Description"
-F 6 "0402" H 2800 760 50  0001 L BNN "Package"
-F 7 "LC" H 2800 660 50  0001 L BNN "Supplier"
-F 8 "C25741" H 2800 560 50  0001 L BNN "SuppliersPartNumber"
-F 9 "" H 2800 460 50  0001 L BNN "Notepad"
-F 10 "100KΩ (1003) ±1%" H 2450 1100 50  0000 L CNN "Comment"
-	1    3000 1200
-	0    1    1    0   
-$EndComp
 $Comp
 L power:+3.3V #PWR012
 U 1 1 5D9F2530
@@ -158,9 +139,6 @@ F 10 "100nF (104) 10% 16V" V 2100 1400 50  0000 L CNN "Comment"
 	1    1900 1400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2400 1400 3000 1400
-Connection ~ 3000 1400
 $Comp
 L power:GND #PWR016
 U 1 1 5D9F8DE0
@@ -190,112 +168,6 @@ F 10 "100KΩ (1003) ±1%" H 2600 1500 50  0000 C CNN "Comment"
 	1    2750 1600
 	1    0    0    -1  
 $EndComp
-$Comp
-L lc_RES:0402_33Ω__33R0_1% R7
-U 1 1 5DA9F59C
-P 5850 3600
-F 0 "R7" H 5600 3650 50  0000 C CNN
-F 1 "0402_33Ω__33R0_1%" H 5700 3790 50  0001 L BNN
-F 2 "lc_lib:0402_R" H 5650 3360 50  0001 L BNN
-F 3 "http://www.szlcsc.com/product/details_25848.html" H 5650 3460 50  0001 L BNN
-F 4 "贴片电阻" H 5850 3600 50  0001 C CNN "description"
-F 5 "供应商链接" H 5650 3260 50  0001 L BNN "ComponentLink1Description"
-F 6 "0402" H 5650 3160 50  0001 L BNN "Package"
-F 7 "LC" H 5650 3060 50  0001 L BNN "Supplier"
-F 8 "C25105" H 5650 2960 50  0001 L BNN "SuppliersPartNumber"
-F 9 "" H 5650 2860 50  0001 L BNN "Notepad"
-F 10 "33Ω (33R0) ±1%" H 5850 3716 50  0000 C CNN "Comment"
-	1    5850 3600
-	1    0    0    -1  
-$EndComp
-$Comp
-L lc_RES:0402_33Ω__33R0_1% R8
-U 1 1 5DAA09EB
-P 5850 3700
-F 0 "R8" H 5600 3750 50  0000 C CNN
-F 1 "0402_33Ω__33R0_1%" H 5700 3890 50  0001 L BNN
-F 2 "lc_lib:0402_R" H 5650 3460 50  0001 L BNN
-F 3 "http://www.szlcsc.com/product/details_25848.html" H 5650 3560 50  0001 L BNN
-F 4 "贴片电阻" H 5850 3700 50  0001 C CNN "description"
-F 5 "供应商链接" H 5650 3360 50  0001 L BNN "ComponentLink1Description"
-F 6 "0402" H 5650 3260 50  0001 L BNN "Package"
-F 7 "LC" H 5650 3160 50  0001 L BNN "Supplier"
-F 8 "C25105" H 5650 3060 50  0001 L BNN "SuppliersPartNumber"
-F 9 "" H 5650 2960 50  0001 L BNN "Notepad"
-F 10 "33Ω (33R0) ±1%" H 5850 3600 50  0000 C CNN "Comment"
-	1    5850 3700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5650 3700 5450 3700
-$Comp
-L lc_Cap:0402_18pF__180_5%_50V C9
-U 1 1 5DAA9187
-P 5450 3650
-F 0 "C9" V 5750 3550 50  0000 L CNN
-F 1 "0402_18pF__180_5%_50V" H 5499 3880 50  0001 L BNN
-F 2 "lc_lib:0402_C" H 5449 3370 50  0001 L BNN
-F 3 "http://www.szlcsc.com/product/details_1901.html" H 5449 3470 50  0001 L BNN
-F 4 "贴片电容" H 5450 3650 50  0001 C CNN "description"
-F 5 "供应商链接" H 5449 3270 50  0001 L BNN "ComponentLink1Description"
-F 6 "0402" H 5449 3170 50  0001 L BNN "Package"
-F 7 "LC" H 5449 3070 50  0001 L BNN "Supplier"
-F 8 "C1549" H 5449 2970 50  0001 L BNN "SuppliersPartNumber"
-F 9 "" H 5449 2870 50  0001 L BNN "Notepad"
-F 10 "18pF (180) 5% 50V" H 5850 3600 50  0000 L CNN "Comment"
-	1    5450 3650
-	0    1    1    0   
-$EndComp
-$Comp
-L lc_Cap:0402_18pF__180_5%_50V C7
-U 1 1 5DAAB73B
-P 5250 3650
-F 0 "C7" V 5550 3550 50  0000 L CNN
-F 1 "0402_18pF__180_5%_50V" H 5299 3880 50  0001 L BNN
-F 2 "lc_lib:0402_C" H 5249 3370 50  0001 L BNN
-F 3 "http://www.szlcsc.com/product/details_1901.html" H 5249 3470 50  0001 L BNN
-F 4 "贴片电容" H 5250 3650 50  0001 C CNN "description"
-F 5 "供应商链接" H 5249 3270 50  0001 L BNN "ComponentLink1Description"
-F 6 "0402" H 5249 3170 50  0001 L BNN "Package"
-F 7 "LC" H 5249 3070 50  0001 L BNN "Supplier"
-F 8 "C1549" H 5249 2970 50  0001 L BNN "SuppliersPartNumber"
-F 9 "" H 5249 2870 50  0001 L BNN "Notepad"
-F 10 "18pF (180) 5% 50V" H 5650 3600 50  0000 L CNN "Comment"
-	1    5250 3650
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR018
-U 1 1 5DAAF684
-P 5450 4800
-F 0 "#PWR018" H 5450 4550 50  0001 C CNN
-F 1 "GND" H 5455 4627 50  0000 C CNN
-F 2 "" H 5450 4800 50  0001 C CNN
-F 3 "" H 5450 4800 50  0001 C CNN
-	1    5450 4800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5250 4150 5450 4150
-Wire Wire Line
-	5450 4150 5450 4800
-Connection ~ 5450 4150
-Wire Wire Line
-	5250 3850 5250 3600
-Connection ~ 5250 3600
-Wire Wire Line
-	5250 3600 5650 3600
-Wire Wire Line
-	5450 3850 5450 3700
-Connection ~ 5450 3700
-Text Label 6200 3600 0    50   ~ 0
-TGT_USB_D+
-Text Label 6200 3700 0    50   ~ 0
-TGT_USB_D-
-Wire Wire Line
-	6050 3600 6200 3600
-Wire Wire Line
-	6050 3700 6200 3700
 $Comp
 L power:+3.3V #PWR04
 U 1 1 5DA9E4DD
@@ -689,12 +561,6 @@ Wire Wire Line
 Wire Wire Line
 	4400 3800 4500 3800
 Wire Wire Line
-	5450 3700 4400 3700
-Wire Wire Line
-	4400 3600 5250 3600
-Wire Wire Line
-	3000 1400 3100 1400
-Wire Wire Line
 	3100 1600 2950 1600
 Wire Wire Line
 	1800 2900 1800 3000
@@ -790,17 +656,6 @@ Wire Wire Line
 	2900 3400 3100 3400
 Wire Wire Line
 	4400 2600 4500 2600
-$Comp
-L Connector_Generic:Conn_01x10 J3
-U 1 1 5DBA4E10
-P 9600 2600
-F 0 "J3" H 9680 2592 50  0000 L CNN
-F 1 "Conn_01x10" H 9680 2501 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical" H 9600 2600 50  0001 C CNN
-F 3 "~" H 9600 2600 50  0001 C CNN
-	1    9600 2600
-	1    0    0    -1  
-$EndComp
 Text Label 2900 3100 0    50   ~ 0
 PB6
 Text Label 2900 3200 0    50   ~ 0
@@ -1103,41 +958,24 @@ Connection ~ 5250 5650
 Wire Wire Line
 	5250 6050 5800 6050
 Connection ~ 5250 6050
-$Comp
-L Connector:USB_C_Receptacle_USB2.0 J1
-U 1 1 5DF2C981
-P 2000 6600
-F 0 "J1" H 2107 7467 50  0000 C CNN
-F 1 "USB_C_Receptacle_USB2.0" H 2107 7376 50  0000 C CNN
-F 2 "Connector_USB:USB_C_Receptacle_Palconn_UTC16-G" H 2150 6600 50  0001 C CNN
-F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 2150 6600 50  0001 C CNN
-	1    2000 6600
-	1    0    0    -1  
-$EndComp
-Text Label 2700 6500 0    50   ~ 0
+Text Label 3150 6600 0    50   ~ 0
 TGT_USB_D-
-Text Label 2700 6700 0    50   ~ 0
+Text Label 3150 6700 0    50   ~ 0
 TGT_USB_D+
-Wire Wire Line
-	2600 6500 2700 6500
-Wire Wire Line
-	2600 6600 2600 6500
-Connection ~ 2600 6500
 Wire Wire Line
 	2600 6800 2600 6700
 Wire Wire Line
-	2600 6700 2700 6700
-Connection ~ 2600 6700
+	2600 6700 2950 6700
 $Comp
 L power:+5V #PWR011
 U 1 1 5DFA717B
-P 2700 6000
-F 0 "#PWR011" H 2700 5850 50  0001 C CNN
-F 1 "+5V" V 2715 6128 50  0000 L CNN
-F 2 "" H 2700 6000 50  0001 C CNN
-F 3 "" H 2700 6000 50  0001 C CNN
-	1    2700 6000
-	0    1    1    0   
+P 2700 5900
+F 0 "#PWR011" H 2700 5750 50  0001 C CNN
+F 1 "+5V" V 2715 6028 50  0000 L CNN
+F 2 "" H 2700 5900 50  0001 C CNN
+F 3 "" H 2700 5900 50  0001 C CNN
+	1    2700 5900
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	2600 6000 2700 6000
@@ -1154,29 +992,18 @@ F 3 "" H 2000 7600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2000 7600 2000 7500
-$Comp
-L Connector_Generic:Conn_01x02 J4
-U 1 1 5E07B922
-P 9600 3400
-F 0 "J4" H 9680 3392 50  0000 L CNN
-F 1 "Conn_01x02" H 9680 3301 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9600 3400 50  0001 C CNN
-F 3 "~" H 9600 3400 50  0001 C CNN
-	1    9600 3400
-	1    0    0    -1  
-$EndComp
 Text Label 4500 3400 0    50   ~ 0
 IF_UART_TX
 Text Label 4500 3500 0    50   ~ 0
 IF_UART_RX
-Text Label 9050 3400 0    50   ~ 0
+Text Label 7450 1500 0    50   ~ 0
 IF_UART_RX
-Text Label 9050 3500 0    50   ~ 0
+Text Label 7450 1600 0    50   ~ 0
 IF_UART_TX
 Wire Wire Line
-	9050 3400 9400 3400
+	7450 1500 7800 1500
 Wire Wire Line
-	9050 3500 9400 3500
+	7450 1600 7800 1600
 Text Label 4500 2500 0    50   ~ 0
 PA0
 Wire Wire Line
@@ -1203,15 +1030,10 @@ Wire Wire Line
 	8750 1300 9300 1300
 Text Label 8750 1300 0    50   ~ 0
 PB10
-Wire Wire Line
-	8750 2200 9400 2200
-NoConn ~ 2600 6200
-NoConn ~ 2600 6300
 NoConn ~ 2600 7100
 NoConn ~ 2600 7200
 Wire Wire Line
 	1700 7500 2000 7500
-Connection ~ 2000 7500
 $Comp
 L Device:LED_RCBG D1
 U 1 1 5DC1997D
@@ -1351,12 +1173,8 @@ Wire Wire Line
 Wire Wire Line
 	9600 4100 9700 4100
 Text Label 9850 4600 0    50   ~ 0
-PB7
-Text Label 9850 5000 0    50   ~ 0
-PB8
-Text Label 9850 4800 0    50   ~ 0
 PB9
-Text Label 8750 2200 0    50   ~ 0
+Text Label 2950 7200 1    50   ~ 0
 PB6
 Text Label 8750 2300 0    50   ~ 0
 PC14
@@ -1377,48 +1195,272 @@ PA1
 Text Label 8750 3100 0    50   ~ 0
 PB11
 $Comp
-L Connector_Generic:Conn_01x04 IF_SWD1
-U 1 1 5DC61F35
-P 7900 1050
-F 0 "IF_SWD1" H 7980 996 50  0000 L CNN
-F 1 "Conn_01x04" H 7980 951 50  0001 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 7900 1050 50  0001 C CNN
-F 3 "~" H 7900 1050 50  0001 C CNN
-	1    7900 1050
+L lc_RES:0402_1.5KΩ__1501_1% R13
+U 1 1 5DE66BF6
+P 2950 6900
+F 0 "R13" V 2904 6970 50  0000 L CNN
+F 1 "0402_1.5KΩ__1501_1%" H 2800 7090 50  0001 L BNN
+F 2 "lc_lib:0402_R" H 2750 6660 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_26610.html" H 2750 6760 50  0001 L BNN
+F 4 "贴片电阻" H 2950 6900 50  0001 C CNN "description"
+F 5 "供应商链接" H 2750 6560 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 2750 6460 50  0001 L BNN "Package"
+F 7 "LC" H 2750 6360 50  0001 L BNN "Supplier"
+F 8 "C25867" H 2750 6260 50  0001 L BNN "SuppliersPartNumber"
+F 9 "" H 2750 6160 50  0001 L BNN "Notepad"
+F 10 "1.5KΩ (1501) ±1%" V 2995 6970 50  0000 L CNN "Comment"
+	1    2950 6900
+	0    1    1    0   
+$EndComp
+$Comp
+L lc_RES:0402_22Ω__22R0_1% R15
+U 1 1 5DE3EED4
+P 5350 3700
+F 0 "R15" H 5750 3600 50  0000 C CNN
+F 1 "0402_22Ω__22R0_1%" H 5200 3890 50  0001 L BNN
+F 2 "lc_lib:0402_R" H 5150 3460 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_25835.html" H 5150 3560 50  0001 L BNN
+F 4 "贴片电阻" H 5350 3700 50  0001 C CNN "description"
+F 5 "供应商链接" H 5150 3360 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 5150 3260 50  0001 L BNN "Package"
+F 7 "LC" H 5150 3160 50  0001 L BNN "Supplier"
+F 8 "C25092" H 5150 3060 50  0001 L BNN "SuppliersPartNumber"
+F 9 "" H 5150 2960 50  0001 L BNN "Notepad"
+F 10 "22Ω (22R0) ±1%" H 5350 3600 50  0000 C CNN "Comment"
+	1    5350 3700
 	1    0    0    -1  
 $EndComp
-Text Label 7400 1250 0    50   ~ 0
-IF_SWCLK
 $Comp
-L power:GND #PWR0101
-U 1 1 5DC63E47
-P 7400 1150
-F 0 "#PWR0101" H 7400 900 50  0001 C CNN
-F 1 "GND" V 7405 1022 50  0000 R CNN
-F 2 "" H 7400 1150 50  0001 C CNN
-F 3 "" H 7400 1150 50  0001 C CNN
-	1    7400 1150
+L lc_RES:0402_22Ω__22R0_1% R14
+U 1 1 5DE3DF05
+P 5350 3600
+F 0 "R14" H 5750 3700 50  0000 C CNN
+F 1 "0402_22Ω__22R0_1%" H 5200 3790 50  0001 L BNN
+F 2 "lc_lib:0402_R" H 5150 3360 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_25835.html" H 5150 3460 50  0001 L BNN
+F 4 "贴片电阻" H 5350 3600 50  0001 C CNN "description"
+F 5 "供应商链接" H 5150 3260 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 5150 3160 50  0001 L BNN "Package"
+F 7 "LC" H 5150 3060 50  0001 L BNN "Supplier"
+F 8 "C25092" H 5150 2960 50  0001 L BNN "SuppliersPartNumber"
+F 9 "" H 5150 2860 50  0001 L BNN "Notepad"
+F 10 "22Ω (22R0) ±1%" H 5350 3700 50  0000 C CNN "Comment"
+	1    5350 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 3700 5750 3700
+Wire Wire Line
+	5550 3600 5750 3600
+Text Label 5750 3600 0    50   ~ 0
+TGT_USB_D-
+Text Label 5750 3700 0    50   ~ 0
+TGT_USB_D+
+Wire Wire Line
+	4400 3600 5150 3600
+Connection ~ 2950 6700
+Wire Wire Line
+	2950 6700 3150 6700
+Wire Wire Line
+	4400 3700 5150 3700
+$Comp
+L power:+3.3V #PWR018
+U 1 1 5DF3A86F
+P 3450 7200
+F 0 "#PWR018" H 3450 7050 50  0001 C CNN
+F 1 "+3.3V" V 3465 7328 50  0000 L CNN
+F 2 "" H 3450 7200 50  0001 C CNN
+F 3 "" H 3450 7200 50  0001 C CNN
+	1    3450 7200
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	7400 1250 7700 1250
-Text Label 7400 1050 0    50   ~ 0
-IF_SWDIO
+	2950 7100 2950 7200
 $Comp
-L power:+3.3V #PWR0102
-U 1 1 5DC80FEE
-P 7400 950
-F 0 "#PWR0102" H 7400 800 50  0001 C CNN
-F 1 "+3.3V" H 7415 1123 50  0000 C CNN
-F 2 "" H 7400 950 50  0001 C CNN
-F 3 "" H 7400 950 50  0001 C CNN
-	1    7400 950 
+L lc_RES:0402_5.1KΩ__5101_1% R7
+U 1 1 5DF4E3B5
+P 2950 6200
+F 0 "R7" H 2900 6200 50  0000 C CNN
+F 1 "0402_5.1KΩ__5101_1%" H 2800 6390 50  0001 L BNN
+F 2 "lc_lib:0402_R" H 2750 5960 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_26648.html" H 2750 6060 50  0001 L BNN
+F 4 "贴片电阻" H 2950 6200 50  0001 C CNN "description"
+F 5 "供应商链接" H 2750 5860 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 2750 5760 50  0001 L BNN "Package"
+F 7 "LC" H 2750 5660 50  0001 L BNN "Supplier"
+F 8 "C25905" H 2750 5560 50  0001 L BNN "SuppliersPartNumber"
+F 9 "" H 2750 5460 50  0001 L BNN "Notepad"
+F 10 "5.1KΩ (5101) ±1%" H 3050 6300 50  0000 C CNN "Comment"
+	1    2950 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L lc_RES:0402_5.1KΩ__5101_1% R8
+U 1 1 5DF4EF8C
+P 2950 6300
+F 0 "R8" H 2900 6300 50  0000 C CNN
+F 1 "0402_5.1KΩ__5101_1%" H 2800 6490 50  0001 L BNN
+F 2 "lc_lib:0402_R" H 2750 6060 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_26648.html" H 2750 6160 50  0001 L BNN
+F 4 "贴片电阻" H 2950 6300 50  0001 C CNN "description"
+F 5 "供应商链接" H 2750 5960 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 2750 5860 50  0001 L BNN "Package"
+F 7 "LC" H 2750 5760 50  0001 L BNN "Supplier"
+F 8 "C25905" H 2750 5660 50  0001 L BNN "SuppliersPartNumber"
+F 9 "" H 2750 5560 50  0001 L BNN "Notepad"
+F 10 "5.1KΩ (5101) ±1%" H 3050 6200 50  0000 C CNN "Comment"
+	1    2950 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 5900 2700 6000
+Wire Wire Line
+	2600 6200 2750 6200
+Wire Wire Line
+	2600 6300 2750 6300
+$Comp
+L power:GND #PWR023
+U 1 1 5DF6F09D
+P 3250 6250
+F 0 "#PWR023" H 3250 6000 50  0001 C CNN
+F 1 "GND" V 3255 6122 50  0000 R CNN
+F 2 "" H 3250 6250 50  0001 C CNN
+F 3 "" H 3250 6250 50  0001 C CNN
+	1    3250 6250
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	7400 950  7700 950 
+	3150 6200 3150 6250
 Wire Wire Line
-	7400 1050 7700 1050
+	3150 6250 3250 6250
+Connection ~ 3150 6250
 Wire Wire Line
-	7400 1150 7700 1150
+	3150 6250 3150 6300
+Connection ~ 2600 6700
+Connection ~ 2000 7500
+$Comp
+L Connector:USB_C_Receptacle_USB2.0 J1
+U 1 1 5DF2C981
+P 2000 6600
+F 0 "J1" H 2107 7467 50  0000 C CNN
+F 1 "USB_C_Receptacle_USB2.0" H 2107 7376 50  0000 C CNN
+F 2 "Connector_USB:USB_C_Receptacle_Palconn_UTC16-G" H 2150 6600 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 2150 6600 50  0001 C CNN
+	1    2000 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 6500 2600 6600
+Wire Wire Line
+	2600 6600 3150 6600
+Connection ~ 2600 6600
+$Comp
+L Connector_Generic:Conn_01x09 J3
+U 1 1 5E032A64
+P 9600 2700
+F 0 "J3" H 9680 2742 50  0000 L CNN
+F 1 "Conn_01x09" H 9680 2651 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical" H 9600 2700 50  0001 C CNN
+F 3 "~" H 9600 2700 50  0001 C CNN
+	1    9600 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L lc_RES:0402_0Ω__0R0_1% R16
+U 1 1 5E049D4E
+P 3200 7200
+F 0 "R16" H 3200 7200 50  0000 C CNN
+F 1 "0402_0Ω__0R0_1%" H 3050 7390 50  0001 L BNN
+F 2 "lc_lib:0402_R" H 3000 6960 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_17853.html" H 3000 7060 50  0001 L BNN
+F 4 "贴片电阻" H 3200 7200 50  0001 C CNN "description"
+F 5 "供应商链接" H 3000 6860 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 3000 6760 50  0001 L BNN "Package"
+F 7 "LC" H 3000 6660 50  0001 L BNN "Supplier"
+F 8 "C17168" H 3000 6560 50  0001 L BNN "SuppliersPartNumber"
+F 9 "" H 3000 6460 50  0001 L BNN "Notepad"
+F 10 "0Ω (0R0) ±1%" H 3200 7050 50  0000 C CNN "Comment"
+	1    3200 7200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 7200 3000 7200
+Wire Wire Line
+	3400 7200 3450 7200
+Text Label 4500 3700 0    50   ~ 0
+MCU_USB_D+
+Text Label 4500 3600 0    50   ~ 0
+MCU_USB_D-
+$Comp
+L Connector_Generic:Conn_01x06 J4
+U 1 1 5E13928B
+P 8000 1300
+F 0 "J4" H 8080 1292 50  0000 L CNN
+F 1 "Conn_01x06" H 8080 1201 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 8000 1300 50  0001 C CNN
+F 3 "~" H 8000 1300 50  0001 C CNN
+	1    8000 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 1300 7800 1300
+Wire Wire Line
+	7500 1200 7800 1200
+Wire Wire Line
+	7500 1100 7800 1100
+$Comp
+L power:+3.3V #PWR0102
+U 1 1 5DC80FEE
+P 7500 1100
+F 0 "#PWR0102" H 7500 950 50  0001 C CNN
+F 1 "+3.3V" H 7515 1273 50  0000 C CNN
+F 2 "" H 7500 1100 50  0001 C CNN
+F 3 "" H 7500 1100 50  0001 C CNN
+	1    7500 1100
+	0    -1   -1   0   
+$EndComp
+Text Label 7500 1200 0    50   ~ 0
+IF_SWDIO
+Wire Wire Line
+	7500 1400 7800 1400
+$Comp
+L power:GND #PWR0101
+U 1 1 5DC63E47
+P 7500 1300
+F 0 "#PWR0101" H 7500 1050 50  0001 C CNN
+F 1 "GND" V 7505 1172 50  0000 R CNN
+F 2 "" H 7500 1300 50  0001 C CNN
+F 3 "" H 7500 1300 50  0001 C CNN
+	1    7500 1300
+	0    1    1    0   
+$EndComp
+Text Label 7500 1400 0    50   ~ 0
+IF_SWCLK
+$Comp
+L lc_RES:0402_10KΩ__1002_1% R5
+U 1 1 5E1CB053
+P 3000 1200
+F 0 "R5" V 2954 1270 50  0000 L CNN
+F 1 "0402_10KΩ__1002_1%" H 2850 1390 50  0001 L BNN
+F 2 "lc_lib:0402_R" H 2800 960 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_26487.html" H 2800 1060 50  0001 L BNN
+F 4 "贴片电阻" H 3000 1200 50  0001 C CNN "description"
+F 5 "供应商链接" H 2800 860 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 2800 760 50  0001 L BNN "Package"
+F 7 "LC" H 2800 660 50  0001 L BNN "Supplier"
+F 8 "C25744" H 2800 560 50  0001 L BNN "SuppliersPartNumber"
+F 9 "" H 2800 460 50  0001 L BNN "Notepad"
+F 10 "10KΩ (1002) ±1%" H 2450 1050 50  0000 L CNN "Comment"
+	1    3000 1200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2400 1400 3000 1400
+Connection ~ 3000 1400
+Wire Wire Line
+	3000 1400 3100 1400
+Text Label 9850 5000 0    50   ~ 0
+PB8
+Text Label 9850 4800 0    50   ~ 0
+PB7
 $EndSCHEMATC
