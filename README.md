@@ -7,3 +7,5 @@
 ![pcb图](./pcb_kicad/dap_with_general/doc/dap-stm32f103.jpg)
 
 关于使用 KiCad 打开工程出现原理图缺失元器件的问题：原因是你没有安装和作者相同的 KiCad 库，请到此 [链接](https://github.com/balanceTWK/lc_kicad_lib)  处下载，并百度 KiCad 如何添加库。
+
+关于 MDK 不识别 CMSIS-DAP V2 的问题：参考 /doc 目录下 [Notes.md](doc/Notes.md)。
