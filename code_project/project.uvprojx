@@ -332,9 +332,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls />
-              <Define>STM32F103xB, __packed=__packed, INTERFACE_STM32F103XB, MSC_ENDPOINT, DAPLINK_BUILD_KEY=0x9B939E8F, OS_CLOCK=72000000, DRAG_N_DROP_SUPPORT, USE_HAL_DRIVER, DAPLINK_VERSION=254, CDC_ENDPOINT, HID_ENDPOINT, DAPLINK_IF, DAPLINK_NO_ASSERT_FILENAMES, WEBUSB_INTERFACE, OS_TICK=10000, DAPLINK_HIC_ID=0x97969908, WINUSB_INTERFACE, BULK_ENDPOINT</Define>
+              <Define>STM32F103xB, __packed=__packed, INTERFACE_STM32F103XB, MSC_ENDPOINT, DAPLINK_BUILD_KEY=0x9B939E8F, OS_CLOCK=72000000, DRAG_N_DROP_SUPPORT, USE_HAL_DRIVER, DAPLINK_VERSION=254, CDC_ENDPOINT, HID_ENDPOINT, DAPLINK_IF, DAPLINK_NO_ASSERT_FILENAMES, WEBUSB_INTERFACE, OS_TICK=10000, DAPLINK_HIC_ID=0x97969908, WINUSB_INTERFACE, BULK_ENDPOINT, RT_USING_ARM_LIBC</Define>
               <Undefine />
-              <IncludePath>.;rt-thread\include;applications;.;board;board\CubeMX_Config\Inc;board\ports;libraries\HAL_Drivers;libraries\HAL_Drivers\config;DAPLink\source\usb;DAPLink\source\daplink;DAPLink\source\daplink\cmsis-dap;DAPLink\source\daplink\drag-n-drop;DAPLink\source\daplink\usb2uart;DAPLink\source\daplink\settings;DAPLink\source\daplink\interface;DAPLink\source\cmsis-core;DAPLink\source\hic_hal;DAPLink\source\target;DAPLink\source\hic_hal\stm32\stm32f103xb;DAPLink\source\hic_hal\stm32\stm32f103xb\cmsis;packages\CMSIS-v5.0.0\CMSIS_5\CMSIS\RTOS2\Include;packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src;rt-thread\libcpu\arm\common;rt-thread\libcpu\arm\cortex-m3;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\usb\usbdevice;rt-thread\components\finsh;rt-thread\components\libc\compilers\common;libraries\STM32F1xx_HAL\CMSIS\Device\ST\STM32F1xx\Include;libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Inc;libraries\STM32F1xx_HAL\CMSIS\Include</IncludePath>
+              <IncludePath>.;rt-thread\include;applications;.;board;board\CubeMX_Config\Inc;board\ports;libraries\HAL_Drivers;libraries\HAL_Drivers\config;DAPLink\source\usb;DAPLink\source\daplink;DAPLink\source\daplink\cmsis-dap;DAPLink\source\daplink\drag-n-drop;DAPLink\source\daplink\usb2uart;DAPLink\source\daplink\settings;DAPLink\source\daplink\interface;DAPLink\source\cmsis-core;DAPLink\source\hic_hal;DAPLink\source\target;DAPLink\source\hic_hal\stm32\stm32f103xb;DAPLink\source\hic_hal\stm32\stm32f103xb\cmsis;packages\CMSIS-v5.0.0\CMSIS_5\CMSIS\RTOS2\Include;packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src;rt-thread\libcpu\arm\common;rt-thread\libcpu\arm\cortex-m3;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\spi;rt-thread\components\drivers\include;rt-thread\components\drivers\spi\sfud\inc;rt-thread\components\drivers\include;rt-thread\components\drivers\usb\usbdevice;rt-thread\components\finsh;rt-thread\components\libc\compilers\armlibc;rt-thread\components\libc\compilers\common;libraries\STM32F1xx_HAL\CMSIS\Device\ST\STM32F1xx\Include;libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Inc;libraries\STM32F1xx_HAL\CMSIS\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -511,6 +511,13 @@
           </Files>
           <Files>
             <File>
+              <FileName>spi_flash_init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>board\ports\spi_flash_init.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
               <FileName>startup_stm32f103xb.s</FileName>
               <FileType>2</FileType>
               <FilePath>libraries\STM32F1xx_HAL\CMSIS\Device\ST\STM32F1xx\Source\Templates\arm\startup_stm32f103xb.s</FilePath>
@@ -528,6 +535,20 @@
               <FileName>drv_usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>libraries\HAL_Drivers\drv_usart.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>drv_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>libraries\HAL_Drivers\drv_spi.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>drv_rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>libraries\HAL_Drivers\drv_rtc.c</FilePath>
             </File>
           </Files>
           <Files>
@@ -623,9 +644,51 @@
           </Files>
           <Files>
             <File>
+              <FileName>rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>rt-thread\components\drivers\rtc\rtc.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
               <FileName>serial.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\components\drivers\serial\serial.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>spi_core.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>rt-thread\components\drivers\spi\spi_core.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>spi_dev.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>rt-thread\components\drivers\spi\spi_dev.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>spi_flash_sfud.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>rt-thread\components\drivers\spi\spi_flash_sfud.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>sfud.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>rt-thread\components\drivers\spi\sfud\src\sfud.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>sfud_sfdp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>rt-thread\components\drivers\spi\sfud\src\sfud_sfdp.c</FilePath>
             </File>
           </Files>
           <Files>
@@ -677,6 +740,18 @@
               <FilePath>rt-thread\components\drivers\src\workqueue.c</FilePath>
             </File>
           </Files>
+          <GroupOption>
+            <GroupArmAds>
+              <Cads>
+                <VariousControls>
+                  <MiscControls> --c99</MiscControls>
+                  <Define> </Define>
+                  <Undefine> </Undefine>
+                  <IncludePath> </IncludePath>
+                </VariousControls>
+              </Cads>
+            </GroupArmAds>
+          </GroupOption>
         </Group>
         <Group>
           <GroupName>rt_usbd</GroupName>
@@ -728,6 +803,27 @@
         </Group>
         <Group>
           <GroupName>libc</GroupName>
+          <Files>
+            <File>
+              <FileName>libc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>rt-thread\components\libc\compilers\armlibc\libc.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>mem_std.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>rt-thread\components\libc\compilers\armlibc\mem_std.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stubs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>rt-thread\components\libc\compilers\armlibc\stubs.c</FilePath>
+            </File>
+          </Files>
           <Files>
             <File>
               <FileName>time.c</FileName>
@@ -838,6 +934,20 @@
           </Files>
           <Files>
             <File>
+              <FileName>stm32f1xx_hal_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_ll_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_spi.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
               <FileName>stm32f1xx_hal_pcd.c</FileName>
               <FileType>1</FileType>
               <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd.c</FilePath>
@@ -862,6 +972,20 @@
               <FileName>stm32f1xx_hal_hcd.c</FileName>
               <FileType>1</FileType>
               <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_hcd.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rtc.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_rtc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rtc_ex.c</FilePath>
             </File>
           </Files>
         </Group>
