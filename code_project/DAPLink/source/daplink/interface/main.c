@@ -507,7 +507,7 @@ int main(void)
     SCB->VTOR = SCB_VTOR_TBLOFF_Msk & DAPLINK_ROM_IF_START;
 #endif
     // initialize vendor sdk
-    sdk_init();
+//    sdk_init();
 
     osKernelInitialize();                 // Initialize CMSIS-RTOS
     osThreadNew(main_task, NULL, NULL);    // Create application main thread
@@ -521,9 +521,9 @@ int main(void)
     {
 //        rt_pin_write(LED0_PIN, PIN_HIGH);
 			  PIN_LED_SET();
-        rt_thread_mdelay(1500);
+        osDelay(rt_tick_from_millisecond(500));
 //        rt_pin_write(LED0_PIN, PIN_LOW);
 			  PIN_LED_CLR();
-        rt_thread_mdelay(1500);
+        osDelay(rt_tick_from_millisecond(500));
     }
 }

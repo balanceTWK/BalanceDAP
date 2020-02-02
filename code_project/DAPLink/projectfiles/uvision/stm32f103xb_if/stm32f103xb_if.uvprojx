@@ -312,7 +312,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>3</Optim>
+            <Optim>0</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -338,7 +338,7 @@
               <MiscControls>--gnu --c99 --no_unaligned_access --no_unaligned_access</MiscControls>
               <Define>DAPLINK_VERSION=254, HID_ENDPOINT, MSC_ENDPOINT, CDC_ENDPOINT, WEBUSB_INTERFACE, WINUSB_INTERFACE, DRAG_N_DROP_SUPPORT, DAPLINK_IF, DAPLINK_BUILD_KEY=0x9B939E8F, OS_TICK=10000, INTERFACE_STM32F103XB, USE_HAL_DRIVER, STM32F103xB, DAPLINK_HIC_ID=0x97969908, __packed=__packed, DAPLINK_NO_ASSERT_FILENAMES, OS_CLOCK=72000000, BULK_ENDPOINT</Define>
               <Undefine></Undefine>
-              <IncludePath>../../../source/usb;../../../source/daplink/cmsis-dap;../../../source/daplink/drag-n-drop;../../../source/daplink/usb2uart;../../../source/daplink/settings;../../../source/daplink;../../../source/daplink/interface;../../../source/cmsis-core;../../../source/hic_hal;../../../source/target;../../../source/hic_hal/stm32/stm32f103xb;../../../source/hic_hal/stm32/stm32f103xb/cmsis;../../../source/hic_hal/stm32/stm32f103xb/STM32F1xx_HAL_Driver;../../../source/hic_hal/stm32/stm32f103xb/STM32F1xx_HAL_Driver/Inc;..\..\..\source\rtos\rt-thread-3.1.3\include;..\..\..\source\rtos\rt-thread-3.1.3\packages\CMSIS-v5.0.0\CMSIS_5\CMSIS\RTOS2\Include;..\..\..\source\rtos\rt-thread-3.1.3</IncludePath>
+              <IncludePath>../../../source/usb;../../../source/daplink/cmsis-dap;../../../source/daplink/drag-n-drop;../../../source/daplink/usb2uart;../../../source/daplink/settings;../../../source/daplink;../../../source/daplink/interface;../../../source/cmsis-core;../../../source/hic_hal;../../../source/target;../../../source/hic_hal/stm32/stm32f103xb;../../../source/hic_hal/stm32/stm32f103xb/cmsis;../../../source/hic_hal/stm32/stm32f103xb/STM32F1xx_HAL_Driver;../../../source/hic_hal/stm32/stm32f103xb/STM32F1xx_HAL_Driver/Inc;..\..\..\source\rtos\rt-thread-3.1.3\include;..\..\..\source\rtos\rt-thread-3.1.3\packages\CMSIS-v5.0.0\CMSIS_5\CMSIS\RTOS2\Include;..\..\..\source\rtos\rt-thread-3.1.3;..\..\..\source\rtos\rt-thread-3.1.3\components\finsh;..\..\RTE\_stm32f103xb_if</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1315,96 +1315,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>rtos</GroupName>
-          <Files>
-            <File>
-              <FileName>board.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\board.c</FilePath>
-            </File>
-            <File>
-              <FileName>cmsis_rtthread.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src\cmsis_rtthread.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_systick.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src\os_systick.c</FilePath>
-            </File>
-            <File>
-              <FileName>context_rvds.S</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\libcpu\arm\cortex-m3\context_rvds.S</FilePath>
-            </File>
-            <File>
-              <FileName>cpuport.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\libcpu\arm\cortex-m3\cpuport.c</FilePath>
-            </File>
-            <File>
-              <FileName>clock.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\src\clock.c</FilePath>
-            </File>
-            <File>
-              <FileName>components.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\src\components.c</FilePath>
-            </File>
-            <File>
-              <FileName>idle.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\src\idle.c</FilePath>
-            </File>
-            <File>
-              <FileName>ipc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\src\ipc.c</FilePath>
-            </File>
-            <File>
-              <FileName>irq.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\src\irq.c</FilePath>
-            </File>
-            <File>
-              <FileName>kservice.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\src\kservice.c</FilePath>
-            </File>
-            <File>
-              <FileName>mem.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\src\mem.c</FilePath>
-            </File>
-            <File>
-              <FileName>object.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\src\object.c</FilePath>
-            </File>
-            <File>
-              <FileName>scheduler.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\src\scheduler.c</FilePath>
-            </File>
-            <File>
-              <FileName>thread.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\src\thread.c</FilePath>
-            </File>
-            <File>
-              <FileName>timer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\src\timer.c</FilePath>
-            </File>
-            <File>
-              <FileName>rtconfig.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\rtconfig.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>settings</GroupName>
           <Files>
             <File>
@@ -1501,6 +1411,126 @@
               <FileName>usbd_user_cdc_acm.c</FileName>
               <FileType>1</FileType>
               <FilePath>../../../source/daplink/usb2uart/usbd_user_cdc_acm.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>rtos</GroupName>
+          <Files>
+            <File>
+              <FileName>board.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\board.c</FilePath>
+            </File>
+            <File>
+              <FileName>cmsis_rtthread.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src\cmsis_rtthread.c</FilePath>
+            </File>
+            <File>
+              <FileName>os_systick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src\os_systick.c</FilePath>
+            </File>
+            <File>
+              <FileName>context_rvds.S</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\libcpu\arm\cortex-m3\context_rvds.S</FilePath>
+            </File>
+            <File>
+              <FileName>cpuport.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\libcpu\arm\cortex-m3\cpuport.c</FilePath>
+            </File>
+            <File>
+              <FileName>clock.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\src\clock.c</FilePath>
+            </File>
+            <File>
+              <FileName>components.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\src\components.c</FilePath>
+            </File>
+            <File>
+              <FileName>idle.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\src\idle.c</FilePath>
+            </File>
+            <File>
+              <FileName>ipc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\src\ipc.c</FilePath>
+            </File>
+            <File>
+              <FileName>irq.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\src\irq.c</FilePath>
+            </File>
+            <File>
+              <FileName>kservice.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\src\kservice.c</FilePath>
+            </File>
+            <File>
+              <FileName>mem.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\src\mem.c</FilePath>
+            </File>
+            <File>
+              <FileName>object.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\src\object.c</FilePath>
+            </File>
+            <File>
+              <FileName>scheduler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\src\scheduler.c</FilePath>
+            </File>
+            <File>
+              <FileName>thread.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\src\thread.c</FilePath>
+            </File>
+            <File>
+              <FileName>timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\src\timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>rtconfig.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\rtconfig.h</FilePath>
+            </File>
+            <File>
+              <FileName>cmd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\components\finsh\cmd.c</FilePath>
+            </File>
+            <File>
+              <FileName>msh.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\components\finsh\msh.c</FilePath>
+            </File>
+            <File>
+              <FileName>shell.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\components\finsh\shell.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>rtos_drivers</GroupName>
+          <Files>
+            <File>
+              <FileName>drv_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\drivers\drv_usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>drv_common.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\source\rtos\rt-thread-3.1.3\drivers\drv_common.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -58,6 +58,20 @@ RT_WEAK void *rt_heap_end_get(void)
 }
 #endif
 
+#include "board.h"
+void sdk_init();
+/* SysTick configuration */
+void rt_hw_systick_init(void)
+{
+#if defined (SOC_SERIES_STM32H7)
+    HAL_SYSTICK_Config((HAL_RCCEx_GetD1SysClockFreq()) / RT_TICK_PER_SECOND);
+#else
+    HAL_SYSTICK_Config(HAL_RCC_GetHCLKFreq() / RT_TICK_PER_SECOND);
+#endif
+    HAL_SYSTICK_CLKSourceConfig(SYSTICK_CLKSOURCE_HCLK);
+    HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
+}
+
 /**
  * This function will initial your board.
  */
@@ -66,8 +80,12 @@ void rt_hw_board_init()
     /* System Clock Update */
     SystemCoreClockUpdate();
     
+		sdk_init();
     /* System Tick Configuration */
     _SysTick_Config(SystemCoreClock / RT_TICK_PER_SECOND);
+		rt_hw_systick_init();
+	
+	  uart_init();
 
     /* Call components board initial (use INIT_BOARD_EXPORT()) */
 #ifdef RT_USING_COMPONENTS_INIT

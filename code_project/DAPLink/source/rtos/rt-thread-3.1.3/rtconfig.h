@@ -4,6 +4,7 @@
 #define __RTTHREAD_CFG_H__
 
 #include "RTE_Components.h"
+#include "RTE_Components_another.h"
 
 // <<< Use Configuration Wizard in Context Menu >>>
 // <h>Basic Configuration
@@ -112,7 +113,7 @@
 // <h>Console Configuration
 // <c1>Using console
 //  <i>Using console
-//#define RT_USING_CONSOLE
+#define RT_USING_CONSOLE
 // </c>
 // <o>the buffer size of console <1-1024>
 //  <i>the buffer size of console
