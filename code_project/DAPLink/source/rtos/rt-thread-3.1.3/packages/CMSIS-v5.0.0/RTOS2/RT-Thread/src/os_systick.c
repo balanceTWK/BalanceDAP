@@ -1,114 +1,116 @@
-///**************************************************************************//**
-// * @file     os_systick.c
-// * @brief    CMSIS OS Tick SysTick implementation
-// * @version  V1.0.1
-// * @date     29. November 2017
-// ******************************************************************************/
-///*
-// * Copyright (c) 2017-2017 Arm Limited. All rights reserved.
-// *
-// * SPDX-License-Identifier: Apache-2.0
-// *
-// * Licensed under the Apache License, Version 2.0 (the License); you may
-// * not use this file except in compliance with the License.
-// * You may obtain a copy of the License at
-// *
-// * www.apache.org/licenses/LICENSE-2.0
-// *
-// * Unless required by applicable law or agreed to in writing, software
-// * distributed under the License is distributed on an AS IS BASIS, WITHOUT
-// * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// * See the License for the specific language governing permissions and
-// * limitations under the License.
-// */
+/**************************************************************************//**
+ * @file     os_systick.c
+ * @brief    CMSIS OS Tick SysTick implementation
+ * @version  V1.0.1
+ * @date     29. November 2017
+ ******************************************************************************/
+/*
+ * Copyright (c) 2017-2017 Arm Limited. All rights reserved.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * Licensed under the Apache License, Version 2.0 (the License); you may
+ * not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an AS IS BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
-//#include "os_tick.h"
-//#include "board.h"
+#include "os_tick.h"
+#include "board.h"
 
-//#ifdef  SysTick
+#include "rtdef.h"
 
-//#ifndef SYSTICK_IRQ_PRIORITY
-//#define SYSTICK_IRQ_PRIORITY    0xFFU
-//#endif
+#ifdef  SysTick
 
-//static uint8_t PendST;
+#ifndef SYSTICK_IRQ_PRIORITY
+#define SYSTICK_IRQ_PRIORITY    0xFFU
+#endif
 
-//// Setup OS Tick.
-//RT_WEAK int32_t OS_Tick_Setup (uint32_t freq, IRQHandler_t handler) {
-//  uint32_t load;
-//  (void)handler;
+static uint8_t PendST;
 
-//  if (freq == 0U) {
-//    return (-1);
-//  }
+// Setup OS Tick.
+RT_WEAK int32_t OS_Tick_Setup (uint32_t freq, IRQHandler_t handler) {
+  uint32_t load;
+  (void)handler;
 
-//  load = (SystemCoreClock / freq) - 1U;
-//  if (load > 0x00FFFFFFU) {
-//    return (-1);
-//  }
+  if (freq == 0U) {
+    return (-1);
+  }
 
-//  NVIC_SetPriority(SysTick_IRQn, SYSTICK_IRQ_PRIORITY);
+  load = (SystemCoreClock / freq) - 1U;
+  if (load > 0x00FFFFFFU) {
+    return (-1);
+  }
 
-//  SysTick->CTRL =  SysTick_CTRL_CLKSOURCE_Msk | SysTick_CTRL_TICKINT_Msk;
-//  SysTick->LOAD =  load;
-//  SysTick->VAL  =  0U;
+  NVIC_SetPriority(SysTick_IRQn, SYSTICK_IRQ_PRIORITY);
 
-//  PendST = 0U;
+  SysTick->CTRL =  SysTick_CTRL_CLKSOURCE_Msk | SysTick_CTRL_TICKINT_Msk;
+  SysTick->LOAD =  load;
+  SysTick->VAL  =  0U;
 
-//  return (0);
-//}
+  PendST = 0U;
 
-///// Enable OS Tick.
-//RT_WEAK void OS_Tick_Enable (void) {
+  return (0);
+}
 
-//  if (PendST != 0U) {
-//    PendST = 0U;
-//    SCB->ICSR = SCB_ICSR_PENDSTSET_Msk;
-//  }
+/// Enable OS Tick.
+RT_WEAK void OS_Tick_Enable (void) {
 
-//  SysTick->CTRL |=  SysTick_CTRL_ENABLE_Msk;
-//}
+  if (PendST != 0U) {
+    PendST = 0U;
+    SCB->ICSR = SCB_ICSR_PENDSTSET_Msk;
+  }
 
-///// Disable OS Tick.
-//RT_WEAK void OS_Tick_Disable (void) {
+  SysTick->CTRL |=  SysTick_CTRL_ENABLE_Msk;
+}
 
-//  SysTick->CTRL &= ~SysTick_CTRL_ENABLE_Msk;
+/// Disable OS Tick.
+RT_WEAK void OS_Tick_Disable (void) {
 
-//  if ((SCB->ICSR & SCB_ICSR_PENDSTSET_Msk) != 0U) {
-//    SCB->ICSR = SCB_ICSR_PENDSTCLR_Msk;
-//    PendST = 1U;
-//  }
-//}
+  SysTick->CTRL &= ~SysTick_CTRL_ENABLE_Msk;
 
-//// Acknowledge OS Tick IRQ.
-//RT_WEAK void OS_Tick_AcknowledgeIRQ (void) {
-//  (void)SysTick->CTRL;
-//}
+  if ((SCB->ICSR & SCB_ICSR_PENDSTSET_Msk) != 0U) {
+    SCB->ICSR = SCB_ICSR_PENDSTCLR_Msk;
+    PendST = 1U;
+  }
+}
 
-//// Get OS Tick IRQ number.
-//RT_WEAK int32_t  OS_Tick_GetIRQn (void) {
-//  return ((int32_t)SysTick_IRQn);
-//}
+// Acknowledge OS Tick IRQ.
+RT_WEAK void OS_Tick_AcknowledgeIRQ (void) {
+  (void)SysTick->CTRL;
+}
 
-//// Get OS Tick clock.
-//RT_WEAK uint32_t OS_Tick_GetClock (void) {
-//  return (SystemCoreClock);
-//}
+// Get OS Tick IRQ number.
+RT_WEAK int32_t  OS_Tick_GetIRQn (void) {
+  return ((int32_t)SysTick_IRQn);
+}
 
-//// Get OS Tick interval.
-//RT_WEAK uint32_t OS_Tick_GetInterval (void) {
-//  return (SysTick->LOAD + 1U);
-//}
+// Get OS Tick clock.
+RT_WEAK uint32_t OS_Tick_GetClock (void) {
+  return (SystemCoreClock);
+}
 
-//// Get OS Tick count value.
-//RT_WEAK uint32_t OS_Tick_GetCount (void) {
-//  uint32_t load = SysTick->LOAD;
-//  return  (load - SysTick->VAL);
-//}
+// Get OS Tick interval.
+RT_WEAK uint32_t OS_Tick_GetInterval (void) {
+  return (SysTick->LOAD + 1U);
+}
 
-//// Get OS Tick overflow status.
-//RT_WEAK uint32_t OS_Tick_GetOverflow (void) {
-//  return ((SysTick->CTRL >> 16) & 1U);
-//}
+// Get OS Tick count value.
+RT_WEAK uint32_t OS_Tick_GetCount (void) {
+  uint32_t load = SysTick->LOAD;
+  return  (load - SysTick->VAL);
+}
 
-//#endif  // SysTick
+// Get OS Tick overflow status.
+RT_WEAK uint32_t OS_Tick_GetOverflow (void) {
+  return ((SysTick->CTRL >> 16) & 1U);
+}
+
+#endif  // SysTick

@@ -458,6 +458,47 @@ void main_task(void * arg)
     }
 }
 
+#include <rtthread.h>
+#include <board.h>
+
+//SWD
+#define LED_PIN_PORT           GPIOB
+#define LED_PIN                GPIO_PIN_7
+#define LED_PIN_Bit            7
+static __inline void pin_out_init(GPIO_TypeDef* GPIOx, uint8_t pin_bit)
+{
+    if(pin_bit >= 8)
+    {
+        GPIOx->CRH &= ~(0x0000000F << ((pin_bit-8) << 2));
+        GPIOx->CRH |= ( ((uint32_t)(0x00|0x03) & 0x0F) << ((pin_bit-8) << 2) );
+    }
+    else
+    {
+        GPIOx->CRL &= ~(0x0000000F << ((pin_bit) << 2));
+        GPIOx->CRL |= ( ((uint32_t)(0x00|0x03) & 0x0F) << ((pin_bit) << 2) );
+    }
+}
+static __inline void PORT_LED_SETUP(void)
+{
+    // Set SWCLK HIGH
+	  __HAL_RCC_GPIOB_CLK_ENABLE();
+    pin_out_init(LED_PIN_PORT, LED_PIN_Bit);
+    LED_PIN_PORT->BSRR = LED_PIN;
+}
+
+static void PIN_LED_SET(void)
+{
+    LED_PIN_PORT->BSRR = LED_PIN;
+}
+
+/** SWCLK/TCK I/O pin: Set Output to Low.
+Set the SWCLK/TCK DAP hardware I/O pin to low level.
+*/
+static void PIN_LED_CLR(void)
+{
+    LED_PIN_PORT->BRR = LED_PIN;
+}
+
 int main(void)
 {
     // Explicitly set the vector table since the bootloader might not set
@@ -471,5 +512,18 @@ int main(void)
     osKernelInitialize();                 // Initialize CMSIS-RTOS
     osThreadNew(main_task, NULL, NULL);    // Create application main thread
     osKernelStart();                      // Start thread execution
-    for (;;) {}
+    rt_uint32_t count = 1;
+	  PORT_LED_SETUP();
+    /* set LED0 pin mode to output */
+//    rt_pin_mode(LED0_PIN, PIN_MODE_OUTPUT);
+
+    while (count++)
+    {
+//        rt_pin_write(LED0_PIN, PIN_HIGH);
+			  PIN_LED_SET();
+        rt_thread_mdelay(1500);
+//        rt_pin_write(LED0_PIN, PIN_LOW);
+			  PIN_LED_CLR();
+        rt_thread_mdelay(1500);
+    }
 }

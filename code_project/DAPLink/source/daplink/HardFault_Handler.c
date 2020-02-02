@@ -28,51 +28,51 @@ register unsigned int _psp __asm("psp");
 register unsigned int _msp __asm("msp");
 register unsigned int _lr __asm("lr");
 register unsigned int _control __asm("control");
-void HardFault_Handler()
-{
-//hexdump logic on hardfault
-    uint32_t stk_ptr;
-    uint32_t * stack = (uint32_t *)_msp;
-    
-    if ((_lr & 0xF) == 0xD) { //process stack
-        stack = (uint32_t *)_psp;
-    }
+//void HardFault_Handler()
+//{
+////hexdump logic on hardfault
+//    uint32_t stk_ptr;
+//    uint32_t * stack = (uint32_t *)_msp;
+//    
+//    if ((_lr & 0xF) == 0xD) { //process stack
+//        stack = (uint32_t *)_psp;
+//    }
 
-    //calculate stack ptr before fault
-    stk_ptr = (uint32_t)stack + 0x20;
-    if ((stack[7] & 0x200) != 0) { //xpsr bit 9 align
-        stk_ptr += 0x4;
-    }
-    if ((_lr & 0x10) == 0) { //fp
-        stk_ptr += 0x48;
-    }
-    
-    config_ram_add_hexdump(_lr);  //EXC_RETURN
-    config_ram_add_hexdump(_psp);
-    config_ram_add_hexdump(_msp);
-    config_ram_add_hexdump(_control);
-    config_ram_add_hexdump(stk_ptr); //SP
-    config_ram_add_hexdump(stack[5]);  //LR
-    config_ram_add_hexdump(stack[6]);  //PC
-    config_ram_add_hexdump(stack[7]);  //xPSR 
+//    //calculate stack ptr before fault
+//    stk_ptr = (uint32_t)stack + 0x20;
+//    if ((stack[7] & 0x200) != 0) { //xpsr bit 9 align
+//        stk_ptr += 0x4;
+//    }
+//    if ((_lr & 0x10) == 0) { //fp
+//        stk_ptr += 0x48;
+//    }
+//    
+//    config_ram_add_hexdump(_lr);  //EXC_RETURN
+//    config_ram_add_hexdump(_psp);
+//    config_ram_add_hexdump(_msp);
+//    config_ram_add_hexdump(_control);
+//    config_ram_add_hexdump(stk_ptr); //SP
+//    config_ram_add_hexdump(stack[5]);  //LR
+//    config_ram_add_hexdump(stack[6]);  //PC
+//    config_ram_add_hexdump(stack[7]);  //xPSR 
 
-#ifndef __CORTEX_M
-#error __CORTEX_M not defined!!
-#else
+//#ifndef __CORTEX_M
+//#error __CORTEX_M not defined!!
+//#else
 
-#if (__CORTEX_M > 0x00)
-    config_ram_add_hexdump(SCB->HFSR);
-    config_ram_add_hexdump(SCB->CFSR);
-    config_ram_add_hexdump(SCB->DFSR);
-    config_ram_add_hexdump(SCB->AFSR);
-    config_ram_add_hexdump(SCB->MMFAR);
-    config_ram_add_hexdump(SCB->BFAR);
-#endif  
+//#if (__CORTEX_M > 0x00)
+//    config_ram_add_hexdump(SCB->HFSR);
+//    config_ram_add_hexdump(SCB->CFSR);
+//    config_ram_add_hexdump(SCB->DFSR);
+//    config_ram_add_hexdump(SCB->AFSR);
+//    config_ram_add_hexdump(SCB->MMFAR);
+//    config_ram_add_hexdump(SCB->BFAR);
+//#endif  
 
-#endif //#ifndef __CORTEX_M
+//#endif //#ifndef __CORTEX_M
 
-    util_assert(0);
-    SystemReset();
+//    util_assert(0);
+//    SystemReset();
 
-    while (1); // Wait for reset
-}
+//    while (1); // Wait for reset
+//}

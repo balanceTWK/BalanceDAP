@@ -23,7 +23,7 @@
 #include "main.h"
 #include "info.h"
 #include "target_config.h"
-#include "board.h"
+#include "dap_board.h"
 #include "read_uid.h"
 #include "util.h"
 #include "crc.h"
