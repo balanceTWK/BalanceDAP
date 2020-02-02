@@ -338,7 +338,7 @@
               <MiscControls>--gnu --c99 --no_unaligned_access --no_unaligned_access</MiscControls>
               <Define>DAPLINK_VERSION=254, HID_ENDPOINT, MSC_ENDPOINT, CDC_ENDPOINT, WEBUSB_INTERFACE, WINUSB_INTERFACE, DRAG_N_DROP_SUPPORT, DAPLINK_IF, DAPLINK_BUILD_KEY=0x9B939E8F, OS_TICK=10000, INTERFACE_STM32F103XB, USE_HAL_DRIVER, STM32F103xB, DAPLINK_HIC_ID=0x97969908, __packed=__packed, DAPLINK_NO_ASSERT_FILENAMES, OS_CLOCK=72000000, BULK_ENDPOINT</Define>
               <Undefine></Undefine>
-              <IncludePath>../../../source/usb; ../../../source/daplink/cmsis-dap; ../../../source/daplink/drag-n-drop; ../../../source/daplink/usb2uart; ../../../source/daplink/settings; ../../../source/daplink; ../../../source/daplink/interface; ../../../source/cmsis-core; ../../../source/hic_hal; ../../../source/target; ../../../source/rtos; ../../../source/hic_hal/stm32/stm32f103xb; ../../../source/hic_hal/stm32/stm32f103xb/cmsis; ../../../source/hic_hal/stm32/stm32f103xb/STM32F1xx_HAL_Driver; ../../../source/hic_hal/stm32/stm32f103xb/STM32F1xx_HAL_Driver/Inc</IncludePath>
+              <IncludePath>../../../source/usb;../../../source/daplink/cmsis-dap;../../../source/daplink/drag-n-drop;../../../source/daplink/usb2uart;../../../source/daplink/settings;../../../source/daplink;../../../source/daplink/interface;../../../source/cmsis-core;../../../source/hic_hal;../../../source/target;../../../source/rtos/RTX;../../../source/hic_hal/stm32/stm32f103xb;../../../source/hic_hal/stm32/stm32f103xb/cmsis;../../../source/hic_hal/stm32/stm32f103xb/STM32F1xx_HAL_Driver;../../../source/hic_hal/stm32/stm32f103xb/STM32F1xx_HAL_Driver/Inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1320,72 +1320,72 @@
             <File>
               <FileName>cmsis_os2_port.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../source/rtos/cmsis_os2_port.c</FilePath>
+              <FilePath>../../../source/rtos/RTX/cmsis_os2_port.c</FilePath>
             </File>
             <File>
               <FileName>HAL_CM3.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../source/rtos/cm3/HAL_CM3.c</FilePath>
+              <FilePath>../../../source/rtos/RTX/cm3/HAL_CM3.c</FilePath>
             </File>
             <File>
               <FileName>rt_Event.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../source/rtos/rt_Event.c</FilePath>
+              <FilePath>../../../source/rtos/RTX/rt_Event.c</FilePath>
             </File>
             <File>
               <FileName>rt_List.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../source/rtos/rt_List.c</FilePath>
+              <FilePath>../../../source/rtos/RTX/rt_List.c</FilePath>
             </File>
             <File>
               <FileName>rt_Mailbox.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../source/rtos/rt_Mailbox.c</FilePath>
+              <FilePath>../../../source/rtos/RTX/rt_Mailbox.c</FilePath>
             </File>
             <File>
               <FileName>rt_MemBox.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../source/rtos/rt_MemBox.c</FilePath>
+              <FilePath>../../../source/rtos/RTX/rt_MemBox.c</FilePath>
             </File>
             <File>
               <FileName>rt_Mutex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../source/rtos/rt_Mutex.c</FilePath>
+              <FilePath>../../../source/rtos/RTX/rt_Mutex.c</FilePath>
             </File>
             <File>
               <FileName>rt_Robin.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../source/rtos/rt_Robin.c</FilePath>
+              <FilePath>../../../source/rtos/RTX/rt_Robin.c</FilePath>
             </File>
             <File>
               <FileName>rt_Semaphore.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../source/rtos/rt_Semaphore.c</FilePath>
+              <FilePath>../../../source/rtos/RTX/rt_Semaphore.c</FilePath>
             </File>
             <File>
               <FileName>rt_System.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../source/rtos/rt_System.c</FilePath>
+              <FilePath>../../../source/rtos/RTX/rt_System.c</FilePath>
             </File>
             <File>
               <FileName>rt_Task.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../source/rtos/rt_Task.c</FilePath>
+              <FilePath>../../../source/rtos/RTX/rt_Task.c</FilePath>
             </File>
             <File>
               <FileName>rt_Time.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../source/rtos/rt_Time.c</FilePath>
+              <FilePath>../../../source/rtos/RTX/rt_Time.c</FilePath>
             </File>
             <File>
               <FileName>rt_Timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../source/rtos/rt_Timer.c</FilePath>
+              <FilePath>../../../source/rtos/RTX/rt_Timer.c</FilePath>
             </File>
             <File>
               <FileName>RTX_Config.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../../../source/rtos/RTX_Config.c</FilePath>
+              <FilePath>../../../source/rtos/RTX/RTX_Config.c</FilePath>
             </File>
           </Files>
         </Group>
