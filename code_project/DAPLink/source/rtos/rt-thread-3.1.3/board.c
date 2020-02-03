@@ -44,20 +44,6 @@ static uint32_t _SysTick_Config(rt_uint32_t ticks)
     return 0;
 }
 
-#if defined(RT_USING_USER_MAIN) && defined(RT_USING_HEAP)
-#define RT_HEAP_SIZE 1536
-static uint32_t rt_heap[RT_HEAP_SIZE];	// heap default size: 6K(1536 * 4)
-RT_WEAK void *rt_heap_begin_get(void)
-{
-    return rt_heap;
-}
-
-RT_WEAK void *rt_heap_end_get(void)
-{
-    return rt_heap + RT_HEAP_SIZE;
-}
-#endif
-
 #include "board.h"
 void sdk_init();
 /* SysTick configuration */
@@ -91,10 +77,11 @@ void rt_hw_board_init()
 #ifdef RT_USING_COMPONENTS_INIT
     rt_components_board_init();
 #endif
-    
-#if defined(RT_USING_USER_MAIN) && defined(RT_USING_HEAP)
-    rt_system_heap_init(rt_heap_begin_get(), rt_heap_end_get());
+
+#if defined(RT_USING_HEAP)
+    rt_system_heap_init((void *)HEAP_BEGIN, (void *)HEAP_END);
 #endif
+
 }
 
 void SysTick_Handler(void)
