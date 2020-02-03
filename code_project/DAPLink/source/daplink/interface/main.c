@@ -249,7 +249,7 @@ void main_task(void * arg)
 
     // Start timer tasks
     osTimerId_t tmr_id = osTimerNew(timer_task_30mS, osTimerPeriodic, NULL, NULL);
-    osTimerStart(tmr_id, 3);
+    osTimerStart(tmr_id, 30);
     while (1) {
         flags = osThreadFlagsWait(FLAGS_MAIN_RESET             // Put target in reset state
                        | FLAGS_MAIN_90MS            // 90mS tick

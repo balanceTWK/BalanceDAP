@@ -36,23 +36,23 @@ static osKernelState_t kernel_state = osKernelInactive;
 
 static void thread_cleanup(rt_thread_t thread)
 {
-//    thread_cb_t *thread_cb;
-//    thread_cb = (thread_cb_t *)(thread->user_data);
+    thread_cb_t *thread_cb;
+    thread_cb = (thread_cb_t *)(thread->user_data);
 
-//    /* clear cleanup function */
-//    thread->cleanup = RT_NULL;
-//    if (thread_cb->flags & osThreadJoinable)
-//    {
-//        rt_sem_release(thread_cb->joinable_sem);
-//    }
-//    else
-//    {
-//        if (thread_cb->flags & MALLOC_STACK)
-//            rt_free(thread_cb->thread.stack_addr);
+    /* clear cleanup function */
+    thread->cleanup = RT_NULL;
+    if (thread_cb->flags & osThreadJoinable)
+    {
+        rt_sem_release(thread_cb->joinable_sem);
+    }
+    else
+    {
+        if (thread_cb->flags & MALLOC_STACK)
+            rt_free(thread_cb->thread.stack_addr);
 
-//        if (thread_cb->flags & MALLOC_CB)
-//            rt_free(thread_cb);
-//    }
+        if (thread_cb->flags & MALLOC_CB)
+            rt_free(thread_cb);
+    }
 }
 
 ////  ==== Kernel Management Functions ====
@@ -928,7 +928,7 @@ uint32_t osThreadFlagsSet(osThreadId_t thread_id, uint32_t flags)
                 thread_cb->flag_set &= ~thread_cb->thread.event_set;
 
             /* resume thread, and thread list breaks out */
-            rt_thread_resume(rt_thread_self());
+            rt_thread_resume(&thread_cb->thread);
             need_schedule = RT_TRUE;
         }
     }
@@ -1025,7 +1025,9 @@ uint32_t osThreadFlagsWait(uint32_t flags, uint32_t options, uint32_t timeout)
     {
         return_value = thread_cb->flag_set & flags;
         if (!(options & osFlagsNoClear))
+        {
             thread_cb->flag_set &= ~flags;
+        }
     }
     else if (0U == timeout)
     {
