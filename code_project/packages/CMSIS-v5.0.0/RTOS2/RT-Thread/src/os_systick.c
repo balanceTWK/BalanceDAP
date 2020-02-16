@@ -25,6 +25,8 @@
 #include "os_tick.h"
 #include "board.h"
 
+#include "rtdef.h"
+
 #ifdef  SysTick
 
 #ifndef SYSTICK_IRQ_PRIORITY

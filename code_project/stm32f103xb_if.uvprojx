@@ -52,7 +52,7 @@
           <OutputName>stm32f103xb_if</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
-          <CreateHexFile>1</CreateHexFile>
+          <CreateHexFile>0</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
           <ListingPath>.\build\</ListingPath>
@@ -338,7 +338,7 @@
               <MiscControls>--gnu --c99 --no_unaligned_access --no_unaligned_access</MiscControls>
               <Define>DAPLINK_VERSION=254, HID_ENDPOINT, MSC_ENDPOINT, CDC_ENDPOINT, WEBUSB_INTERFACE, WINUSB_INTERFACE, DRAG_N_DROP_SUPPORT, DAPLINK_IF, DAPLINK_BUILD_KEY=0x9B939E8F, OS_TICK=10000, INTERFACE_STM32F103XB, USE_HAL_DRIVER, STM32F103xB, DAPLINK_HIC_ID=0x97969908, __packed=__packed, DAPLINK_NO_ASSERT_FILENAMES, OS_CLOCK=72000000, BULK_ENDPOINT</Define>
               <Undefine></Undefine>
-              <IncludePath>packages/DAPLink/source/usb;packages/DAPLink/source/daplink/cmsis-dap;packages/DAPLink/source/daplink/drag-n-drop;packages/DAPLink/source/daplink/usb2uart;packages/DAPLink/source/daplink/settings;packages/DAPLink/source/daplink/interface;packages/DAPLink/source/daplink;packages/DAPLink/source/cmsis-core;packages/DAPLink/source/hic_hal;packages/DAPLink/source/target;packages/DAPLink/source/hic_hal/stm32/stm32f103xb;packages/DAPLink/source/hic_hal/stm32/stm32f103xb/cmsis;packages/DAPLink/source/hic_hal/stm32/stm32f103xb/STM32F1xx_HAL_Driver;packages/DAPLink/source/hic_hal/stm32/stm32f103xb/STM32F1xx_HAL_Driver/Inc;packages/DAPLink/source\rtos\rt-thread-3.1.3\include;packages/DAPLink/source\rtos\rt-thread-3.1.3\packages\CMSIS-v5.0.0\CMSIS_5\CMSIS\RTOS2\Include;packages/DAPLink/source\rtos\rt-thread-3.1.3;packages/DAPLink/source\rtos\rt-thread-3.1.3\components\finsh</IncludePath>
+              <IncludePath>packages/DAPLink/source/usb;packages/DAPLink/source/daplink/cmsis-dap;packages/DAPLink/source/daplink/drag-n-drop;packages/DAPLink/source/daplink/usb2uart;packages/DAPLink/source/daplink/settings;packages/DAPLink/source/daplink/interface;packages/DAPLink/source/daplink;packages/DAPLink/source/cmsis-core;packages/DAPLink/source/hic_hal;packages/DAPLink/source/target;packages/DAPLink/source/hic_hal/stm32/stm32f103xb;packages/DAPLink/source/hic_hal/stm32/stm32f103xb/cmsis;packages/DAPLink/source/hic_hal/stm32/stm32f103xb/STM32F1xx_HAL_Driver;packages/DAPLink/source/hic_hal/stm32/stm32f103xb/STM32F1xx_HAL_Driver/Inc;rt-thread\include;packages\CMSIS-v5.0.0\CMSIS_5\CMSIS\RTOS2\Include;rt-thread;rt-thread\components\finsh;..\code_project;.\drivers</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -835,127 +835,129 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>rtos</GroupName>
+          <GroupName>rtt_os</GroupName>
           <Files>
             <File>
               <FileName>board.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages/DAPLink/source\rtos\rt-thread-3.1.3\board.c</FilePath>
+              <FilePath>drivers/board.c</FilePath>
             </File>
             <File>
               <FileName>cmsis_rtthread.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages/DAPLink/source\rtos\rt-thread-3.1.3\packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src\cmsis_rtthread.c</FilePath>
+              <FilePath>packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src\cmsis_rtthread.c</FilePath>
             </File>
             <File>
               <FileName>os_systick.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages/DAPLink/source\rtos\rt-thread-3.1.3\packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src\os_systick.c</FilePath>
+              <FilePath>packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src\os_systick.c</FilePath>
             </File>
             <File>
               <FileName>context_rvds.S</FileName>
               <FileType>2</FileType>
-              <FilePath>packages/DAPLink/source\rtos\rt-thread-3.1.3\libcpu\arm\cortex-m3\context_rvds.S</FilePath>
+              <FilePath>rt-thread\libcpu\arm\cortex-m3\context_rvds.S</FilePath>
             </File>
             <File>
               <FileName>cpuport.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages/DAPLink/source\rtos\rt-thread-3.1.3\libcpu\arm\cortex-m3\cpuport.c</FilePath>
+              <FilePath>rt-thread\libcpu\arm\cortex-m3\cpuport.c</FilePath>
             </File>
             <File>
               <FileName>clock.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages/DAPLink/source\rtos\rt-thread-3.1.3\src\clock.c</FilePath>
+              <FilePath>rt-thread\src\clock.c</FilePath>
             </File>
             <File>
               <FileName>components.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages/DAPLink/source\rtos\rt-thread-3.1.3\src\components.c</FilePath>
+              <FilePath>rt-thread\src\components.c</FilePath>
             </File>
             <File>
               <FileName>idle.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages/DAPLink/source\rtos\rt-thread-3.1.3\src\idle.c</FilePath>
+              <FilePath>rt-thread\src\idle.c</FilePath>
             </File>
             <File>
               <FileName>ipc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages/DAPLink/source\rtos\rt-thread-3.1.3\src\ipc.c</FilePath>
+              <FilePath>rt-thread\src\ipc.c</FilePath>
             </File>
             <File>
               <FileName>irq.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages/DAPLink/source\rtos\rt-thread-3.1.3\src\irq.c</FilePath>
+              <FilePath>rt-thread\src\irq.c</FilePath>
             </File>
             <File>
               <FileName>kservice.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages/DAPLink/source\rtos\rt-thread-3.1.3\src\kservice.c</FilePath>
+              <FilePath>rt-thread\src\kservice.c</FilePath>
             </File>
             <File>
               <FileName>mem.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages/DAPLink/source\rtos\rt-thread-3.1.3\src\mem.c</FilePath>
+              <FilePath>rt-thread\src\mem.c</FilePath>
             </File>
             <File>
               <FileName>object.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages/DAPLink/source\rtos\rt-thread-3.1.3\src\object.c</FilePath>
+              <FilePath>rt-thread\src\object.c</FilePath>
             </File>
             <File>
               <FileName>scheduler.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages/DAPLink/source\rtos\rt-thread-3.1.3\src\scheduler.c</FilePath>
+              <FilePath>rt-thread\src\scheduler.c</FilePath>
             </File>
             <File>
               <FileName>thread.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages/DAPLink/source\rtos\rt-thread-3.1.3\src\thread.c</FilePath>
+              <FilePath>rt-thread\src\thread.c</FilePath>
             </File>
             <File>
               <FileName>timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages/DAPLink/source\rtos\rt-thread-3.1.3\src\timer.c</FilePath>
+              <FilePath>rt-thread\src\timer.c</FilePath>
             </File>
             <File>
               <FileName>rtconfig.h</FileName>
               <FileType>5</FileType>
-              <FilePath>packages/DAPLink/source\rtos\rt-thread-3.1.3\rtconfig.h</FilePath>
+              <FilePath>rtconfig.h</FilePath>
             </File>
             <File>
               <FileName>cmd.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages/DAPLink/source\rtos\rt-thread-3.1.3\components\finsh\cmd.c</FilePath>
+              <FilePath>rt-thread\components\finsh\cmd.c</FilePath>
             </File>
             <File>
               <FileName>msh.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages/DAPLink/source\rtos\rt-thread-3.1.3\components\finsh\msh.c</FilePath>
+              <FilePath>rt-thread\components\finsh\msh.c</FilePath>
             </File>
             <File>
               <FileName>shell.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages/DAPLink/source\rtos\rt-thread-3.1.3\components\finsh\shell.c</FilePath>
+              <FilePath>rt-thread\components\finsh\shell.c</FilePath>
+            </File>
+            <File>
+              <FileName>device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>rt-thread\src\device.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>rtos_drivers</GroupName>
+          <GroupName>rtt_drivers</GroupName>
           <Files>
             <File>
               <FileName>drv_usart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages/DAPLink/source\rtos\rt-thread-3.1.3\drivers\drv_usart.c</FilePath>
+              <FilePath>drivers\drv_usart.c</FilePath>
             </File>
             <File>
               <FileName>drv_common.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages/DAPLink/source\rtos\rt-thread-3.1.3\drivers\drv_common.c</FilePath>
+              <FilePath>drivers\drv_common.c</FilePath>
             </File>
           </Files>
-        </Group>
-        <Group>
-          <GroupName>::CMSIS</GroupName>
         </Group>
       </Groups>
     </Target>
@@ -963,14 +965,7 @@
 
   <RTE>
     <apis/>
-    <components>
-      <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" Cversion="5.1.2" condition="ARMv6_7_8-M Device">
-        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.4.0"/>
-        <targetInfos>
-          <targetInfo name="stm32f103xb_if"/>
-        </targetInfos>
-      </component>
-    </components>
+    <components/>
     <files/>
   </RTE>
 
