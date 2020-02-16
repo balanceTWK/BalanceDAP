@@ -12,6 +12,12 @@
 #include <rtdevice.h>
 #include <board.h>
 
+#include <dfs_fs.h>
+
+#define DBG_TAG "main"
+#define DBG_LVL DBG_LOG
+#include <rtdbg.h>
+
 /* defined the LED0 pin: PB7 */
 #define LED0_PIN    GET_PIN(B, 7)
 
