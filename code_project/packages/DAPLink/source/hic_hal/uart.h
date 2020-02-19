@@ -31,11 +31,11 @@ extern "C" {
 
 /* Parity enumerator */
 typedef enum {
-    UART_PARITY_NONE    = 0,
-    UART_PARITY_ODD     = 1,
-    UART_PARITY_EVEN    = 2,
-    UART_PARITY_MARK    = 3,
-    UART_PARITY_SPACE   = 4
+    HAL_UART_PARITY_NONE    = 0,
+    HAL_UART_PARITY_ODD     = 1,
+    HAL_UART_PARITY_EVEN    = 2,
+    HAL_UART_PARITY_MARK    = 3,
+    HAL_UART_PARITY_SPACE   = 4
 } UART_Parity;
 
 /* Stop Bits enumerator */

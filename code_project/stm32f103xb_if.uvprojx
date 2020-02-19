@@ -188,7 +188,7 @@
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
-            <useUlib>0</useUlib>
+            <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
             <nSecure>0</nSecure>
@@ -204,12 +204,12 @@
             <Ro1Chk>0</Ro1Chk>
             <Ro2Chk>0</Ro2Chk>
             <Ro3Chk>0</Ro3Chk>
-            <Ir1Chk>1</Ir1Chk>
+            <Ir1Chk>0</Ir1Chk>
             <Ir2Chk>0</Ir2Chk>
             <Ra1Chk>0</Ra1Chk>
             <Ra2Chk>0</Ra2Chk>
             <Ra3Chk>0</Ra3Chk>
-            <Im1Chk>1</Im1Chk>
+            <Im1Chk>0</Im1Chk>
             <Im2Chk>0</Im2Chk>
             <OnChipMemories>
               <Ocm1>
@@ -312,7 +312,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>0</Optim>
+            <Optim>3</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -336,9 +336,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls>--gnu --c99 --no_unaligned_access --no_unaligned_access</MiscControls>
-              <Define>DAPLINK_VERSION=254, HID_ENDPOINT, MSC_ENDPOINT, CDC_ENDPOINT, WEBUSB_INTERFACE, WINUSB_INTERFACE, DRAG_N_DROP_SUPPORT, DAPLINK_IF, DAPLINK_BUILD_KEY=0x9B939E8F, OS_TICK=10000, INTERFACE_STM32F103XB, USE_HAL_DRIVER, STM32F103xB, DAPLINK_HIC_ID=0x97969908, __packed=__packed, DAPLINK_NO_ASSERT_FILENAMES, OS_CLOCK=72000000, BULK_ENDPOINT</Define>
+              <Define>DAPLINK_VERSION=254, HID_ENDPOINT, MSC_ENDPOINT, CDC_ENDPOINT, WEBUSB_INTERFACE, WINUSB_INTERFACE, DRAG_N_DROP_SUPPORT,DAPLINK_IF, DAPLINK_BUILD_KEY=0x9B939E8F, OS_TICK=10000, INTERFACE_STM32F103XB, USE_HAL_DRIVER, STM32F103xB, DAPLINK_HIC_ID=0x97969908, __packed=__packed, DAPLINK_NO_ASSERT_FILENAMES, OS_CLOCK=72000000, BULK_ENDPOINT</Define>
               <Undefine></Undefine>
-              <IncludePath>packages/DAPLink/source/usb;packages/DAPLink/source/daplink/cmsis-dap;packages/DAPLink/source/daplink/drag-n-drop;packages/DAPLink/source/daplink/usb2uart;packages/DAPLink/source/daplink/settings;packages/DAPLink/source/daplink/interface;packages/DAPLink/source/daplink;packages/DAPLink/source/cmsis-core;packages/DAPLink/source/hic_hal;packages/DAPLink/source/target;packages/DAPLink/source/hic_hal/stm32/stm32f103xb;packages/DAPLink/source/hic_hal/stm32/stm32f103xb/cmsis;packages/DAPLink/source/hic_hal/stm32/stm32f103xb/STM32F1xx_HAL_Driver;packages/DAPLink/source/hic_hal/stm32/stm32f103xb/STM32F1xx_HAL_Driver/Inc;rt-thread\include;packages\CMSIS-v5.0.0\CMSIS_5\CMSIS\RTOS2\Include;rt-thread;rt-thread\components\finsh;..\code_project;.\drivers</IncludePath>
+              <IncludePath>.\packages\DAPLink\source;packages/DAPLink/source/usb;packages/DAPLink/source/daplink/cmsis-dap;packages/DAPLink/source/daplink/drag-n-drop;packages/DAPLink/source/daplink/usb2uart;packages/DAPLink/source/daplink/settings;packages/DAPLink/source/daplink/interface;packages/DAPLink/source/daplink;packages/DAPLink/source/cmsis-core;packages/DAPLink/source/hic_hal;packages/DAPLink/source/target;packages/DAPLink/source/hic_hal/stm32/stm32f103xb;packages/DAPLink/source/hic_hal/stm32/stm32f103xb/cmsis;packages/DAPLink/source/hic_hal/stm32/stm32f103xb/STM32F1xx_HAL_Driver;packages/DAPLink/source/hic_hal/stm32/stm32f103xb/STM32F1xx_HAL_Driver/Inc;packages\CMSIS-v5.0.0\CMSIS_5\CMSIS\RTOS2\Include;.\rt-thread;.\rt-thread\include;.\rt-thread\components\finsh;..\code_project;.\drivers;.\rt-thread\components\drivers;.\rt-thread\components\drivers\include;.\rt-thread\components\utilities\ulog;.\rt-thread\components\drivers\spi;.\rt-thread\components\drivers\spi\sfud\inc;.\rt-thread\components\dfs\include;.\rt-thread\components\dfs\filesystems\devfs;.\rt-thread\components\dfs\filesystems\elmfat</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -364,7 +364,7 @@
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
             <noStLib>0</noStLib>
-            <RepFail>1</RepFail>
+            <RepFail>0</RepFail>
             <useFile>0</useFile>
             <TextAddressRange>0x00000000</TextAddressRange>
             <DataAddressRange>0x00000000</DataAddressRange>
@@ -468,9 +468,9 @@
               <FilePath>packages/DAPLink/source/daplink/info.c</FilePath>
             </File>
             <File>
-              <FileName>main.c</FileName>
+              <FileName>dap_main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>packages/DAPLink/source/daplink/interface/main.c</FilePath>
+              <FilePath>packages/DAPLink/source/daplink/interface/dap_main.c</FilePath>
             </File>
             <File>
               <FileName>sdk_stub.c</FileName>
@@ -732,6 +732,16 @@
               <FileType>1</FileType>
               <FilePath>packages/DAPLink/source/hic_hal/stm32/stm32f103xb/usbd_STM32F103.c</FilePath>
             </File>
+            <File>
+              <FileName>stm32f1xx_hal_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f1xx_ll_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_spi.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -835,6 +845,16 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>rtt_Applications</GroupName>
+          <Files>
+            <File>
+              <FileName>rtt_main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Applications\rtt_main.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>rtt_os</GroupName>
           <Files>
             <File>
@@ -923,24 +943,79 @@
               <FilePath>rtconfig.h</FilePath>
             </File>
             <File>
-              <FileName>cmd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>rt-thread\components\finsh\cmd.c</FilePath>
-            </File>
-            <File>
-              <FileName>msh.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>rt-thread\components\finsh\msh.c</FilePath>
-            </File>
-            <File>
-              <FileName>shell.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>rt-thread\components\finsh\shell.c</FilePath>
-            </File>
-            <File>
               <FileName>device.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\src\device.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>rtt_DevixeDrivers</GroupName>
+          <Files>
+            <File>
+              <FileName>serial.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rt-thread\components\drivers\serial\serial.c</FilePath>
+            </File>
+            <File>
+              <FileName>waitqueue.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rt-thread\components\drivers\src\waitqueue.c</FilePath>
+            </File>
+            <File>
+              <FileName>workqueue.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rt-thread\components\drivers\src\workqueue.c</FilePath>
+            </File>
+            <File>
+              <FileName>ringbuffer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rt-thread\components\drivers\src\ringbuffer.c</FilePath>
+            </File>
+            <File>
+              <FileName>ringblk_buf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rt-thread\components\drivers\src\ringblk_buf.c</FilePath>
+            </File>
+            <File>
+              <FileName>pipe.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rt-thread\components\drivers\src\pipe.c</FilePath>
+            </File>
+            <File>
+              <FileName>dataqueue.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rt-thread\components\drivers\src\dataqueue.c</FilePath>
+            </File>
+            <File>
+              <FileName>completion.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rt-thread\components\drivers\src\completion.c</FilePath>
+            </File>
+            <File>
+              <FileName>spi_core.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rt-thread\components\drivers\spi\spi_core.c</FilePath>
+            </File>
+            <File>
+              <FileName>spi_dev.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rt-thread\components\drivers\spi\spi_dev.c</FilePath>
+            </File>
+            <File>
+              <FileName>spi_flash_sfud.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rt-thread\components\drivers\spi\spi_flash_sfud.c</FilePath>
+            </File>
+            <File>
+              <FileName>sfud.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rt-thread\components\drivers\spi\sfud\src\sfud.c</FilePath>
+            </File>
+            <File>
+              <FileName>sfud_sfdp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rt-thread\components\drivers\spi\sfud\src\sfud_sfdp.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -956,6 +1031,150 @@
               <FileName>drv_common.c</FileName>
               <FileType>1</FileType>
               <FilePath>drivers\drv_common.c</FilePath>
+            </File>
+            <File>
+              <FileName>drv_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\drivers\drv_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>spi_flash_init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\drivers\spi_flash_init.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>rtt_finsh</GroupName>
+          <Files>
+            <File>
+              <FileName>cmd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rt-thread\components\finsh\cmd.c</FilePath>
+            </File>
+            <File>
+              <FileName>msh_file.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rt-thread\components\finsh\msh_file.c</FilePath>
+            </File>
+            <File>
+              <FileName>msh.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rt-thread\components\finsh\msh.c</FilePath>
+            </File>
+            <File>
+              <FileName>shell.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rt-thread\components\finsh\shell.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>rtt_Filesystem</GroupName>
+          <GroupOption>
+            <CommonProperty>
+              <UseCPPCompiler>0</UseCPPCompiler>
+              <RVCTCodeConst>0</RVCTCodeConst>
+              <RVCTZI>0</RVCTZI>
+              <RVCTOtherData>0</RVCTOtherData>
+              <ModuleSelection>0</ModuleSelection>
+              <IncludeInBuild>0</IncludeInBuild>
+              <AlwaysBuild>2</AlwaysBuild>
+              <GenerateAssemblyFile>2</GenerateAssemblyFile>
+              <AssembleAssemblyFile>2</AssembleAssemblyFile>
+              <PublicsOnly>2</PublicsOnly>
+              <StopOnExitCode>11</StopOnExitCode>
+              <CustomArgument></CustomArgument>
+              <IncludeLibraryModules></IncludeLibraryModules>
+              <ComprImg>1</ComprImg>
+            </CommonProperty>
+            <GroupArmAds>
+              <Cads>
+                <interw>2</interw>
+                <Optim>0</Optim>
+                <oTime>2</oTime>
+                <SplitLS>2</SplitLS>
+                <OneElfS>2</OneElfS>
+                <Strict>2</Strict>
+                <EnumInt>2</EnumInt>
+                <PlainCh>2</PlainCh>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <wLevel>0</wLevel>
+                <uThumb>2</uThumb>
+                <uSurpInc>2</uSurpInc>
+                <uC99>2</uC99>
+                <uGnu>2</uGnu>
+                <useXO>2</useXO>
+                <v6Lang>0</v6Lang>
+                <v6LangP>0</v6LangP>
+                <vShortEn>2</vShortEn>
+                <vShortWch>2</vShortWch>
+                <v6Lto>2</v6Lto>
+                <v6WtE>2</v6WtE>
+                <v6Rtti>2</v6Rtti>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Cads>
+              <Aads>
+                <interw>2</interw>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <thumb>2</thumb>
+                <SplitLS>2</SplitLS>
+                <SwStkChk>2</SwStkChk>
+                <NoWarn>2</NoWarn>
+                <uSurpInc>2</uSurpInc>
+                <useXO>2</useXO>
+                <uClangAs>2</uClangAs>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Aads>
+            </GroupArmAds>
+          </GroupOption>
+          <Files>
+            <File>
+              <FileName>dfs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rt-thread\components\dfs\src\dfs.c</FilePath>
+            </File>
+            <File>
+              <FileName>dfs_file.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rt-thread\components\dfs\src\dfs_file.c</FilePath>
+            </File>
+            <File>
+              <FileName>dfs_fs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rt-thread\components\dfs\src\dfs_fs.c</FilePath>
+            </File>
+            <File>
+              <FileName>dfs_posix.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rt-thread\components\dfs\src\dfs_posix.c</FilePath>
+            </File>
+            <File>
+              <FileName>devfs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rt-thread\components\dfs\filesystems\devfs\devfs.c</FilePath>
+            </File>
+            <File>
+              <FileName>dfs_elm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rt-thread\components\dfs\filesystems\elmfat\dfs_elm.c</FilePath>
+            </File>
+            <File>
+              <FileName>ff.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rt-thread\components\dfs\filesystems\elmfat\ff.c</FilePath>
             </File>
           </Files>
         </Group>

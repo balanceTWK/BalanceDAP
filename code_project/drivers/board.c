@@ -70,17 +70,17 @@ void rt_hw_board_init()
     /* System Tick Configuration */
     _SysTick_Config(SystemCoreClock / RT_TICK_PER_SECOND);
 		rt_hw_systick_init();
-	
-	  uart_init();
+
+#if defined(RT_USING_HEAP)
+    rt_system_heap_init((void *)HEAP_BEGIN, (void *)HEAP_END);
+#endif
 
     /* Call components board initial (use INIT_BOARD_EXPORT()) */
 #ifdef RT_USING_COMPONENTS_INIT
     rt_components_board_init();
 #endif
 
-#if defined(RT_USING_HEAP)
-    rt_system_heap_init((void *)HEAP_BEGIN, (void *)HEAP_END);
-#endif
+    rt_console_set_device(RT_CONSOLE_DEVICE_NAME);
 
 }
 

@@ -20,7 +20,7 @@
  */
 
 #include <string.h>
-#include "main.h"
+#include "dap_main.h"
 #include "info.h"
 #include "target_config.h"
 #include "dap_board.h"

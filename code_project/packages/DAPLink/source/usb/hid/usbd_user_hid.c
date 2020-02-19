@@ -28,7 +28,7 @@
 #include "DAP.h"
 #include "util.h"
 #include "DAP_queue.h"
-#include "main.h"
+#include "dap_main.h"
 
 
 #if (USBD_HID_OUTREPORT_MAX_SZ > DAP_PACKET_SIZE)

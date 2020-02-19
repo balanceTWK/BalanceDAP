@@ -22,7 +22,7 @@
 #include "stdbool.h"
 #include "ctype.h"
 
-#include "main.h"
+#include "dap_main.h"
 #include "cmsis_os2.h"
 #include "rl_usb.h"
 #include "virtual_fs.h"

@@ -77,7 +77,7 @@
 //#define HAL_RTC_MODULE_ENABLED
 //#define HAL_SD_MODULE_ENABLED
 //#define HAL_SMARTCARD_MODULE_ENABLED
-//#define HAL_SPI_MODULE_ENABLED
+#define HAL_SPI_MODULE_ENABLED
 //#define HAL_SRAM_MODULE_ENABLED
 #define HAL_TIM_MODULE_ENABLED
 #define HAL_UART_MODULE_ENABLED
@@ -110,6 +110,15 @@
 #if !defined  (HSI_VALUE)
   #define HSI_VALUE    ((uint32_t)8000000) /*!< Value of the Internal oscillator in Hz*/
 #endif /* HSI_VALUE */
+
+/**
+  * @brief Internal Low Speed oscillator (LSI) value.
+  */
+#if !defined  (LSI_VALUE) 
+ #define LSI_VALUE               40000U    /*!< LSI Typical Value in Hz */
+#endif /* LSI_VALUE */                     /*!< Value of the Internal Low Speed oscillator in Hz
+                                                The real value may vary depending on the variations
+                                                in voltage and temperature. */
 
 /**
   * @brief External Low Speed oscillator (LSE) value.

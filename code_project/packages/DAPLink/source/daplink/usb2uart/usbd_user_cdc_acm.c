@@ -21,7 +21,7 @@
 
 #include "cmsis_os2.h"
 #include "rl_usb.h"
-#include "main.h"
+#include "dap_main.h"
 #include "target_reset.h"
 #include "uart.h"
 #ifdef DRAG_N_DROP_SUPPORT
