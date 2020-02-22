@@ -45,7 +45,7 @@ enum
     }
 #endif /* UART1_CONFIG */
 
-const static struct stm32_uart_config uart_config[] =
+static struct stm32_uart_config uart_config[] =
 {
 #ifdef BSP_USING_UART1
     UART1_CONFIG,

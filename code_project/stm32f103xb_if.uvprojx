@@ -863,26 +863,6 @@
               <FilePath>drivers/board.c</FilePath>
             </File>
             <File>
-              <FileName>cmsis_rtthread.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src\cmsis_rtthread.c</FilePath>
-            </File>
-            <File>
-              <FileName>os_systick.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src\os_systick.c</FilePath>
-            </File>
-            <File>
-              <FileName>context_rvds.S</FileName>
-              <FileType>2</FileType>
-              <FilePath>rt-thread\libcpu\arm\cortex-m3\context_rvds.S</FilePath>
-            </File>
-            <File>
-              <FileName>cpuport.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>rt-thread\libcpu\arm\cortex-m3\cpuport.c</FilePath>
-            </File>
-            <File>
               <FileName>clock.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\src\clock.c</FilePath>
@@ -938,14 +918,24 @@
               <FilePath>rt-thread\src\timer.c</FilePath>
             </File>
             <File>
-              <FileName>rtconfig.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>rtconfig.h</FilePath>
-            </File>
-            <File>
               <FileName>device.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\src\device.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>rtt_cpu</GroupName>
+          <Files>
+            <File>
+              <FileName>cpuport.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>rt-thread\libcpu\arm\cortex-m3\cpuport.c</FilePath>
+            </File>
+            <File>
+              <FileName>context_rvds.S</FileName>
+              <FileType>2</FileType>
+              <FilePath>rt-thread\libcpu\arm\cortex-m3\context_rvds.S</FilePath>
             </File>
           </Files>
         </Group>
@@ -1041,6 +1031,21 @@
               <FileName>spi_flash_init.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\drivers\spi_flash_init.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>rtt_CMSIS</GroupName>
+          <Files>
+            <File>
+              <FileName>cmsis_rtthread.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src\cmsis_rtthread.c</FilePath>
+            </File>
+            <File>
+              <FileName>os_systick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src\os_systick.c</FilePath>
             </File>
           </Files>
         </Group>

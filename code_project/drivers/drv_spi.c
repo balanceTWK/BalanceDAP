@@ -42,7 +42,7 @@ enum
 #endif /* SPI1_BUS_CONFIG */
 #endif /* BSP_USING_SPI1 */
  
-const static struct stm32_spi_config spi_config[] =
+static struct stm32_spi_config spi_config[] =
 {
 #ifdef BSP_USING_SPI1
     SPI1_BUS_CONFIG,
