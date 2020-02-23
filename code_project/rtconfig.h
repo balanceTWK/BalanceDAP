@@ -79,7 +79,6 @@
 #define RT_PIPE_BUFSZ 512
 #define RT_USING_SERIAL
 #define RT_SERIAL_RB_BUFSZ 64
-#define RT_USING_PIN
 #define RT_USING_SPI
 #define RT_USING_SFUD
 #define RT_SFUD_USING_SFDP
@@ -152,11 +151,11 @@
 
 /* samples: kernel and components samples */
 
-#define SOC_FAMILY_STM32
-#define SOC_SERIES_STM32F1
 
 /* Hardware Drivers Config */
 
+#define SOC_FAMILY_STM32
+#define SOC_SERIES_STM32F1
 #define SOC_STM32F103CB
 
 /* Onboard Peripheral Drivers */
