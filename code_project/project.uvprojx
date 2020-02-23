@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="project_projx.xsd">
-
   <SchemaVersion>2.1</SchemaVersion>
-
   <Header>### uVision Project, (C) Keil Software</Header>
-
   <Targets>
     <Target>
-      <TargetName>rt-thread</TargetName>
+      <TargetName>stm32f103xb_if</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>5060750::V5.06 update 6 (build 750)::ARMCC</pCCUsed>
@@ -19,28 +16,28 @@
           <PackID>Keil.STM32F1xx_DFP.2.3.0</PackID>
           <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x00005000) IROM(0x08000000,0x00020000) CPUTYPE("Cortex-M3") CLOCK(12000000) ELITTLE</Cpu>
-          <FlashUtilSpec></FlashUtilSpec>
-          <StartupFile></StartupFile>
+          <FlashUtilSpec />
+          <StartupFile />
           <FlashDriverDll>UL2CM3(-S0 -C0 -P0 -FD20000000 -FC1000 -FN1 -FF0STM32F10x_128 -FS08000000 -FL020000 -FP0($$Device:STM32F103CB$Flash\STM32F10x_128.FLM))</FlashDriverDll>
           <DeviceId>0</DeviceId>
           <RegisterFile>$$Device:STM32F103CB$Device\Include\stm32f10x.h</RegisterFile>
-          <MemoryEnv></MemoryEnv>
-          <Cmp></Cmp>
-          <Asm></Asm>
-          <Linker></Linker>
-          <OHString></OHString>
-          <InfinionOptionDll></InfinionOptionDll>
-          <SLE66CMisc></SLE66CMisc>
-          <SLE66AMisc></SLE66AMisc>
-          <SLE66LinkerMisc></SLE66LinkerMisc>
+          <MemoryEnv />
+          <Cmp />
+          <Asm />
+          <Linker />
+          <OHString />
+          <InfinionOptionDll />
+          <SLE66CMisc />
+          <SLE66AMisc />
+          <SLE66LinkerMisc />
           <SFDFile>$$Device:STM32F103CB$SVD\STM32F103xx.svd</SFDFile>
           <bCustSvd>0</bCustSvd>
           <UseEnv>0</UseEnv>
-          <BinPath></BinPath>
-          <IncludePath></IncludePath>
-          <LibPath></LibPath>
-          <RegisterFilePath></RegisterFilePath>
-          <DBRegisterFilePath></DBRegisterFilePath>
+          <BinPath />
+          <IncludePath />
+          <LibPath />
+          <RegisterFilePath />
+          <DBRegisterFilePath />
           <TargetStatus>
             <Error>0</Error>
             <ExitCodeStop>0</ExitCodeStop>
@@ -48,22 +45,22 @@
             <NotGenerated>0</NotGenerated>
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
-          <OutputDirectory>.\build\keil\Obj\</OutputDirectory>
-          <OutputName>rt-thread</OutputName>
+          <OutputDirectory>.\build\</OutputDirectory>
+          <OutputName>stm32f103xb_if</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
           <DebugInformation>1</DebugInformation>
-          <BrowseInformation>0</BrowseInformation>
-          <ListingPath>.\build\keil\List\</ListingPath>
+          <BrowseInformation>1</BrowseInformation>
+          <ListingPath>.\build\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
           <CreateBatchFile>0</CreateBatchFile>
           <BeforeCompile>
             <RunUserProg1>0</RunUserProg1>
             <RunUserProg2>0</RunUserProg2>
-            <UserProg1Name></UserProg1Name>
-            <UserProg2Name></UserProg2Name>
+            <UserProg1Name />
+            <UserProg2Name />
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
             <nStopU1X>0</nStopU1X>
@@ -72,25 +69,25 @@
           <BeforeMake>
             <RunUserProg1>0</RunUserProg1>
             <RunUserProg2>0</RunUserProg2>
-            <UserProg1Name></UserProg1Name>
-            <UserProg2Name></UserProg2Name>
+            <UserProg1Name>..\..\..\tools\pre_build_script.bat</UserProg1Name>
+            <UserProg2Name />
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
-            <nStopB1X>0</nStopB1X>
+            <nStopB1X>2</nStopB1X>
             <nStopB2X>0</nStopB2X>
           </BeforeMake>
           <AfterMake>
-            <RunUserProg1>1</RunUserProg1>
-            <RunUserProg2>0</RunUserProg2>
-            <UserProg1Name>fromelf --bin !L --output rtthread.bin</UserProg1Name>
-            <UserProg2Name></UserProg2Name>
+            <RunUserProg1>0</RunUserProg1>
+            <RunUserProg2>1</RunUserProg2>
+            <UserProg1Name>..\..\..\tools\post_build_script.bat $L@L $KARM</UserProg1Name>
+            <UserProg2Name>fromelf --bin !L --output rtthread-dap.bin</UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
-            <nStopA1X>0</nStopA1X>
+            <nStopA1X>2</nStopA1X>
             <nStopA2X>0</nStopA2X>
           </AfterMake>
           <SelectedForBatchBuild>0</SelectedForBatchBuild>
-          <SVCSIdString></SVCSIdString>
+          <SVCSIdString />
         </TargetCommonOption>
         <CommonProperty>
           <UseCPPCompiler>0</UseCPPCompiler>
@@ -104,8 +101,8 @@
           <AssembleAssemblyFile>0</AssembleAssemblyFile>
           <PublicsOnly>0</PublicsOnly>
           <StopOnExitCode>3</StopOnExitCode>
-          <CustomArgument></CustomArgument>
-          <IncludeLibraryModules></IncludeLibraryModules>
+          <CustomArgument />
+          <IncludeLibraryModules />
           <ComprImg>1</ComprImg>
         </CommonProperty>
         <DllOption>
@@ -114,7 +111,7 @@
           <SimDlgDll>DCM.DLL</SimDlgDll>
           <SimDlgDllArguments>-pCM3</SimDlgDllArguments>
           <TargetDllName>SARMCM3.DLL</TargetDllName>
-          <TargetDllArguments></TargetDllArguments>
+          <TargetDllArguments />
           <TargetDlgDll>TCM.DLL</TargetDlgDll>
           <TargetDlgDllArguments>-pCM3</TargetDlgDllArguments>
         </DllOption>
@@ -138,11 +135,11 @@
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3>"" ()</Flash3>
-          <Flash4></Flash4>
-          <pFcarmOut></pFcarmOut>
-          <pFcarmGrp></pFcarmGrp>
-          <pFcArmRoot></pFcArmRoot>
+          <Flash3 />
+          <Flash4 />
+          <pFcarmOut />
+          <pFcarmGrp />
+          <pFcArmRoot />
           <FcArmLst>0</FcArmLst>
         </Utilities>
         <TargetArmAds>
@@ -172,10 +169,10 @@
             <AdsLsun>1</AdsLsun>
             <AdsLven>1</AdsLven>
             <AdsLsxf>1</AdsLsxf>
-            <RvctClst>0</RvctClst>
+            <RvctClst>1</RvctClst>
             <GenPPlst>0</GenPPlst>
             <AdsCpuType>"Cortex-M3"</AdsCpuType>
-            <RvctDeviceName></RvctDeviceName>
+            <RvctDeviceName />
             <mOS>0</mOS>
             <uocRom>0</uocRom>
             <uocRam>0</uocRam>
@@ -204,12 +201,12 @@
             <Ro1Chk>0</Ro1Chk>
             <Ro2Chk>0</Ro2Chk>
             <Ro3Chk>0</Ro3Chk>
-            <Ir1Chk>1</Ir1Chk>
+            <Ir1Chk>0</Ir1Chk>
             <Ir2Chk>0</Ir2Chk>
             <Ra1Chk>0</Ra1Chk>
             <Ra2Chk>0</Ra2Chk>
             <Ra3Chk>0</Ra3Chk>
-            <Im1Chk>1</Im1Chk>
+            <Im1Chk>0</Im1Chk>
             <Im2Chk>0</Im2Chk>
             <OnChipMemories>
               <Ocm1>
@@ -308,7 +305,7 @@
                 <Size>0x0</Size>
               </OCR_RVCT10>
             </OnChipMemories>
-            <RvctStartVector></RvctStartVector>
+            <RvctStartVector />
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
@@ -321,10 +318,10 @@
             <PlainCh>0</PlainCh>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
-            <wLevel>2</wLevel>
+            <wLevel>0</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
-            <uC99>1</uC99>
+            <uC99>0</uC99>
             <uGnu>0</uGnu>
             <useXO>0</useXO>
             <v6Lang>1</v6Lang>
@@ -335,10 +332,10 @@
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
             <VariousControls>
-              <MiscControls></MiscControls>
-              <Define>STM32F103xB, __packed=__packed, INTERFACE_STM32F103XB, MSC_ENDPOINT, DAPLINK_BUILD_KEY=0x9B939E8F, OS_CLOCK=72000000, DRAG_N_DROP_SUPPORT, USE_HAL_DRIVER, DAPLINK_VERSION=254, CDC_ENDPOINT, HID_ENDPOINT, DAPLINK_IF, DAPLINK_NO_ASSERT_FILENAMES, WEBUSB_INTERFACE, OS_TICK=10000, DAPLINK_HIC_ID=0x97969908, WINUSB_INTERFACE, BULK_ENDPOINT, RT_USING_ARM_LIBC</Define>
-              <Undefine></Undefine>
-              <IncludePath>.;rt-thread\include;applications;.;board;board\CubeMX_Config\Inc;board\ports;libraries\HAL_Drivers;libraries\HAL_Drivers\config;DAPLink\source\usb;DAPLink\source\daplink;DAPLink\source\daplink\cmsis-dap;DAPLink\source\daplink\drag-n-drop;DAPLink\source\daplink\usb2uart;DAPLink\source\daplink\settings;DAPLink\source\daplink\interface;DAPLink\source\cmsis-core;DAPLink\source\hic_hal;DAPLink\source\target;DAPLink\source\hic_hal\stm32\stm32f103xb;DAPLink\source\hic_hal\stm32\stm32f103xb\cmsis;packages\CMSIS-v5.0.0\CMSIS_5\CMSIS\RTOS2\Include;packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src;rt-thread\libcpu\arm\common;rt-thread\libcpu\arm\cortex-m3;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\spi;rt-thread\components\drivers\include;rt-thread\components\drivers\spi\sfud\inc;rt-thread\components\drivers\include;rt-thread\components\drivers\usb\usbdevice;rt-thread\components\finsh;rt-thread\components\libc\compilers\armlibc;rt-thread\components\libc\compilers\common;libraries\STM32F1xx_HAL\CMSIS\Device\ST\STM32F1xx\Include;libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Inc;libraries\STM32F1xx_HAL\CMSIS\Include</IncludePath>
+              <MiscControls>--gnu --c99 --no_unaligned_access --no_unaligned_access</MiscControls>
+              <Define>STM32F103xB, __packed=__packed, INTERFACE_STM32F103XB, MSC_ENDPOINT, DAPLINK_BUILD_KEY=0x9B939E8F, OS_CLOCK=72000000, DRAG_N_DROP_SUPPORT, USE_HAL_DRIVER, DAPLINK_VERSION=254, CDC_ENDPOINT, HID_ENDPOINT, DAPLINK_IF, DAPLINK_NO_ASSERT_FILENAMES, WEBUSB_INTERFACE, OS_TICK=10000, DAPLINK_HIC_ID=0x97969908, WINUSB_INTERFACE, BULK_ENDPOINT</Define>
+              <Undefine />
+              <IncludePath>.;rt-thread\include;Applications;drivers;drivers\config;packages\CMSIS-v5.0.0\CMSIS_5\CMSIS\RTOS2\Include;packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src;packages\DAPLink\source;packages\DAPLink\source\usb;packages\DAPLink\source\daplink;packages\DAPLink\source\daplink\cmsis-dap;packages\DAPLink\source\daplink\drag-n-drop;packages\DAPLink\source\daplink\usb2uart;packages\DAPLink\source\daplink\settings;packages\DAPLink\source\daplink\interface;packages\DAPLink\source\cmsis-core;packages\DAPLink\source\target;packages\DAPLink\source\hic_hal;packages\DAPLink\source\hic_hal\stm32\stm32f103xb;packages\DAPLink\source\hic_hal\stm32\stm32f103xb\cmsis;packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver;packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Inc;rt-thread\libcpu\arm\common;rt-thread\libcpu\arm\cortex-m3;rt-thread\components\drivers\include;rt-thread\components\drivers\spi;rt-thread\components\drivers\include;rt-thread\components\drivers\spi\sfud\inc;rt-thread\components\drivers\include;rt-thread\components\finsh;rt-thread\components\libc\compilers\common</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -353,10 +350,10 @@
             <useXO>0</useXO>
             <uClangAs>0</uClangAs>
             <VariousControls>
-              <MiscControls></MiscControls>
-              <Define></Define>
-              <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <MiscControls>--cpreproc --cpreproc_opts=-DDAPLINK_VERSION=254,-DHID_ENDPOINT,-DMSC_ENDPOINT,-DCDC_ENDPOINT,-DWEBUSB_INTERFACE,-DWINUSB_INTERFACE,-DDRAG_N_DROP_SUPPORT,-DDAPLINK_IF,-DDAPLINK_BUILD_KEY=0x9B939E8F,-DOS_TICK=10000,-DINTERFACE_STM32F103XB,-DUSE_HAL_DRIVER,-DSTM32F103xB,-DDAPLINK_HIC_ID=0x97969908,-D__packed=__packed,-DDAPLINK_NO_ASSERT_FILENAMES,-DOS_CLOCK=72000000,-DBULK_ENDPOINT --no_unaligned_access</MiscControls>
+              <Define />
+              <Undefine />
+              <IncludePath />
             </VariousControls>
           </Aads>
           <LDads>
@@ -364,17 +361,17 @@
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
             <noStLib>0</noStLib>
-            <RepFail>1</RepFail>
+            <RepFail>0</RepFail>
             <useFile>0</useFile>
-            <TextAddressRange>0x08000000</TextAddressRange>
-            <DataAddressRange>0x20000000</DataAddressRange>
-            <pXoBase></pXoBase>
-            <ScatterFile>.\board\linker_scripts\link.sct</ScatterFile>
-            <IncludeLibs></IncludeLibs>
-            <IncludeLibsPath></IncludeLibsPath>
-            <Misc></Misc>
-            <LinkerInputFile></LinkerInputFile>
-            <DisabledWarnings></DisabledWarnings>
+            <TextAddressRange>0x00000000</TextAddressRange>
+            <DataAddressRange>0x00000000</DataAddressRange>
+            <pXoBase />
+            <ScatterFile>.\packages\DAPLink\source\daplink.sct</ScatterFile>
+            <IncludeLibs />
+            <IncludeLibsPath />
+            <Misc />
+            <LinkerInputFile />
+            <DisabledWarnings />
           </LDads>
         </TargetArmAds>
       </TargetOption>
@@ -387,71 +384,99 @@
               <FileType>1</FileType>
               <FilePath>rt-thread\src\clock.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>components.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\src\components.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>device.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\src\device.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>idle.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\src\idle.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>ipc.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\src\ipc.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>irq.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\src\irq.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>kservice.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\src\kservice.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>mem.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\src\mem.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>memheap.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\src\memheap.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>mempool.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\src\mempool.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>object.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\src\object.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>scheduler.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\src\scheduler.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>signal.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\src\signal.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>thread.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\src\thread.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>timer.c</FileName>
               <FileType>1</FileType>
@@ -463,9 +488,9 @@
           <GroupName>Applications</GroupName>
           <Files>
             <File>
-              <FileName>main.c</FileName>
+              <FileName>rtt_main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>applications\main.c</FilePath>
+              <FilePath>Applications\rtt_main.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -475,131 +500,634 @@
             <File>
               <FileName>board.c</FileName>
               <FileType>1</FileType>
-              <FilePath>board\board.c</FilePath>
+              <FilePath>drivers\board.c</FilePath>
             </File>
-            <File>
-              <FileName>stm32f1xx_hal_msp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>board\CubeMX_Config\Src\stm32f1xx_hal_msp.c</FilePath>
-            </File>
-            <File>
-              <FileName>spi_flash_init.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>board\ports\spi_flash_init.c</FilePath>
-            </File>
-            <File>
-              <FileName>startup_stm32f103xb.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>libraries\STM32F1xx_HAL\CMSIS\Device\ST\STM32F1xx\Source\Templates\arm\startup_stm32f103xb.s</FilePath>
-            </File>
-            <File>
-              <FileName>drv_gpio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\HAL_Drivers\drv_gpio.c</FilePath>
-            </File>
+          </Files>
+          <Files>
             <File>
               <FileName>drv_usart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>libraries\HAL_Drivers\drv_usart.c</FilePath>
+              <FilePath>drivers\drv_usart.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>drv_spi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>libraries\HAL_Drivers\drv_spi.c</FilePath>
+              <FilePath>drivers\drv_spi.c</FilePath>
             </File>
-            <File>
-              <FileName>drv_usbd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\HAL_Drivers\drv_usbd.c</FilePath>
-            </File>
+          </Files>
+          <Files>
             <File>
               <FileName>drv_common.c</FileName>
               <FileType>1</FileType>
-              <FilePath>libraries\HAL_Drivers\drv_common.c</FilePath>
+              <FilePath>drivers\drv_common.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
           <GroupName>CMSIS</GroupName>
-          <GroupOption>
-            <CommonProperty>
-              <UseCPPCompiler>0</UseCPPCompiler>
-              <RVCTCodeConst>0</RVCTCodeConst>
-              <RVCTZI>0</RVCTZI>
-              <RVCTOtherData>0</RVCTOtherData>
-              <ModuleSelection>0</ModuleSelection>
-              <IncludeInBuild>1</IncludeInBuild>
-              <AlwaysBuild>0</AlwaysBuild>
-              <GenerateAssemblyFile>0</GenerateAssemblyFile>
-              <AssembleAssemblyFile>0</AssembleAssemblyFile>
-              <PublicsOnly>0</PublicsOnly>
-              <StopOnExitCode>3</StopOnExitCode>
-              <CustomArgument></CustomArgument>
-              <IncludeLibraryModules></IncludeLibraryModules>
-              <ComprImg>0</ComprImg>
-            </CommonProperty>
-            <GroupArmAds>
-              <Cads>
-                <interw>2</interw>
-                <Optim>0</Optim>
-                <oTime>2</oTime>
-                <SplitLS>2</SplitLS>
-                <OneElfS>2</OneElfS>
-                <Strict>2</Strict>
-                <EnumInt>2</EnumInt>
-                <PlainCh>2</PlainCh>
-                <Ropi>2</Ropi>
-                <Rwpi>2</Rwpi>
-                <wLevel>0</wLevel>
-                <uThumb>2</uThumb>
-                <uSurpInc>2</uSurpInc>
-                <uC99>2</uC99>
-                <uGnu>2</uGnu>
-                <useXO>2</useXO>
-                <v6Lang>0</v6Lang>
-                <v6LangP>0</v6LangP>
-                <vShortEn>2</vShortEn>
-                <vShortWch>2</vShortWch>
-                <v6Lto>2</v6Lto>
-                <v6WtE>2</v6WtE>
-                <v6Rtti>2</v6Rtti>
-                <VariousControls>
-                  <MiscControls> </MiscControls>
-                  <Define>ARM_MATH_CM3</Define>
-                  <Undefine> </Undefine>
-                  <IncludePath></IncludePath>
-                </VariousControls>
-              </Cads>
-              <Aads>
-                <interw>2</interw>
-                <Ropi>2</Ropi>
-                <Rwpi>2</Rwpi>
-                <thumb>2</thumb>
-                <SplitLS>2</SplitLS>
-                <SwStkChk>2</SwStkChk>
-                <NoWarn>2</NoWarn>
-                <uSurpInc>2</uSurpInc>
-                <useXO>2</useXO>
-                <uClangAs>2</uClangAs>
-                <VariousControls>
-                  <MiscControls></MiscControls>
-                  <Define></Define>
-                  <Undefine></Undefine>
-                  <IncludePath></IncludePath>
-                </VariousControls>
-              </Aads>
-            </GroupArmAds>
-          </GroupOption>
           <Files>
             <File>
               <FileName>cmsis_rtthread.c</FileName>
               <FileType>1</FileType>
               <FilePath>packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src\cmsis_rtthread.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>os_systick.c</FileName>
               <FileType>1</FileType>
               <FilePath>packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src\os_systick.c</FilePath>
+            </File>
+          </Files>
+          <GroupOption>
+            <GroupArmAds>
+              <Cads>
+                <VariousControls>
+                  <MiscControls> </MiscControls>
+                  <Define>ARM_MATH_CM3</Define>
+                  <Undefine> </Undefine>
+                  <IncludePath> </IncludePath>
+                </VariousControls>
+              </Cads>
+            </GroupArmAds>
+          </GroupOption>
+        </Group>
+        <Group>
+          <GroupName>daplink</GroupName>
+          <Files>
+            <File>
+              <FileName>DAP.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\cmsis-dap\DAP.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>DAP_queue.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\cmsis-dap\DAP_queue.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>DAP_vendor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\cmsis-dap\DAP_vendor.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>JTAG_DP.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\cmsis-dap\JTAG_DP.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>SW_DP.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\cmsis-dap\SW_DP.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>SWO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\cmsis-dap\SWO.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>bootloader_update.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\interface\bootloader_update.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>circ_buf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\circ_buf.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>cortex_m.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\cortex_m.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>crc16.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\crc16.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>crc32.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\crc32.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>daplink.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\interface\daplink.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>error.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\error.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>flash_hal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\flash_hal.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>info.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\info.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>dap_main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\interface\dap_main.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>sdk_stub.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\sdk_stub.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>SVC_Table.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>packages\DAPLink\source\daplink\interface\SVC_Table.s</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>swd_host.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\interface\swd_host.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>swd_host_ca.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\interface\swd_host_ca.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>target_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\interface\target_flash.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>util.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\util.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>validation.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\validation.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>file_stream.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\drag-n-drop\file_stream.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>flash_decoder.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\drag-n-drop\flash_decoder.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>flash_intf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\drag-n-drop\flash_intf.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>flash_manager.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\drag-n-drop\flash_manager.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>iap_flash_intf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\drag-n-drop\iap_flash_intf.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>intelhex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\drag-n-drop\intelhex.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>vfs_manager.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\drag-n-drop\vfs_manager.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>vfs_user.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\drag-n-drop\vfs_user.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>virtual_fs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\drag-n-drop\virtual_fs.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>target_reset_Kseries.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\family\freescale\target_reset_Kseries.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>target_reset_Lseries.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\family\freescale\target_reset_Lseries.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>target_reset_mimxrt.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\family\freescale\target_reset_mimxrt.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>target_reset_nrf51.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\family\nordic\target_reset_nrf51.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>target_reset_nrf52.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\family\nordic\target_reset_nrf52.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>target_reset_rapid_iot.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\family\freescale\target_reset_rapid_iot.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>target_reset_realtek_rtl8195am.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\family\realtek\target_reset_realtek_rtl8195am.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>target_reset_rza.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\family\renesas\target_reset_rza.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>target_reset_ti.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\family\ti\target_reset_ti.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>target_reset_tz.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\family\toshiba\target_reset_tz.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>target_reset_wiznet.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\family\wiznet\target_reset_wiznet.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\flash.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\gpio.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>read_uid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\read_uid.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>sdk.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\sdk.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>startup_stm32f103xb.S</FileName>
+              <FileType>2</FileType>
+              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\armcc\startup_stm32f103xb.S</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_cortex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_dma.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_flash_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_gpio_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_rcc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_rcc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_tim_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_usart.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>system_stm32f1xx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\cmsis\system_stm32f1xx.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\uart.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>usb_config.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\usb_config.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>usbd_STM32F103.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\usbd_STM32F103.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>settings.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\settings\settings.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>settings_rom.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\settings\settings_rom.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>target_board.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\target\target_board.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>target_family.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\target\target_family.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>usbd_bulk.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\usb\bulk\usbd_bulk.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>usbd_cdc_acm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\usb\cdc\usbd_cdc_acm.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>usbd_core.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\usb\usbd_core.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>usbd_core_cdc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\usb\cdc\usbd_core_cdc.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>usbd_core_hid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\usb\hid\usbd_core_hid.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>usbd_core_msc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\usb\msc\usbd_core_msc.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>usbd_core_webusb.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\usb\webusb\usbd_core_webusb.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>usbd_core_winusb.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\usb\winusb\usbd_core_winusb.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>usbd_hid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\usb\hid\usbd_hid.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>usbd_msc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\usb\msc\usbd_msc.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>usbd_user_hid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\usb\hid\usbd_user_hid.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>usbd_user_cdc_acm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\DAPLink\source\daplink\usb2uart\usbd_user_cdc_acm.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -611,21 +1139,29 @@
               <FileType>1</FileType>
               <FilePath>rt-thread\libcpu\arm\common\backtrace.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>div0.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\libcpu\arm\common\div0.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>showmem.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\libcpu\arm\common\showmem.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>cpuport.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\libcpu\arm\cortex-m3\cpuport.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>context_rvds.S</FileName>
               <FileType>2</FileType>
@@ -635,172 +1171,109 @@
         </Group>
         <Group>
           <GroupName>DeviceDrivers</GroupName>
-          <GroupOption>
-            <CommonProperty>
-              <UseCPPCompiler>0</UseCPPCompiler>
-              <RVCTCodeConst>0</RVCTCodeConst>
-              <RVCTZI>0</RVCTZI>
-              <RVCTOtherData>0</RVCTOtherData>
-              <ModuleSelection>0</ModuleSelection>
-              <IncludeInBuild>1</IncludeInBuild>
-              <AlwaysBuild>0</AlwaysBuild>
-              <GenerateAssemblyFile>0</GenerateAssemblyFile>
-              <AssembleAssemblyFile>0</AssembleAssemblyFile>
-              <PublicsOnly>0</PublicsOnly>
-              <StopOnExitCode>3</StopOnExitCode>
-              <CustomArgument></CustomArgument>
-              <IncludeLibraryModules></IncludeLibraryModules>
-              <ComprImg>0</ComprImg>
-            </CommonProperty>
-            <GroupArmAds>
-              <Cads>
-                <interw>2</interw>
-                <Optim>0</Optim>
-                <oTime>2</oTime>
-                <SplitLS>2</SplitLS>
-                <OneElfS>2</OneElfS>
-                <Strict>2</Strict>
-                <EnumInt>2</EnumInt>
-                <PlainCh>2</PlainCh>
-                <Ropi>2</Ropi>
-                <Rwpi>2</Rwpi>
-                <wLevel>0</wLevel>
-                <uThumb>2</uThumb>
-                <uSurpInc>2</uSurpInc>
-                <uC99>2</uC99>
-                <uGnu>2</uGnu>
-                <useXO>2</useXO>
-                <v6Lang>0</v6Lang>
-                <v6LangP>0</v6LangP>
-                <vShortEn>2</vShortEn>
-                <vShortWch>2</vShortWch>
-                <v6Lto>2</v6Lto>
-                <v6WtE>2</v6WtE>
-                <v6Rtti>2</v6Rtti>
-                <VariousControls>
-                  <MiscControls> --c99</MiscControls>
-                  <Define> </Define>
-                  <Undefine> </Undefine>
-                  <IncludePath></IncludePath>
-                </VariousControls>
-              </Cads>
-              <Aads>
-                <interw>2</interw>
-                <Ropi>2</Ropi>
-                <Rwpi>2</Rwpi>
-                <thumb>2</thumb>
-                <SplitLS>2</SplitLS>
-                <SwStkChk>2</SwStkChk>
-                <NoWarn>2</NoWarn>
-                <uSurpInc>2</uSurpInc>
-                <useXO>2</useXO>
-                <uClangAs>2</uClangAs>
-                <VariousControls>
-                  <MiscControls></MiscControls>
-                  <Define></Define>
-                  <Undefine></Undefine>
-                  <IncludePath></IncludePath>
-                </VariousControls>
-              </Aads>
-            </GroupArmAds>
-          </GroupOption>
           <Files>
-            <File>
-              <FileName>pin.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>rt-thread\components\drivers\misc\pin.c</FilePath>
-            </File>
-            <File>
-              <FileName>rtc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>rt-thread\components\drivers\rtc\rtc.c</FilePath>
-            </File>
             <File>
               <FileName>serial.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\components\drivers\serial\serial.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>spi_core.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\components\drivers\spi\spi_core.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>spi_dev.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\components\drivers\spi\spi_dev.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>spi_flash_sfud.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\components\drivers\spi\spi_flash_sfud.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>sfud.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\components\drivers\spi\sfud\src\sfud.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>sfud_sfdp.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\components\drivers\spi\sfud\src\sfud_sfdp.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>completion.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\components\drivers\src\completion.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>dataqueue.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\components\drivers\src\dataqueue.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>pipe.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\components\drivers\src\pipe.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>ringblk_buf.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\components\drivers\src\ringblk_buf.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>ringbuffer.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\components\drivers\src\ringbuffer.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>waitqueue.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\components\drivers\src\waitqueue.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>workqueue.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\components\drivers\src\workqueue.c</FilePath>
             </File>
           </Files>
-        </Group>
-        <Group>
-          <GroupName>rt_usbd</GroupName>
-          <Files>
-            <File>
-              <FileName>core.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>rt-thread\components\drivers\usb\usbdevice\core\core.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbdevice.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>rt-thread\components\drivers\usb\usbdevice\core\usbdevice.c</FilePath>
-            </File>
-            <File>
-              <FileName>cdc_vcom.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>rt-thread\components\drivers\usb\usbdevice\class\cdc_vcom.c</FilePath>
-            </File>
-          </Files>
+          <GroupOption>
+            <GroupArmAds>
+              <Cads>
+                <VariousControls>
+                  <MiscControls> --c99</MiscControls>
+                  <Define> </Define>
+                  <Undefine> </Undefine>
+                  <IncludePath> </IncludePath>
+                </VariousControls>
+              </Cads>
+            </GroupArmAds>
+          </GroupOption>
         </Group>
         <Group>
           <GroupName>finsh</GroupName>
@@ -810,11 +1283,15 @@
               <FileType>1</FileType>
               <FilePath>rt-thread\components\finsh\shell.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>cmd.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\components\finsh\cmd.c</FilePath>
             </File>
+          </Files>
+          <Files>
             <File>
               <FileName>msh.c</FileName>
               <FileType>1</FileType>
@@ -822,154 +1299,12 @@
             </File>
           </Files>
         </Group>
-        <Group>
-          <GroupName>libc</GroupName>
-          <Files>
-            <File>
-              <FileName>libc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>rt-thread\components\libc\compilers\armlibc\libc.c</FilePath>
-            </File>
-            <File>
-              <FileName>mem_std.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>rt-thread\components\libc\compilers\armlibc\mem_std.c</FilePath>
-            </File>
-            <File>
-              <FileName>stubs.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>rt-thread\components\libc\compilers\armlibc\stubs.c</FilePath>
-            </File>
-            <File>
-              <FileName>time.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>rt-thread\components\libc\compilers\common\time.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>STM32_HAL</GroupName>
-          <Files>
-            <File>
-              <FileName>system_stm32f1xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\STM32F1xx_HAL\CMSIS\Device\ST\STM32F1xx\Source\Templates\system_stm32f1xx.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f1xx_hal_dma.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f1xx_hal_cortex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f1xx_hal_crc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_crc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f1xx_hal_pwr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f1xx_hal_rcc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f1xx_hal_rcc_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f1xx_hal.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f1xx_hal_cec.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cec.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f1xx_hal_sram.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_sram.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f1xx_hal_gpio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f1xx_hal_gpio_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f1xx_hal_uart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f1xx_hal_usart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_usart.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f1xx_hal_spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f1xx_ll_spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_spi.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f1xx_hal_pcd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f1xx_hal_pcd_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pcd_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f1xx_ll_usb.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_usb.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f1xx_hal_hcd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_hcd.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f1xx_hal_rtc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rtc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f1xx_hal_rtc_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>libraries\STM32F1xx_HAL\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rtc_ex.c</FilePath>
-            </File>
-          </Files>
-        </Group>
       </Groups>
     </Target>
   </Targets>
-
   <RTE>
-    <apis/>
-    <components/>
-    <files/>
+    <apis />
+    <components />
+    <files />
   </RTE>
-
 </Project>

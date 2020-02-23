@@ -178,7 +178,7 @@ void main_thread_entry(void *parameter)
 #ifdef RT_USING_COMPONENTS_INIT
     /* RT-Thread components initialization */
     rt_components_init();
-#endif    
+#endif
 #ifdef RT_USING_SMP
     rt_hw_secondary_cpu_up();
 #endif
@@ -192,6 +192,17 @@ void main_thread_entry(void *parameter)
 
 void rt_application_init(void)
 {
+#ifdef DAPLINK_IF
+
+    /* invoke system main function */
+#if defined(__CC_ARM) || defined(__CLANG_ARM)
+    $Super$$main(); /* for ARMCC. */
+#elif defined(__ICCARM__) || defined(__GNUC__)
+    main();
+#endif
+
+#else
+
     rt_thread_t tid;
 
 #ifdef RT_USING_HEAP
@@ -211,6 +222,8 @@ void rt_application_init(void)
 #endif
 
     rt_thread_startup(tid);
+
+#endif /* DAPLINK_IF */
 }
 
 int rtthread_startup(void)

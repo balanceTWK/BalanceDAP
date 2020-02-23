@@ -5,7 +5,7 @@ import rtconfig
 if os.getenv('RTT_ROOT'):
     RTT_ROOT = os.getenv('RTT_ROOT')
 else:
-    RTT_ROOT = os.path.normpath(os.getcwd() + '/../../..')
+    RTT_ROOT = os.path.normpath(os.getcwd() + '/rt-thread')
 
 # set RTT_ROOT
 if not os.getenv("RTT_ROOT"): 
@@ -54,11 +54,6 @@ objs = PrepareBuilding(env, RTT_ROOT, has_libcpu=False)
 stm32_library = 'STM32F1xx_HAL'
 rtconfig.BSP_LIBRARY_TYPE = stm32_library
 
-# include libraries
-objs.extend(SConscript(os.path.join(libraries_path_prefix, stm32_library, 'SConscript')))
-
-# include drivers
-objs.extend(SConscript(os.path.join(libraries_path_prefix, 'HAL_Drivers', 'SConscript')))
 
 # make a building
 DoBuilding(TARGET, objs)

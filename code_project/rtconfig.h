@@ -8,16 +8,14 @@
 
 #define RT_NAME_MAX 8
 #define RT_ALIGN_SIZE 4
-#define RT_THREAD_PRIORITY_32
-#define RT_THREAD_PRIORITY_MAX 32
+#define RT_THREAD_PRIORITY_8
+#define RT_THREAD_PRIORITY_MAX 8
 #define RT_TICK_PER_SECOND 1000
 #define RT_USING_OVERFLOW_CHECK
 #define RT_USING_HOOK
 #define RT_USING_IDLE_HOOK
 #define RT_IDLE_HOOK_LIST_SIZE 4
 #define IDLE_THREAD_STACK_SIZE 256
-#define RT_DEBUG
-#define RT_DEBUG_COLOR
 
 /* Inter-Thread communication */
 
@@ -50,8 +48,8 @@
 
 #define RT_USING_COMPONENTS_INIT
 #define RT_USING_USER_MAIN
-#define RT_MAIN_THREAD_STACK_SIZE 512
-#define RT_MAIN_THREAD_PRIORITY 10
+#define RT_MAIN_THREAD_STACK_SIZE 1024
+#define RT_MAIN_THREAD_PRIORITY 4
 
 /* C++ features */
 
@@ -64,8 +62,8 @@
 #define FINSH_HISTORY_LINES 5
 #define FINSH_USING_SYMTAB
 #define FINSH_USING_DESCRIPTION
-#define FINSH_THREAD_PRIORITY 0
-#define FINSH_THREAD_STACK_SIZE 512
+#define FINSH_THREAD_PRIORITY 4
+#define FINSH_THREAD_STACK_SIZE 1024
 #define FINSH_CMD_SIZE 80
 #define FINSH_USING_MSH
 #define FINSH_USING_MSH_DEFAULT
@@ -80,31 +78,16 @@
 #define RT_USING_DEVICE_IPC
 #define RT_PIPE_BUFSZ 512
 #define RT_USING_SERIAL
-#define RT_SERIAL_USING_DMA
 #define RT_SERIAL_RB_BUFSZ 64
-#define RT_USING_PIN
-#define RT_USING_RTC
 #define RT_USING_SPI
 #define RT_USING_SFUD
 #define RT_SFUD_USING_SFDP
 
 /* Using USB */
 
-#define RT_USING_USB_DEVICE
-#define RT_USBD_THREAD_STACK_SZ 2048
-#define USB_VENDOR_ID 0x0FFE
-#define USB_PRODUCT_ID 0x0001
-#define RT_USB_DEVICE_COMPOSITE
-#define RT_USB_DEVICE_CDC
-#define RT_USB_DEVICE_NONE
-#define RT_VCOM_TASK_STK_SIZE 512
-#define RT_VCOM_SERNO "32021919830108"
-#define RT_VCOM_SER_LEN 14
-#define RT_VCOM_TX_TIMEOUT 1000
 
 /* POSIX layer and C standard library */
 
-#define RT_USING_LIBC
 
 /* Network */
 
@@ -168,11 +151,11 @@
 
 /* samples: kernel and components samples */
 
-#define SOC_FAMILY_STM32
-#define SOC_SERIES_STM32F1
 
 /* Hardware Drivers Config */
 
+#define SOC_FAMILY_STM32
+#define SOC_SERIES_STM32F1
 #define SOC_STM32F103CB
 
 /* Onboard Peripheral Drivers */
@@ -182,14 +165,10 @@
 
 /* On-chip Peripheral Drivers */
 
-#define BSP_USING_GPIO
 #define BSP_USING_UART
 #define BSP_USING_UART1
 #define BSP_USING_SPI
 #define BSP_USING_SPI1
-#define BSP_SPI1_TX_USING_DMA
-#define BSP_SPI1_RX_USING_DMA
-#define BSP_USING_USBD
 
 /* Board extended module Drivers */
 

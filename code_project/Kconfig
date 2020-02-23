@@ -17,6 +17,4 @@ config PKGS_DIR
 
 source "$RTT_DIR/Kconfig"
 source "$PKGS_DIR/Kconfig"
-source "libraries/Kconfig"
-source "board/Kconfig"
-
+source "drivers/Kconfig"
