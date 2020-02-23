@@ -89,6 +89,9 @@ if GetDepend(['BSP_USING_USBD']):
 if GetDepend(['BSP_USING_PULSE_ENCODER']):
     src += ['drv_pulse_encoder.c']
 
+if GetDepend(['BSP_USING_SPI_FLASH']):
+    src += ['drv_spi_flash.c']
+
 src += ['drv_common.c']
 
 path =  [cwd]

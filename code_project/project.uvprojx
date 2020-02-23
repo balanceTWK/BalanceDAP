@@ -519,6 +519,13 @@
           </Files>
           <Files>
             <File>
+              <FileName>drv_spi_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>drivers\drv_spi_flash.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
               <FileName>drv_common.c</FileName>
               <FileType>1</FileType>
               <FilePath>drivers\drv_common.c</FilePath>
