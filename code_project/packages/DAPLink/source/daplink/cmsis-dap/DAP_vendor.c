@@ -29,7 +29,7 @@
 #include "DAP_config.h"
 #include "DAP.h"
 #include "info.h"
-#include "dap_main.h"
+#include "main.h"
 #include "uart.h"
 #include "settings.h"
 #include "target_reset.h"

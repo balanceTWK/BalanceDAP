@@ -43,25 +43,25 @@ U16 DataFeatReceLen;
 
 
 /* Dummy Weak Functions that need to be provided by user */
-__weak void usbd_hid_init(void)
+__WEAK void usbd_hid_init(void)
 {
 
 }
-__weak int usbd_hid_get_report(U8 rtype, U8 rid, U8 *buf, U8 req)
+__WEAK int usbd_hid_get_report(U8 rtype, U8 rid, U8 *buf, U8 req)
 {
     return (0);
 };
-__weak void usbd_hid_set_report(U8  rtype, U8 rid, U8 *buf, int len, U8 req)
+__WEAK void usbd_hid_set_report(U8  rtype, U8 rid, U8 *buf, int len, U8 req)
 {
 
 }
-__weak U8 usbd_hid_get_protocol(void)
+__WEAK U8 usbd_hid_get_protocol(void)
 {
     return (0);
 };
-__weak void usbd_hid_set_protocol(U8  protocol)
+__WEAK void usbd_hid_set_protocol(U8  protocol)
 {
-    
+
 };
 
 
@@ -272,11 +272,11 @@ void USBD_HID_EP_INTIN_Event(U32 event)
         if (bytes_to_send > usbd_hid_maxpacketsize[USBD_HighSpeed]) {
             bytes_to_send = usbd_hid_maxpacketsize[USBD_HighSpeed];
         }
-        
+
         if (usbd_hid_ep_intin != 0) { //control ep does the sending to host
             USBD_WriteEP(usbd_hid_ep_intin | 0x80, ptrDataOut, bytes_to_send);
         }
-        
+
         ptrDataOut     += bytes_to_send;
         DataOutSentLen += bytes_to_send;
 
