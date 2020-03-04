@@ -23,7 +23,7 @@
 //                                   ((rt_uint32_t)RT_REVISION *        1UL))
 //#define KERNEL_Id     "RT-Thread"  ///< Kernel identification string
 
-#define DEFAULT_STACK_SIZE 512
+#define DEFAULT_STACK_SIZE 1024
 #define DEFAULT_TICK 5
 #define WAITING_THREAD_FLAGS 0x08
 #define MALLOC_CB 0x10

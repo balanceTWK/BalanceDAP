@@ -1,7 +1,17 @@
 [
  {
+  "path": "/packages/system/fal", 
+  "ver": "v0.4.0", 
+  "name": "FAL"
+ }, 
+ {
   "path": "/packages/system/CMSIS", 
   "ver": "v5.0.0", 
   "name": "CMSIS"
+ }, 
+ {
+  "path": "/packages/system/littlefs", 
+  "ver": "v2.0.5", 
+  "name": "LITTLEFS"
  }
 ]
