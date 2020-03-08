@@ -22,12 +22,9 @@
 #define RT_USING_SEMAPHORE
 #define RT_USING_MUTEX
 #define RT_USING_EVENT
-#define RT_USING_MAILBOX
-#define RT_USING_MESSAGEQUEUE
 
 /* Memory Management */
 
-#define RT_USING_MEMPOOL
 #define RT_USING_MEMHEAP
 #define RT_USING_SMALL_MEM
 #define RT_USING_HEAP
@@ -63,7 +60,7 @@
 #define FINSH_USING_SYMTAB
 #define FINSH_USING_DESCRIPTION
 #define FINSH_THREAD_PRIORITY 5
-#define FINSH_THREAD_STACK_SIZE 1024
+#define FINSH_THREAD_STACK_SIZE 2048
 #define FINSH_CMD_SIZE 80
 #define FINSH_USING_MSH
 #define FINSH_USING_MSH_DEFAULT
@@ -72,13 +69,19 @@
 
 /* Device virtual file system */
 
+#define RT_USING_DFS
+#define DFS_USING_WORKDIR
+#define DFS_FILESYSTEMS_MAX 1
+#define DFS_FILESYSTEM_TYPES_MAX 1
+#define DFS_FD_MAX 16
 
 /* Device Drivers */
 
 #define RT_USING_DEVICE_IPC
-#define RT_PIPE_BUFSZ 512
+#define RT_PIPE_BUFSZ 128
 #define RT_USING_SERIAL
 #define RT_SERIAL_RB_BUFSZ 64
+#define RT_USING_MTD_NOR
 #define RT_USING_SPI
 #define RT_USING_SFUD
 #define RT_SFUD_USING_SFDP
@@ -139,9 +142,25 @@
 
 /* system packages */
 
+#define PKG_USING_FAL
+#define FAL_DEBUG_CONFIG
+#define FAL_DEBUG 1
+#define FAL_PART_HAS_TABLE_CFG
+#define FAL_USING_SFUD_PORT
+#define FAL_USING_NOR_FLASH_DEV_NAME "W25Q128"
+#define PKG_USING_FAL_V00400
+#define PKG_FAL_VER_NUM 0x00400
 #define PKG_USING_CMSIS
 #define PKG_USING_CMSIS_V500
 #define PKG_CMSIS_RTOS2
+#define PKG_USING_LITTLEFS
+#define PKG_USING_LITTLEFS_V205
+#define LFS_READ_SIZE 64
+#define LFS_PROG_SIZE 64
+#define LFS_BLOCK_SIZE 4096
+#define LFS_CACHE_SIZE 64
+#define LFS_BLOCK_CYCLES 5
+#define LFS_LOOKAHEAD_MAX 12
 
 /* peripheral libraries and drivers */
 
