@@ -7,7 +7,7 @@ cwd = GetCurrentDir()
 
 # The set of source files associated with this SConscript file.
 src = Split("""
-CMSIS/system_stm32f1xx.c
+CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.c
 STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c
 STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c
 STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c
@@ -24,14 +24,12 @@ STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.c
 STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c
 """)
 
-src += ['CMSIS/startup_stm32f103xb.s']
-
-# if rtconfig.CROSS_TOOL == 'gcc':
-#     src += ['CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc/startup_stm32f103xb.s']
-# elif rtconfig.CROSS_TOOL == 'keil':
-#     src += ['CMSIS/Device/ST/STM32F1xx/Source/Templates/arm/startup_stm32f103xb.s']
-# elif rtconfig.CROSS_TOOL == 'iar':
-#     src += ['CMSIS/Device/ST/STM32F1xx/Source/Templates/iar/startup_stm32f103xb.s']
+if rtconfig.CROSS_TOOL == 'gcc':
+    src += ['CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc/startup_stm32f103xb.s']
+elif rtconfig.CROSS_TOOL == 'keil':
+    src += ['CMSIS/Device/ST/STM32F1xx/Source/Templates/arm/startup_stm32f103xb.s']
+elif rtconfig.CROSS_TOOL == 'iar':
+    src += ['CMSIS/Device/ST/STM32F1xx/Source/Templates/iar/startup_stm32f103xb.s']
 
 # if GetDepend(['RT_USING_PIN']):
 #     src += ['STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c']
@@ -99,8 +97,7 @@ src += ['CMSIS/startup_stm32f103xb.s']
 path = [cwd + '/CMSIS/Device/ST/STM32F1xx/Include', 
     cwd + '/STM32F1xx_HAL_Driver/Inc',
     cwd + '/STM32F1xx_HAL_Driver',
-    cwd + '/CMSIS/Include',
-    cwd + '/CMSIS']
+    cwd + '/CMSIS/Include']
 
 CPPDEFINES = ['USE_HAL_DRIVER']
 group = DefineGroup('STM32_HAL', src, depend = [''], CPPPATH = path, CPPDEFINES = CPPDEFINES)

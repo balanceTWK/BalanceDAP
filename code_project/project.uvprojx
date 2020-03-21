@@ -334,7 +334,7 @@
               <MiscControls>--gnu --c99 --no_unaligned_access --no_unaligned_access</MiscControls>
               <Define>STM32F103xB, __packed=__packed, INTERFACE_STM32F103XB, LFS_CONFIG=lfs_config.h, MSC_ENDPOINT, DAPLINK_BUILD_KEY=0x9B939E8F, OS_CLOCK=72000000, DRAG_N_DROP_SUPPORT, USE_HAL_DRIVER, DAPLINK_VERSION=254, CDC_ENDPOINT, HID_ENDPOINT, DAPLINK_IF, DAPLINK_NO_ASSERT_FILENAMES, WEBUSB_INTERFACE, OS_TICK=10000, DAPLINK_HIC_ID=0x97969908, WINUSB_INTERFACE, BULK_ENDPOINT</Define>
               <Undefine />
-              <IncludePath>.;rt-thread\include;Applications;dap-ports;drivers;drivers\config;Libraries\CMSIS\Device\ST\STM32F1xx\Include;Libraries\STM32F1xx_HAL_Driver\Inc;Libraries\STM32F1xx_HAL_Driver;Libraries\CMSIS\Include;Libraries\CMSIS;packages\CMSIS-v5.0.0\CMSIS_5\CMSIS\RTOS2\Include;packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src;packages\DAPLink\source;packages\DAPLink\source\usb;packages\DAPLink\source\daplink;packages\DAPLink\source\daplink\cmsis-dap;packages\DAPLink\source\daplink\drag-n-drop;packages\DAPLink\source\daplink\usb2uart;packages\DAPLink\source\daplink\settings;packages\DAPLink\source\daplink\interface;packages\DAPLink\source\cmsis-core;packages\DAPLink\source\target;packages\DAPLink\source\hic_hal;packages\DAPLink\source\hic_hal\stm32\stm32f103xb;packages\DAPLink\source\hic_hal\stm32\stm32f103xb\cmsis;packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver;packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Inc;packages\fal-v0.4.0\inc;packages\littlefs-v2.0.5;rt-thread\libcpu\arm\common;rt-thread\libcpu\arm\cortex-m3;rt-thread\components\dfs\include;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\spi;rt-thread\components\drivers\include;rt-thread\components\drivers\spi\sfud\inc;rt-thread\components\drivers\include;rt-thread\components\finsh;rt-thread\components\libc\compilers\common</IncludePath>
+              <IncludePath>.;rt-thread\include;Applications;dap-ports;drivers;drivers\config;Libraries\CMSIS\Device\ST\STM32F1xx\Include;Libraries\STM32F1xx_HAL_Driver\Inc;Libraries\STM32F1xx_HAL_Driver;Libraries\CMSIS\Include;packages\CMSIS-v5.0.0\CMSIS_5\CMSIS\RTOS2\Include;packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src;packages\DAPLink\source;packages\DAPLink\source\usb;packages\DAPLink\source\daplink;packages\DAPLink\source\daplink\cmsis-dap;packages\DAPLink\source\daplink\drag-n-drop;packages\DAPLink\source\daplink\usb2uart;packages\DAPLink\source\daplink\settings;packages\DAPLink\source\daplink\interface;packages\DAPLink\source\cmsis-core;packages\DAPLink\source\target;packages\DAPLink\source\hic_hal;packages\DAPLink\source\hic_hal\stm32\stm32f103xb;packages\DAPLink\source\hic_hal\stm32\stm32f103xb\cmsis;packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver;packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Inc;packages\fal-v0.4.0\inc;packages\littlefs-v2.0.5;rt-thread\libcpu\arm\common;rt-thread\libcpu\arm\cortex-m3;rt-thread\components\dfs\include;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\spi;rt-thread\components\drivers\include;rt-thread\components\drivers\spi\sfud\inc;rt-thread\components\drivers\include;rt-thread\components\finsh;rt-thread\components\libc\compilers\common</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -582,7 +582,7 @@
             <File>
               <FileName>system_stm32f1xx.c</FileName>
               <FileType>1</FileType>
-              <FilePath>Libraries\CMSIS\system_stm32f1xx.c</FilePath>
+              <FilePath>Libraries\CMSIS\Device\ST\STM32F1xx\Source\Templates\system_stm32f1xx.c</FilePath>
             </File>
           </Files>
           <Files>
@@ -687,7 +687,7 @@
             <File>
               <FileName>startup_stm32f103xb.s</FileName>
               <FileType>2</FileType>
-              <FilePath>Libraries\CMSIS\startup_stm32f103xb.s</FilePath>
+              <FilePath>Libraries\CMSIS\Device\ST\STM32F1xx\Source\Templates\arm\startup_stm32f103xb.s</FilePath>
             </File>
           </Files>
         </Group>
