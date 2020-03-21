@@ -181,7 +181,6 @@
             <hadXRAM>0</hadXRAM>
             <uocXRam>0</uocXRam>
             <RvdsVP>0</RvdsVP>
-            <RvdsMve>0</RvdsMve>
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -335,7 +334,7 @@
               <MiscControls>--gnu --c99 --no_unaligned_access --no_unaligned_access</MiscControls>
               <Define>STM32F103xB, __packed=__packed, INTERFACE_STM32F103XB, LFS_CONFIG=lfs_config.h, MSC_ENDPOINT, DAPLINK_BUILD_KEY=0x9B939E8F, OS_CLOCK=72000000, DRAG_N_DROP_SUPPORT, USE_HAL_DRIVER, DAPLINK_VERSION=254, CDC_ENDPOINT, HID_ENDPOINT, DAPLINK_IF, DAPLINK_NO_ASSERT_FILENAMES, WEBUSB_INTERFACE, OS_TICK=10000, DAPLINK_HIC_ID=0x97969908, WINUSB_INTERFACE, BULK_ENDPOINT</Define>
               <Undefine />
-              <IncludePath>.;rt-thread\include;Applications;drivers;drivers\config;packages\CMSIS-v5.0.0\CMSIS_5\CMSIS\RTOS2\Include;packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src;packages\DAPLink\source;packages\DAPLink\source\usb;packages\DAPLink\source\daplink;packages\DAPLink\source\daplink\cmsis-dap;packages\DAPLink\source\daplink\drag-n-drop;packages\DAPLink\source\daplink\usb2uart;packages\DAPLink\source\daplink\settings;packages\DAPLink\source\daplink\interface;packages\DAPLink\source\cmsis-core;packages\DAPLink\source\target;packages\DAPLink\source\hic_hal;packages\DAPLink\source\hic_hal\stm32\stm32f103xb;packages\DAPLink\source\hic_hal\stm32\stm32f103xb\cmsis;packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver;packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Inc;packages\fal-v0.4.0\inc;packages\littlefs-v2.0.5;rt-thread\libcpu\arm\common;rt-thread\libcpu\arm\cortex-m3;rt-thread\components\dfs\include;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\spi;rt-thread\components\drivers\include;rt-thread\components\drivers\spi\sfud\inc;rt-thread\components\drivers\include;rt-thread\components\finsh;rt-thread\components\libc\compilers\common</IncludePath>
+              <IncludePath>.;rt-thread\include;Applications;drivers;drivers\config;Libraries\CMSIS\Device\ST\STM32F1xx\Include;Libraries\STM32F1xx_HAL_Driver\Inc;Libraries\STM32F1xx_HAL_Driver;Libraries\CMSIS\Include;Libraries\CMSIS;packages\CMSIS-v5.0.0\CMSIS_5\CMSIS\RTOS2\Include;packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src;packages\DAPLink\source;packages\DAPLink\source\usb;packages\DAPLink\source\daplink;packages\DAPLink\source\daplink\cmsis-dap;packages\DAPLink\source\daplink\drag-n-drop;packages\DAPLink\source\daplink\usb2uart;packages\DAPLink\source\daplink\settings;packages\DAPLink\source\daplink\interface;packages\DAPLink\source\cmsis-core;packages\DAPLink\source\target;packages\DAPLink\source\hic_hal;packages\DAPLink\source\hic_hal\stm32\stm32f103xb;packages\DAPLink\source\hic_hal\stm32\stm32f103xb\cmsis;packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver;packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Inc;packages\fal-v0.4.0\inc;packages\littlefs-v2.0.5;rt-thread\libcpu\arm\common;rt-thread\libcpu\arm\cortex-m3;rt-thread\components\dfs\include;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\spi;rt-thread\components\drivers\include;rt-thread\components\drivers\spi\sfud\inc;rt-thread\components\drivers\include;rt-thread\components\finsh;rt-thread\components\libc\compilers\common</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -522,6 +521,121 @@
               <FileName>drv_common.c</FileName>
               <FileType>1</FileType>
               <FilePath>drivers\drv_common.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>STM32_HAL</GroupName>
+          <Files>
+            <File>
+              <FileName>system_stm32f1xx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>Libraries\CMSIS\system_stm32f1xx.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>Libraries\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_cortex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>Libraries\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_dma.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>Libraries\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>Libraries\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_flash_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>Libraries\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>Libraries\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_gpio_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>Libraries\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_rcc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>Libraries\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_rcc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>Libraries\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>Libraries\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_tim_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>Libraries\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>Libraries\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>Libraries\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_usart.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>stm32f1xx_hal_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>Libraries\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>startup_stm32f103xb.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>Libraries\CMSIS\startup_stm32f103xb.s</FilePath>
             </File>
           </Files>
         </Group>
@@ -883,118 +997,6 @@
               <FileName>sdk.c</FileName>
               <FileType>1</FileType>
               <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\sdk.c</FilePath>
-            </File>
-          </Files>
-          <Files>
-            <File>
-              <FileName>startup_stm32f103xb.S</FileName>
-              <FileType>2</FileType>
-              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\armcc\startup_stm32f103xb.S</FilePath>
-            </File>
-          </Files>
-          <Files>
-            <File>
-              <FileName>stm32f1xx_hal.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c</FilePath>
-            </File>
-          </Files>
-          <Files>
-            <File>
-              <FileName>stm32f1xx_hal_cortex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c</FilePath>
-            </File>
-          </Files>
-          <Files>
-            <File>
-              <FileName>stm32f1xx_hal_dma.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c</FilePath>
-            </File>
-          </Files>
-          <Files>
-            <File>
-              <FileName>stm32f1xx_hal_flash.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.c</FilePath>
-            </File>
-          </Files>
-          <Files>
-            <File>
-              <FileName>stm32f1xx_hal_flash_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.c</FilePath>
-            </File>
-          </Files>
-          <Files>
-            <File>
-              <FileName>stm32f1xx_hal_gpio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c</FilePath>
-            </File>
-          </Files>
-          <Files>
-            <File>
-              <FileName>stm32f1xx_hal_gpio_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c</FilePath>
-            </File>
-          </Files>
-          <Files>
-            <File>
-              <FileName>stm32f1xx_hal_rcc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c</FilePath>
-            </File>
-          </Files>
-          <Files>
-            <File>
-              <FileName>stm32f1xx_hal_rcc_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c</FilePath>
-            </File>
-          </Files>
-          <Files>
-            <File>
-              <FileName>stm32f1xx_hal_tim.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c</FilePath>
-            </File>
-          </Files>
-          <Files>
-            <File>
-              <FileName>stm32f1xx_hal_tim_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c</FilePath>
-            </File>
-          </Files>
-          <Files>
-            <File>
-              <FileName>stm32f1xx_hal_uart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c</FilePath>
-            </File>
-          </Files>
-          <Files>
-            <File>
-              <FileName>stm32f1xx_hal_usart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_usart.c</FilePath>
-            </File>
-          </Files>
-          <Files>
-            <File>
-              <FileName>stm32f1xx_hal_spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c</FilePath>
-            </File>
-          </Files>
-          <Files>
-            <File>
-              <FileName>system_stm32f1xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\cmsis\system_stm32f1xx.c</FilePath>
             </File>
           </Files>
           <Files>
