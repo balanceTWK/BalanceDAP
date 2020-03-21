@@ -334,7 +334,7 @@
               <MiscControls>--gnu --c99 --no_unaligned_access --no_unaligned_access</MiscControls>
               <Define>STM32F103xB, __packed=__packed, INTERFACE_STM32F103XB, LFS_CONFIG=lfs_config.h, MSC_ENDPOINT, DAPLINK_BUILD_KEY=0x9B939E8F, OS_CLOCK=72000000, DRAG_N_DROP_SUPPORT, USE_HAL_DRIVER, DAPLINK_VERSION=254, CDC_ENDPOINT, HID_ENDPOINT, DAPLINK_IF, DAPLINK_NO_ASSERT_FILENAMES, WEBUSB_INTERFACE, OS_TICK=10000, DAPLINK_HIC_ID=0x97969908, WINUSB_INTERFACE, BULK_ENDPOINT</Define>
               <Undefine />
-              <IncludePath>.;rt-thread\include;Applications;drivers;drivers\config;Libraries\CMSIS\Device\ST\STM32F1xx\Include;Libraries\STM32F1xx_HAL_Driver\Inc;Libraries\STM32F1xx_HAL_Driver;Libraries\CMSIS\Include;Libraries\CMSIS;packages\CMSIS-v5.0.0\CMSIS_5\CMSIS\RTOS2\Include;packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src;packages\DAPLink\source;packages\DAPLink\source\usb;packages\DAPLink\source\daplink;packages\DAPLink\source\daplink\cmsis-dap;packages\DAPLink\source\daplink\drag-n-drop;packages\DAPLink\source\daplink\usb2uart;packages\DAPLink\source\daplink\settings;packages\DAPLink\source\daplink\interface;packages\DAPLink\source\cmsis-core;packages\DAPLink\source\target;packages\DAPLink\source\hic_hal;packages\DAPLink\source\hic_hal\stm32\stm32f103xb;packages\DAPLink\source\hic_hal\stm32\stm32f103xb\cmsis;packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver;packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Inc;packages\fal-v0.4.0\inc;packages\littlefs-v2.0.5;rt-thread\libcpu\arm\common;rt-thread\libcpu\arm\cortex-m3;rt-thread\components\dfs\include;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\spi;rt-thread\components\drivers\include;rt-thread\components\drivers\spi\sfud\inc;rt-thread\components\drivers\include;rt-thread\components\finsh;rt-thread\components\libc\compilers\common</IncludePath>
+              <IncludePath>.;rt-thread\include;Applications;dap-ports;drivers;drivers\config;Libraries\CMSIS\Device\ST\STM32F1xx\Include;Libraries\STM32F1xx_HAL_Driver\Inc;Libraries\STM32F1xx_HAL_Driver;Libraries\CMSIS\Include;Libraries\CMSIS;packages\CMSIS-v5.0.0\CMSIS_5\CMSIS\RTOS2\Include;packages\CMSIS-v5.0.0\RTOS2\RT-Thread\src;packages\DAPLink\source;packages\DAPLink\source\usb;packages\DAPLink\source\daplink;packages\DAPLink\source\daplink\cmsis-dap;packages\DAPLink\source\daplink\drag-n-drop;packages\DAPLink\source\daplink\usb2uart;packages\DAPLink\source\daplink\settings;packages\DAPLink\source\daplink\interface;packages\DAPLink\source\cmsis-core;packages\DAPLink\source\target;packages\DAPLink\source\hic_hal;packages\DAPLink\source\hic_hal\stm32\stm32f103xb;packages\DAPLink\source\hic_hal\stm32\stm32f103xb\cmsis;packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver;packages\DAPLink\source\hic_hal\stm32\stm32f103xb\STM32F1xx_HAL_Driver\Inc;packages\fal-v0.4.0\inc;packages\littlefs-v2.0.5;rt-thread\libcpu\arm\common;rt-thread\libcpu\arm\cortex-m3;rt-thread\components\dfs\include;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\drivers\spi;rt-thread\components\drivers\include;rt-thread\components\drivers\spi\sfud\inc;rt-thread\components\drivers\include;rt-thread\components\finsh;rt-thread\components\libc\compilers\common</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -365,7 +365,7 @@
             <TextAddressRange>0x00000000</TextAddressRange>
             <DataAddressRange>0x00000000</DataAddressRange>
             <pXoBase />
-            <ScatterFile>.\packages\DAPLink\source\daplink.sct</ScatterFile>
+            <ScatterFile>.\link.sct</ScatterFile>
             <IncludeLibs />
             <IncludeLibsPath />
             <Misc />
@@ -483,6 +483,58 @@
               <FileName>rtt_main.c</FileName>
               <FileType>1</FileType>
               <FilePath>Applications\rtt_main.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>daplink-ports</GroupName>
+          <Files>
+            <File>
+              <FileName>flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>dap-ports\flash.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>dap-ports\gpio.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>read_uid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>dap-ports\read_uid.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>sdk.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>dap-ports\sdk.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>dap-ports\uart.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>usb_config.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>dap-ports\usb_config.c</FilePath>
+            </File>
+          </Files>
+          <Files>
+            <File>
+              <FileName>usbd_STM32F103.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>dap-ports\usbd_STM32F103.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -969,55 +1021,6 @@
               <FileName>target_reset_wiznet.c</FileName>
               <FileType>1</FileType>
               <FilePath>packages\DAPLink\source\family\wiznet\target_reset_wiznet.c</FilePath>
-            </File>
-          </Files>
-          <Files>
-            <File>
-              <FileName>flash.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\flash.c</FilePath>
-            </File>
-          </Files>
-          <Files>
-            <File>
-              <FileName>gpio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\gpio.c</FilePath>
-            </File>
-          </Files>
-          <Files>
-            <File>
-              <FileName>read_uid.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\read_uid.c</FilePath>
-            </File>
-          </Files>
-          <Files>
-            <File>
-              <FileName>sdk.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\sdk.c</FilePath>
-            </File>
-          </Files>
-          <Files>
-            <File>
-              <FileName>uart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\uart.c</FilePath>
-            </File>
-          </Files>
-          <Files>
-            <File>
-              <FileName>usb_config.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\usb_config.c</FilePath>
-            </File>
-          </Files>
-          <Files>
-            <File>
-              <FileName>usbd_STM32F103.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\DAPLink\source\hic_hal\stm32\stm32f103xb\usbd_STM32F103.c</FilePath>
             </File>
           </Files>
           <Files>

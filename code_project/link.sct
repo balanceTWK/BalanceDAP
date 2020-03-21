@@ -20,7 +20,7 @@
 ; * limitations under the License.
 ; */
 
-#include "daplink_addr.h"
+#include "dap-ports\daplink_addr.h"
 
 LR_IROM1 DAPLINK_ROM_APP_START DAPLINK_ROM_APP_SIZE {
 
