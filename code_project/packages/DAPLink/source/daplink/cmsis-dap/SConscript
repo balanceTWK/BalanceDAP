@@ -1,0 +1,34 @@
+# RT-Thread building script for bridge
+
+import os
+import rtconfig
+Import ('RTT_ROOT')
+from building import *
+
+src = []
+libs = []
+objs = []
+libpath = []
+cpppath = []
+cppdefines = []
+cwd = GetCurrentDir()
+list = os.listdir(cwd)
+
+cpppath += [cwd]
+
+src += ['DAP.c']
+src += ['DAP_queue.c']
+src += ['DAP_vendor.c']
+src += ['JTAG_DP.c']
+src += ['SW_DP.c']
+src += ['SWO.c']
+
+group = DefineGroup('CMSIS-DAP', src, depend = [''], CPPPATH = cpppath, CPPDEFINES = cppdefines, LIBS = libs, LIBPATH = libpath)
+
+for d in list:
+    path = os.path.join(cwd, d)
+    if os.path.isfile(os.path.join(path, 'SConscript')):
+        objs = objs + SConscript(os.path.join(d, 'SConscript'))
+objs = objs + group
+
+Return('objs')
